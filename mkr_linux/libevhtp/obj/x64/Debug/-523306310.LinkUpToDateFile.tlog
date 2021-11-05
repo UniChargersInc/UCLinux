@@ -1,0 +1,1 @@
+ar -rsc  "/home/oem/projects/libevhtp/bin/x64/Debug/liblibevhtp.a" /home/oem/projects/libevhtp/obj/x64/Debug/evhtp.o /home/oem/projects/libevhtp/obj/x64/Debug/evthr.o /home/oem/projects/libevhtp/obj/x64/Debug/htparse.o

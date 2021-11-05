@@ -1,0 +1,290 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  evhtp.c
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(304,20): warning : conversion to ‘unsigned int’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(304,20): warning :          h = 31 * h + *str;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(304,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1160,45): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1160,45): warning :      c->request->proto     = _evhtp_protocol(htparser_get_major(p), htparser_get_minor(p));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1160,45): warning :                                              ^~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1160,68): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1160,68): warning :      c->request->proto     = _evhtp_protocol(htparser_get_major(p), htparser_get_minor(p));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1160,68): warning :                                                                     ^~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1310,64): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1310,64): warning :          body           = (const char *)evbuffer_pullup(buf_in, body_len);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1310,64): warning :                                                                 ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1441,36): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1441,36): warning :          evbuffer_add(buf, res_buf, sres);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1441,36): warning :                                     ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1492,55): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1492,55): warning :      buf = evbuffer_pullup(bufferevent_get_input(bev), avail);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1492,55): warning :                                                        ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1514,64): warning : negative integer implicitly converted to unsigned type [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1514,64): warning :                      (*c->request->hooks->on_error)(c->request, -1, c->request->hooks->on_error_arg);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1514,64): warning :                                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1634,52): warning : conversion to ‘evhtp_error_flags {aka unsigned char}’ from ‘short int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1634,52): warning :          (*c->request->hooks->on_error)(c->request, events,
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1634,52): warning :                                                     ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1831,32): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1831,32): warning :      connection->saddr = malloc(sl);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1831,32): warning :                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1832,34): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1832,34): warning :      memcpy(connection->saddr, s, sl);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1832,34): warning :                                   ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1894,37): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1894,37): warning :          (cfg->scache_del)(htp, sid, slen);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1894,37): warning :                                      ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1909,18): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1909,18): warning :      slen       = sess->session_id_length;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(1909,18): warning :                   ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2406,14): warning : conversion to ‘unsigned char’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2406,14): warning :          ch = query[i];
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2406,14): warning :               ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2452,46): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2452,46): warning :                          key_buf[key_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2452,46): warning :                                               ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2457,46): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2457,46): warning :                          key_buf[key_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2457,46): warning :                                               ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2471,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2471,44): warning :                      key_buf[key_idx++]   = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2471,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2477,38): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2477,38): warning :                  key_buf[key_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2477,38): warning :                                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2487,38): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2487,38): warning :                  key_buf[key_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2487,38): warning :                                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2508,46): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2508,46): warning :                          val_buf[val_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2508,46): warning :                                               ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2514,46): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2514,46): warning :                          val_buf[val_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2514,46): warning :                                               ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2530,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2530,44): warning :                      val_buf[val_idx++]   = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2530,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2537,38): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2537,38): warning :                  val_buf[val_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2537,38): warning :                                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2547,38): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2547,38): warning :                  val_buf[val_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2547,38): warning :                                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2753,56): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2753,56): warning :                                            backlog, sa, sin_len);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(2753,56): warning :                                                         ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(3246,38): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(3246,38): warning :      ssl_locks = malloc(ssl_num_locks * sizeof(evhtp_mutex_t));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(3246,38): warning :                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(3337,64): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(3337,64): warning :      X509_STORE_set_flags(SSL_CTX_get_cert_store(htp->ssl_ctx), cfg->store_flags);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evhtp.c(3337,64): warning :                                                                 ^~~
+  evthr.c
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(133,16): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(133,16): warning :      rnum = num * sizeof(evthr_cmd_t);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(133,16): warning :                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(133,12): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(133,12): warning :      rnum = num * sizeof(evthr_cmd_t);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(133,12): warning :             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(231,3): warning : implicit declaration of function ‘event_warnx’; did you mean ‘event_add’? [-Wimplicit-function-declaration]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(231,3): warning :    event_warnx("<FATAL ERROR>!\n");
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(231,3): warning :    ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\evthr.c(231,3): warning :    event_add
+  htparse.c
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(295,28): warning : conversion to ‘uint64_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(295,28): warning :          check = value * 10 + (*str - '0');
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(295,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(486,14): warning : conversion to ‘unsigned char’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(486,14): warning :          ch = data[i];
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(486,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(530,40): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(530,40): warning :                  p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(530,40): warning :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(663,40): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(663,40): warning :                  p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(663,40): warning :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(676,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(676,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(676,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(681,36): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(681,36): warning :                          c        = (unsigned char)(ch | 0x20);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(681,36): warning :                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(685,52): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(685,52): warning :                              p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(685,52): warning :                                                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(699,21): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(699,21): warning :                  c = (unsigned char)(ch | 0x20);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(699,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(702,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(702,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(702,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(738,92): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(738,92): warning :                          res                  = hook_scheme_run(p, hooks, p->scheme_offset, (&p->buf[p->buf_idx] - p->scheme_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(738,92): warning :                                                                                             ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(744,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(744,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(744,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(766,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(766,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(766,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(781,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(781,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(781,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(795,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(795,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(795,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(802,21): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(802,21): warning :                  c = (unsigned char)(ch | 0x20);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(802,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(805,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(805,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(805,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(811,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(811,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(811,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(816,63): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(816,63): warning :                  res = hook_host_run(p, hooks, p->host_offset, (&p->buf[p->buf_idx] - p->host_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(816,63): warning :                                                                ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(831,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(831,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(831,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(854,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(854,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(854,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(871,21): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(871,21): warning :                  c = (unsigned char)(ch | 0x20);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(871,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(875,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(875,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(875,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(883,45): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(883,45): warning :                                              (&p->buf[p->buf_idx] - p->host_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(883,45): warning :                                              ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(888,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(888,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(888,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(901,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(901,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(901,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(907,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(907,37): warning :                                      (&p->buf[p->buf_idx] - p->port_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(907,37): warning :                                      ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(925,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(925,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(925,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(947,36): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(947,36): warning :                  if (usual[ch >> 5] & (1 << (ch & 0x1f))) {
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(947,36): warning :                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(948,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(948,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(948,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(958,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(958,48): warning :                                                 (&p->buf[p->buf_idx] - p->path_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(958,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(982,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(982,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(982,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(988,62): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(988,62): warning :                                                               (&p->buf[p->buf_idx] - p->path_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(988,62): warning :                                                               ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(990,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(990,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(990,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(997,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(997,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(997,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1016,36): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1016,36): warning :                  if (usual[ch >> 5] & (1 << (ch & 0x1f))) {
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1016,36): warning :                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1017,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1017,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1017,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1030,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1030,48): warning :                                                 (&p->buf[p->buf_idx] - p->args_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1030,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1033,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1033,48): warning :                                                 (&p->buf[p->buf_idx] - p->path_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1033,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1046,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1046,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1046,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1062,88): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1062,88): warning :                          res                  = hook_path_run(p, hooks, p->path_offset, (&p->buf[p->buf_idx] - p->path_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1062,88): warning :                                                                                         ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1064,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1064,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1064,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1071,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1071,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1071,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1090,36): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1090,36): warning :                  if (usual[ch >> 5] & (1 << (ch & 0x1f))) {
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1090,36): warning :                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1091,44): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1091,44): warning :                      p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1091,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1104,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1104,48): warning :                                                 (&p->buf[p->buf_idx] - p->args_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1104,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1107,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1107,48): warning :                                                 (&p->buf[p->buf_idx] - p->path_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1107,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1136,49): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1136,49): warning :                                                  (&p->buf[p->buf_idx] - p->path_offset));
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1136,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1138,52): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1138,52): warning :                              p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1138,52): warning :                                                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1145,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1145,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1145,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1231,28): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1231,28): warning :                  p->major = ch - '0';
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1231,28): warning :                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1245,28): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1245,28): warning :                  p->major = p->major * 10 + ch - '0';
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1245,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1253,28): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1253,28): warning :                  p->minor = ch - '0';
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1253,28): warning :                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1279,36): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1279,36): warning :                          p->minor = p->minor * 10 + ch - '0';
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1279,36): warning :                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1402,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1402,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1402,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1423,38): warning : implicit declaration of function ‘strcasecmp’; did you mean ‘strncmp’? [-Wimplicit-function-declaration]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1423,38): warning :                                  if (!strcasecmp(p->buf, "host")) {
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1423,38): warning :                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1423,38): warning :                                       strncmp
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1465,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1465,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1465,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1505,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1505,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1505,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1609,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1609,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1609,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1680,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1680,48): warning :                          p->buf[p->buf_idx++] = ch;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1680,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1766,34): warning : conversion to ‘uint64_t {aka long unsigned int}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1766,34): warning :                  p->content_len = c;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1766,34): warning :                                   ^
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1783,32): warning : conversion to ‘uint64_t {aka long unsigned int}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1783,32): warning :                  p->content_len += c;
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1783,32): warning :                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(204,42): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1819,44): message : in expansion of macro ‘_MIN_READ’
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1819,44): message :                      size_t       to_read = _MIN_READ(pe - pp, p->content_len);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1819,44): message :                                             ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(204,42): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1872,44): message : in expansion of macro ‘_MIN_READ’
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1872,44): message :                      size_t       to_read = _MIN_READ(pe - pp, p->content_len);
+C:\My\UC\UCLinux\mkr_linux\libevhtp\htparse.c(1872,44): message :                                             ^~~~~~~~~
+  Archiving objects
+  libevhtp.vcxproj -> C:\My\UC\UCLinux\mkr_linux\libevhtp\bin\x64\Release\liblibevhtp.a

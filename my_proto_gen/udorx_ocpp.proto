@@ -1,0 +1,33 @@
+
+package udorx_ocpp_pbf;
+
+
+option optimize_for = LITE_RUNTIME;
+
+// [START java_declaration]
+option java_package = "com.mkr.models.ocpp.proto";
+option java_outer_classname = "CommOcppPackets";
+// [END java_declaration]
+
+
+message SampledValue
+{
+	required string value=1;
+	optional string context=2;
+	optional string format=3;
+	optional string measurand=4;
+	optional string phase=5;
+	optional string location =6;
+	optional string unit =7;
+}
+message MeterValue 
+{
+	required  int64 timestamp=1;   // 
+	repeated  SampledValue sampledValue=2;
+}
+
+message TransactionData
+{
+	repeated MeterValue transactionData=1;
+}
+

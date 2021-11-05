@@ -1,0 +1,84 @@
+﻿ #login {
+                  padding-top: 80px;
+                  margin: 0px auto;
+                  width: 400px;
+                  padding-bottom: 60px;
+              }
+
+                  #login h2 {
+                      background-color: #f95252;
+                      -webkit-border-radius: 20px 20px 0 0;
+                      -moz-border-radius: 20px 20px 0 0;
+                      border-radius: 20px 20px 0 0;
+                      color: #fff;
+                      font-size: 22px;
+                      padding: 10px 16px;
+                  }
+
+                      #login h2 span[class*="fontawesome-"] {
+                          margin-right: 14px;
+                      }
+
+                  #login fieldset {
+                      background-color: #fff;
+                      -webkit-border-radius: 0 0 20px 20px;
+                      -moz-border-radius: 0 0 20px 20px;
+                      border-radius: 0 0 20px 20px;
+                      padding: 10px 16px;
+                  }
+
+                      #login fieldset p {
+                          color: #777;
+                          margin-bottom: 14px;
+                      }
+
+                          #login fieldset p:last-child {
+                              margin-bottom: 0;
+                          }
+
+                      #login fieldset input {
+                          -webkit-border-radius: 3px;
+                          -moz-border-radius: 3px;
+                          border-radius: 3px;
+                      }
+
+                          #login fieldset input[type="text"], #login fieldset input[type="password"] {
+                              background-color: #eee;
+                              color: #777;
+                              padding: 4px 10px;
+                              width: 328px;
+                          }
+
+                          #login fieldset input[type="submit"] {
+                              background-color: #33cc77;
+                              color: #fff;
+                              display: block;
+                              margin: 0 auto;
+                              padding: 4px 0;
+                              width: 100px;
+                              border: 2px solid #a4bed4;
+                              -moz-border-radius: 10px; /* Firefox */
+                              -webkit-border-radius: 10px; /* Safari, Chrome */
+                              border-radius: 10px; /* CSS3 */
+                              -moz-box-shadow: 2px 2px 3px #666;
+                              -webkit-box-shadow: 2px 2px 3px #666;
+                              box-shadow: 2px 2px 3px #666;
+                          }
+
+                              #login fieldset input[type="submit"]:hover {
+                                  background-color: #28ad63;
+                              }
+
+              #log_incor {
+                  color: red;
+                  display: none;
+                  text-align: center;
+              }
+
+              .row-info_login {
+                  margin: auto;
+                  width: 80%;
+                  text-align: center;
+                  font-size: 20px;
+                 
+              }

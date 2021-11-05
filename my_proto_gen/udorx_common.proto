@@ -1,0 +1,164 @@
+
+package udorx_pbf;
+
+//option optimize_for = LITE_RUNTIME;
+
+
+// [START java_declaration]
+option java_package = "com.mkr.models.proto";
+option java_outer_classname = "CommPackets";
+// [END java_declaration]
+
+message PCSIStatus   // charge station item status
+{
+    required  int64 ID=1;
+    required int32 status=2;
+    required bytes ObjB=3;
+}
+message PCSItem {
+   required  int64 ID = 1; 
+   required  int32 type = 2;//required  string CHName = 2;   // Charger Type - Duo Grizzly , Smart Grizzly, etc
+  
+   required  string Caller =3;
+   optional  string Param1 =4;
+   required  string Reference =5;
+
+ 		 required  string SerialN =6;  // SerialNumber
+ 		 optional  string Address =7;
+ 		 
+ 		 required  string Instrs =8;
+		 required  int32 CertFlag = 9;//  certification flags 1 - UL, 2-Green Certified , 4-
+
+		 optional  int64 CreatedTS = 10; // CreatedTimeStamp
+		 optional  int64 LastUpdtdTS = 11;//LastUpdatedTimeStamp
+
+		 required  int32 status=12;        // connection status
+		 required  int32 serviceGroup=13;
+		 required  int32 ClientID=14;
+		 required  float Lat=15;
+		 required  float Lon=16;
+
+		optional  int32 ProfID=17;        // it was editFlag
+        optional  bytes ObjB = 18;        //optional  bytes 
+
+		optional string IPAddr = 19;        // IPAddr the charge station was booting   from BootNotification field "chargeBoxSerialNumber"
+		optional string FWVer = 20;
+		optional int32 tz = 21;
+		optional int32 dls = 22;
+}
+message PCSList
+{
+	repeated PCSItem cs_items=1;
+}
+message PCSIStatusList
+{
+	repeated PCSIStatus cs_sts_items=1;
+}
+
+//===================================Login=========================
+
+message PConf   //PConfiguration
+{
+  required  int32 utcOff = 1 ;  // time zone e.g. UTC-05  => -5
+  required  int32 dls = 2 ;
+  optional  int32 param1 = 3;  
+  optional int32 param2 = 4;  
+  optional string param3 =5;
+  optional string param4 =6;
+}
+
+message   PEmpl  //PEmployeeRow
+{
+		 required  int32 ID = 1;                  //// the same as ResourceID
+         required  string DrName = 2;   //DriverName
+         optional  string User = 3; //UserName 
+         optional  string Email = 4;
+         optional  string Pass = 5;  //Password
+         optional  string License = 6;
+         optional  string Country = 7;
+
+         optional  bytes Sign = 8;  //Signature
+         optional  int32  CID  = 9;  // ClientID ->is was Domain
+         optional  int32 Cycle = 10;//HOSCYCLE Cycle = HOSCYCLE.Canadian_70hr_7day;
+        optional  int32 h_exc = 11;  //HOSExcept
+		//optional int32 ApplyDTS=12;//applyDTS - apply Day Time Savings
+        optional int32 TZ= 12;           // it will combine TimeZone(TZ) + ApplyDST(DTS) Daylight Saving Time
+      
+         optional  string haddr = 13;  //HomeAddress
+         optional int32 superv = 14; //IsSupervisor    -> bool  1-NO , 2 - YES
+         optional  string State = 15;
+         optional  string OrgName = 16;
+		 optional  string OrgAddr = 17;
+         optional  string photo=18;
+}
+//---------------------------------------------------------------
+message PRegister
+{
+required string user=1;
+required string pass=2;
+required string fname=3;
+required string email=4;
+}
+
+//CLogin RttHB CommPacket  -> moved to udorx-comm_cnt.proto
+message CommPacket
+{
+	required  int32 req=1;
+    required  sint32 rID=2;
+    required  sint32 cID=3;
+	required  string user=4;
+    required bytes payload=5;
+}
+
+
+
+message PMsg
+{
+   required string mid=1; // IMPORTANT !! -> Sender User ID ( Driver ID) is included in mid = <id-ts in millis> 
+   required string sN=2;  // sender name
+   required int32 sCID=3;  // sender ClientID
+   
+   required int32 dDID=4; //destination Device ID
+   required int32 dCID=5; //destination Client ID
+   required string dN=6;  // destination name
+   required string msg=7;
+   required int32 mT=8; // message type //e.g. 1-text, 2-picture, 3-video, 4- audio 
+   repeated string media_files=9;//optional bytes media=9;
+}
+message PMsgList
+{
+repeated PMsg msgs=1;
+}
+
+//-------------------------------------------------
+message SampledValue
+{
+	required string value=1;
+	optional string context=2;
+	optional string format=3;
+	optional string measurand=4;
+	optional string phase=5;
+	optional string location =6;
+	optional string unit =7;
+}
+message MeterValue 
+{
+	required  int64 timestamp=1;   // 
+	repeated  SampledValue sampledValue=2;
+}
+
+message MeterValues
+{
+	repeated MeterValue transactionData=1;
+}
+message TrData
+{
+	 required string sern=1;       //Serial Number
+	 required int32  transId=2;      // transactionId
+	 required int32  connId=3;      // connectorId
+	 repeated MeterValues mvalues=4;  // 
+}
+message TrDataList
+{
+	repeated TrData tdlist=4;  // 
+}

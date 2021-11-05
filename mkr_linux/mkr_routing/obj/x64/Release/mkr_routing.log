@@ -1,0 +1,878 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  MapUtils.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(7,23): warning : conversion to ‘float’ alters ‘double’ constant value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(7,23): warning :  const float EPSILON = 0.001;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(7,23): warning :                        ^~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(58,28): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(59,26): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(60,43): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\MapUtils.cpp(63,31): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+  RoutingRequest.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\m_routing\RoutingRequest.cpp(36,47): warning : unused variable ‘pos’ [-Wunused-variable]
+  RoutingResult.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\m_routing\RoutingResult.cpp(87,12): warning : unused variable ‘ro’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\m_routing\RoutingResult.cpp(87,12): warning :    PRouteO *ro = getRouteO(0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\m_routing\RoutingResult.cpp(87,12): warning :             ^~
+  valhalla_3_0_route_mob.cc
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(79): warning : "VALHALLA_VERSION" redefined
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(79): warning :  #define VALHALLA_VERSION "3.0.6"
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/config.h(9): message : this is the location of the previous definition
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/config.h(9): message :  #define VALHALLA_VERSION VALHALLA_STRINGIZE(VALHALLA_VERSION_MAJOR) "." VALHALLA_STRINGIZE(VALHALLA_VERSION_MINOR) "." VALHALLA_STRINGIZE(VALHALLA_VERSION_PATCH)
+/home/mkr/extLibs/boost_1_69_0/boost/type_traits/is_complete.hpp(47,20): warning : conversion to ‘unsigned int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/type_traits/is_complete.hpp(47,20): warning :        ok_tag<sizeof(T)> check_is_complete(int);
+/home/mkr/extLibs/boost_1_69_0/boost/type_traits/is_complete.hpp(47,20): warning :                     ^
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(121,71): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(242,1): message : in expansion of macro ‘BOOST_MATH_META_INT’
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(242,1): message :  BOOST_MATH_META_INT(unsigned long, max_series_iterations, BOOST_MATH_MAX_SERIES_ITERATION_POLICY)
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(242,1): message :  ^~~~~~~~~~~~~~~~~~~
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(121,71): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(243,1): message : in expansion of macro ‘BOOST_MATH_META_INT’
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(243,1): message :  BOOST_MATH_META_INT(unsigned long, max_root_iterations, BOOST_MATH_MAX_ROOT_ITERATION_POLICY)
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(243,1): message :  ^~~~~~~~~~~~~~~~~~~
+/home/mkr/extLibs/boost_1_69_0/boost/math/special_functions/detail/fp_traits.hpp(528,60): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/math/special_functions/detail/fp_traits.hpp(566,60): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/json.h(142,36): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/json.h(144,36): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphid.h(170,44): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphid.h(170,44): warning :      return GraphId(tileid(), level(), id() + offset);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphid.h(170,44): warning :                                        ~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(224,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(237,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(243,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(251,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(271,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(271,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(Ch) >= 2);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(271,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(277,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(293,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(308,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(326,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(327,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(345,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(352,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(360,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(367,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(378,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(385,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(393,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(400,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(420,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(420,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(Ch) >= 4);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(420,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(426,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(433,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(440,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(448,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(460,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(467,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(477,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(486,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(499,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(506,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(516,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(525,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(575,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(582,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(588,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(594,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(40,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(101,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(136,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(234,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(107,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(107,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(B) != 0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(107,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(108,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(108,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(D) != 0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(108,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\document.h(629,13): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(239,36): warning : conversion to ‘float’ alters ‘long int’ constant value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(239,36): warning :    static constexpr float INVALID = 0xBADBADBAD;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(239,36): warning :                                     ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(162,58): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::midgard::PointLL>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(162,58): warning :      return HeadingAlongPolyline(pts, dist, 0, pts.size() - 1);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(162,58): warning :                                                ~~~~~~~~~~~^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(187,60): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::midgard::PointLL>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(187,60): warning :      return HeadingAtEndOfPolyline(pts, dist, 0, pts.size() - 1);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(187,60): warning :                                                  ~~~~~~~~~~~^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/util.h(75,21): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/util.h(75,21): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(62,24): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(62,24): warning :      graphid_ = graphid.value;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(62,24): warning :                 ~~~~~~~~^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(78,41): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(78,41): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(94,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(94,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(110,60): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(110,60): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(126,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(126,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(225,18): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(225,18): warning :      nodecount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(225,18): warning :                   ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(246,26): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(246,26): warning :      directededgecount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(246,26): warning :                           ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(267,30): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(267,30): warning :      predictedspeeds_count_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(267,30): warning :                               ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(287,24): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(287,24): warning :      transitioncount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(287,24): warning :                         ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(307,18): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(307,18): warning :      signcount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(307,18): warning :                   ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(393,33): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(393,33): warning :      access_restriction_count_ = n;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(393,33): warning :                                  ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(409,19): warning : conversion to ‘short unsigned int’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(409,19): warning :      admincount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(409,19): warning :                    ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(550,23): warning : conversion to ‘unsigned int:21’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(550,23): warning :      turnlane_count_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(550,23): warning :                        ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(65,50): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(66,50): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(66,50): warning :                              tile_corner.lat() + (lat_offset_ * kDegreesPrecision));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(66,50): warning :                                                   ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(346,25): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(346,25): warning :      transition_index_ = index;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(346,25): warning :                          ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(362,25): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(362,25): warning :      transition_count_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(362,25): warning :                          ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodetransition.h(31,70): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,51): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,51): warning :          *t++ = cosf(kPiBucketConstant * (bucket + 0.5f) * c);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,51): warning :                                                    ^~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,59): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,59): warning :          *t++ = cosf(kPiBucketConstant * (bucket + 0.5f) * c);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,59): warning :                                                            ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(30,33): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(30,33): warning :          text_offset_(text_offset) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(30,33): warning :                                  ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(47,18): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(47,18): warning :      edgeindex_ = idx;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(47,18): warning :                   ^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(75,21): warning : ‘valhalla::baldr::TransitStop::spare_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(73,25): warning : ‘unsigned char:1 valhalla::baldr::TransitStop::generated_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(18,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(18,3): warning :    TransitStop(const uint32_t one_stop_offset,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(18,3): warning :    ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(22,73): warning : conversion to ‘unsigned char:2’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(26,24): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(26,24): warning :      one_stop_offset_ = one_stop_offset;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(26,24): warning :                         ^~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(31,20): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(31,20): warning :      name_offset_ = name_offset;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(31,20): warning :                     ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(78,61): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(95,18): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(95,18): warning :      edgeindex_ = idx;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(95,18): warning :                   ^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(118,27): warning : conversion to ‘std::vector<short unsigned int>::value_type {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(118,27): warning :        masks.push_back(stoi(item));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(118,27): warning :                        ~~~~^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(142,49): warning : conversion to ‘std::unordered_map<short unsigned int, std::__cxx11::basic_string<char> >::key_type {aka short unsigned int}’ from ‘unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(142,49): warning :                auto str = kTurnLaneNames.find(1u << i);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(142,49): warning :                                               ~~~^~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(179,38): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(179,38): warning :            lanemask |= turnlane_mask->second;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(179,38): warning :                                       ^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(52,8): warning : ‘valhalla::baldr::SignInfo::is_route_num_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(52,8): warning :    bool is_route_num_;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(52,8): warning :         ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(51,14): warning : ‘valhalla::baldr::Sign::Type valhalla::baldr::SignInfo::type_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(22,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(118,22): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(118,22): warning :        l->set_heading(*pl.heading_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(118,22): warning :                       ^~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(120,33): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(120,33): warning :      l->set_heading_tolerance(pl.heading_tolerance_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(120,33): warning :                               ~~~^~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(121,35): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(121,35): warning :      l->set_node_snap_tolerance(pl.node_snap_tolerance_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(121,35): warning :                                 ~~~^~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(126,22): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(126,22): warning :      l->set_radius(pl.radius_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(126,22): warning :                    ~~~^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,29): warning : conversion to ‘float’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,62): warning : conversion to ‘float’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,57): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,57): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(128,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(128,37): warning :      l->set_street_side_tolerance(pl.street_side_tolerance_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(128,37): warning :                                   ~~~^~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(208,51): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(208,51): warning :        l.heading_tolerance_ = loc.heading_tolerance();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(208,51): warning :                               ~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(211,55): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(211,55): warning :        l.node_snap_tolerance_ = loc.node_snap_tolerance();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(211,55): warning :                                 ~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(217,43): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(217,43): warning :        l.search_cutoff_ = loc.search_cutoff();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(217,43): warning :                           ~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(220,59): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(220,59): warning :        l.street_side_tolerance_ = loc.street_side_tolerance();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(220,59): warning :                                   ~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(60,23): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(60,23): warning :      currentcost_ = (c - (c % bucketsize));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(60,23): warning :                     ~~~^~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(70,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(70,48): warning :      size_t bucketcount = (range / bucketsize_) + 1;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(70,48): warning :                           ~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(50,23): warning : conversion to ‘unsigned char:7’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(50,23): warning :        daterange.dow = dow;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(50,23): warning :                        ^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(64,29): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(64,29): warning :        daterange.begin_hrs = begin_hrs;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(64,29): warning :                              ^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(78,30): warning : conversion to ‘unsigned char:6’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(78,30): warning :        daterange.begin_mins = begin_mins;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(78,30): warning :                               ^~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(90,31): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(90,31): warning :        daterange.begin_month = begin_month;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(90,31): warning :                                ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(105,33): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(105,33): warning :        daterange.begin_day_dow = begin_day_dow;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(105,33): warning :                                  ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(118,30): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(118,30): warning :        daterange.begin_week = begin_week;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(118,30): warning :                               ^~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(132,27): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(132,27): warning :        daterange.end_hrs = end_hrs;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(132,27): warning :                            ^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(146,28): warning : conversion to ‘unsigned char:6’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(146,28): warning :        daterange.end_mins = end_mins;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(146,28): warning :                             ^~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(158,29): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(158,29): warning :        daterange.end_month = end_month;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(158,29): warning :                              ^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(173,31): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(173,31): warning :        daterange.end_day_dow = end_day_dow;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(173,31): warning :                                ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(186,28): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(186,28): warning :        daterange.end_week = end_week;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(186,28): warning :                             ^~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :          sortcost_(sortcost), distance_(dist) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :                                             ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(54,99): warning : conversion to ‘unsigned char:7’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :          sortcost_(sortcost), distance_(dist) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :                                             ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,52): warning : conversion to ‘unsigned char:7’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,52): warning :          edgeid_(edgeid), opp_index_(edge->opp_index()), opp_local_idx_(edge->opp_local_idx()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,52): warning :                                      ~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,91): warning : conversion to ‘unsigned char:7’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,91): warning :          edgeid_(edgeid), opp_index_(edge->opp_index()), opp_local_idx_(edge->opp_local_idx()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,91): warning :                                                                         ~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(56,15): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(56,15): warning :          mode_(static_cast<uint32_t>(mode)), endnode_(edge->endnode()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(56,15): warning :                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning : conversion to ‘long unsigned int:48’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :          sortcost_(sortcost), distance_(dist) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :                                             ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(57,14): warning : conversion to ‘unsigned char:6’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(57,14): warning :          use_(static_cast<uint32_t>(edge->use())),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(57,14): warning :               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,25): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,25): warning :          classification_(static_cast<uint32_t>(edge->classification())), shortcut_(edge->shortcut()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,25): warning :                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,97): warning : conversion to ‘unsigned char:1’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,97): warning :          classification_(static_cast<uint32_t>(edge->classification())), shortcut_(edge->shortcut()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,97): warning :                                                                                    ~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(94,22): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(94,22): warning :      path_distance_ = path_distance;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(94,22): warning :                       ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(524,13): warning : ‘valhalla::sif::BDEdgeLabel::transition_cost_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(521,32): warning : ‘unsigned char:1 valhalla::sif::BDEdgeLabel::not_thru_pruning_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(377,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(377,3): warning :    BDEdgeLabel(const uint32_t predecessor,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(377,3): warning :    ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(388,65): warning : conversion to ‘long unsigned int:63’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(388,65): warning :          transition_cost_(tc), not_thru_pruning_(not_thru_pruning) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(388,65): warning :                                                                  ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(524,13): warning : ‘valhalla::sif::BDEdgeLabel::transition_cost_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(521,32): warning : ‘unsigned char:1 valhalla::sif::BDEdgeLabel::not_thru_pruning_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(405,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(405,3): warning :    BDEdgeLabel(const uint32_t predecessor,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(405,3): warning :    ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(415,89): warning : conversion to ‘long unsigned int:63’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(415,89): warning :          opp_edgeid_(oppedgeid), transition_cost_(tc), not_thru_pruning_(not_thru_pruning) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(415,89): warning :                                                                                          ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(478,22): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(478,22): warning :      path_distance_ = path_distance;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(478,22): warning :                       ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning : conversion to ‘unsigned int:21’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning :          transit_operator_(transit_operator), has_transit_(has_transit) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning :                                                                       ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning : conversion to ‘short unsigned int:10’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(588,22): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(588,22): warning :      path_distance_ = path_distance;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(588,22): warning :                       ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(590,16): warning : conversion to ‘unsigned int:21’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(590,16): warning :      blockid_ = blockid;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(590,16): warning :                 ^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,29): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,29): warning :        max_up_transitions *= factor;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,29): warning :                              ^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,26): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,26): warning :        max_up_transitions *= factor;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,26): warning :        ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/dynamiccost.h(578,17): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/dynamiccost.h(578,17): warning :        penalty = static_cast<uint32_t>(kMaxFerryPenalty * (1.0f - use_ferry * 2.0f));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/dynamiccost.h(578,17): warning :                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(318,96): warning : typedef ‘using queue_t = class std::map<T, std::_List_iterator<std::basic_fstream<char> >, std::function<bool(const T&, const T&)> >’ locally defined but not used [-Wunused-local-typedefs]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(571,25): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(571,25): warning :        for (int i = 0; i < sizeof(header_t); i++) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(571,25): warning :                        ~~^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,19): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,19): warning :        return rsum == usum || rsum == sum;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,19): warning :               ~~~~~^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,35): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,35): warning :        return rsum == usum || rsum == sum;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,35): warning :                               ~~~~~^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/odin/enhancedtrippath.h(544,39): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘double’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/odin/enhancedtrippath.h(544,39): warning :      return mutable_node_->elapsed_time();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/odin/enhancedtrippath.h(544,39): warning :             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(82,9): warning : ‘valhalla::thor::AStarHeuristic::costfactor_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(82,9): warning :    float costfactor_;                         // Cost factor - ensures the cost estimate
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(82,9): warning :          ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(81,33): warning : ‘valhalla::midgard::DistanceApproximator valhalla::thor::AStarHeuristic::distapprox_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(20,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(29,12): warning : conversion to ‘unsigned char:4’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(29,12): warning :      set_ = static_cast<uint32_t>(set);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(29,12): warning :             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(30,14): warning : conversion to ‘unsigned int:28’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(30,14): warning :      index_ = index;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(30,14): warning :               ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(101,36): warning : conversion to ‘unsigned char:4’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(101,36): warning :        p->second[edgeid.id()].set_ =(uint32_t) static_cast<uint32_t>(set);  // svk added (uint32_t)
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(101,36): warning :                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(127,10): warning : unused variable ‘relax_factor’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(193,12): warning : unused variable ‘totalms’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(193,12): warning :    uint32_t totalms = 0;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(193,12): warning :             ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(448,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(448,20): warning :   for (int i = 0; i < shape.size(); i++)
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(448,20): warning :                   ~~^~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(484,43): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(484,43): warning :    rMnv->set_azimuth(maneuver.begin_heading());
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(484,43): warning :                      ~~~~~~~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(490,41): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(490,41): warning :    rStep->set_distance(maneuver.length() * 1000.0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(490,41): warning :                        ~~~~~~~~~~~~~~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(492,32): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(492,32): warning :    rStep->set_time(maneuver.time());
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(492,32): warning :                    ~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(597,32): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::baldr::Location>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(597,32): warning :   uint32_t n = locations.size() - 1;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(597,32): warning :                ~~~~~~~~~~~~~~~~~^~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(726,32): warning : conversion to ‘float’ from ‘unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(726,32): warning :     rLeg->set_distance(trip_time);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(726,32): warning :                                 ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(732,30): warning : conversion to ‘float’ from ‘unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(732,30): warning :     rO->set_duration(trip_time);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_3_0_route_mob.cc(732,30): warning :                               ^
+  valhalla_opt_route.cc
+/home/mkr/extLibs/boost_1_69_0/boost/type_traits/is_complete.hpp(47,20): warning : conversion to ‘unsigned int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/type_traits/is_complete.hpp(47,20): warning :        ok_tag<sizeof(T)> check_is_complete(int);
+/home/mkr/extLibs/boost_1_69_0/boost/type_traits/is_complete.hpp(47,20): warning :                     ^
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(121,71): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(242,1): message : in expansion of macro ‘BOOST_MATH_META_INT’
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(242,1): message :  BOOST_MATH_META_INT(unsigned long, max_series_iterations, BOOST_MATH_MAX_SERIES_ITERATION_POLICY)
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(242,1): message :  ^~~~~~~~~~~~~~~~~~~
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(121,71): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(243,1): message : in expansion of macro ‘BOOST_MATH_META_INT’
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(243,1): message :  BOOST_MATH_META_INT(unsigned long, max_root_iterations, BOOST_MATH_MAX_ROOT_ITERATION_POLICY)
+/home/mkr/extLibs/boost_1_69_0/boost/math/policies/policy.hpp(243,1): message :  ^~~~~~~~~~~~~~~~~~~
+/home/mkr/extLibs/boost_1_69_0/boost/math/special_functions/detail/fp_traits.hpp(528,60): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/boost_1_69_0/boost/math/special_functions/detail/fp_traits.hpp(566,60): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/json.h(142,36): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/json.h(144,36): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphid.h(170,44): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphid.h(170,44): warning :      return GraphId(tileid(), level(), id() + offset);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphid.h(170,44): warning :                                        ~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(224,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(237,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(243,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(251,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(271,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(271,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(Ch) >= 2);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(271,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(277,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(293,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(308,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(326,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(327,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(345,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(352,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(360,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(367,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(378,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(385,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(393,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(400,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(420,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(420,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(Ch) >= 4);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(420,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(426,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(433,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(440,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(448,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(460,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(467,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(477,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(486,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(499,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(506,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(516,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(525,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(575,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(582,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(588,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodings.h(594,9): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(40,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(101,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(136,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\encodedstream.h(234,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(107,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(107,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(B) != 0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(107,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(108,5): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(108,5): message :      RAPIDJSON_STATIC_ASSERT(sizeof(D) != 0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\internal\meta.h(108,5): message :      ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\rapidjson.h(439,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\..\udorx_deps\carto_deps\rapidjson\document.h(629,13): message : in expansion of macro ‘RAPIDJSON_STATIC_ASSERT’
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(239,36): warning : conversion to ‘float’ alters ‘long int’ constant value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(239,36): warning :    static constexpr float INVALID = 0xBADBADBAD;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(239,36): warning :                                     ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(162,58): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::midgard::PointLL>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(162,58): warning :      return HeadingAlongPolyline(pts, dist, 0, pts.size() - 1);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(162,58): warning :                                                ~~~~~~~~~~~^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(187,60): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::midgard::PointLL>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(187,60): warning :      return HeadingAtEndOfPolyline(pts, dist, 0, pts.size() - 1);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/pointll.h(187,60): warning :                                                  ~~~~~~~~~~~^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/util.h(75,21): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/util.h(75,21): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(62,24): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(62,24): warning :      graphid_ = graphid.value;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(62,24): warning :                 ~~~~~~~~^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(78,41): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(78,41): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(94,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(94,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(110,60): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(110,60): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(126,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(126,58): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(225,18): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(225,18): warning :      nodecount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(225,18): warning :                   ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(246,26): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(246,26): warning :      directededgecount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(246,26): warning :                           ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(267,30): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(267,30): warning :      predictedspeeds_count_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(267,30): warning :                               ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(287,24): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(287,24): warning :      transitioncount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(287,24): warning :                         ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(307,18): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(307,18): warning :      signcount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(307,18): warning :                   ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(393,33): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(393,33): warning :      access_restriction_count_ = n;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(393,33): warning :                                  ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(409,19): warning : conversion to ‘short unsigned int’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(409,19): warning :      admincount_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(409,19): warning :                    ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(550,23): warning : conversion to ‘unsigned int:21’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(550,23): warning :      turnlane_count_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/graphtileheader.h(550,23): warning :                        ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(65,50): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(66,50): warning : conversion to ‘float’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(66,50): warning :                              tile_corner.lat() + (lat_offset_ * kDegreesPrecision));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(66,50): warning :                                                   ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(346,25): warning : conversion to ‘unsigned int:21’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(346,25): warning :      transition_index_ = index;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(346,25): warning :                          ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(362,25): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(362,25): warning :      transition_count_ = count;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodeinfo.h(362,25): warning :                          ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/nodetransition.h(31,70): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,51): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,51): warning :          *t++ = cosf(kPiBucketConstant * (bucket + 0.5f) * c);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,51): warning :                                                    ^~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,59): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,59): warning :          *t++ = cosf(kPiBucketConstant * (bucket + 0.5f) * c);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/predictedspeeds.h(50,59): warning :                                                            ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(30,33): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(30,33): warning :          text_offset_(text_offset) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(30,33): warning :                                  ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(47,18): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(47,18): warning :      edgeindex_ = idx;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/sign.h(47,18): warning :                   ^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(75,21): warning : ‘valhalla::baldr::TransitStop::spare_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(73,25): warning : ‘unsigned char:1 valhalla::baldr::TransitStop::generated_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(18,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(18,3): warning :    TransitStop(const uint32_t one_stop_offset,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(18,3): warning :    ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(22,73): warning : conversion to ‘unsigned char:2’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(26,24): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(26,24): warning :      one_stop_offset_ = one_stop_offset;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(26,24): warning :                         ^~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(31,20): warning : conversion to ‘unsigned int:24’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(31,20): warning :      name_offset_ = name_offset;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/transitstop.h(31,20): warning :                     ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(78,61): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(95,18): warning : conversion to ‘unsigned int:22’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(95,18): warning :      edgeindex_ = idx;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(95,18): warning :                   ^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(118,27): warning : conversion to ‘std::vector<short unsigned int>::value_type {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(118,27): warning :        masks.push_back(stoi(item));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(118,27): warning :                        ~~~~^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(142,49): warning : conversion to ‘std::unordered_map<short unsigned int, std::__cxx11::basic_string<char> >::key_type {aka short unsigned int}’ from ‘unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(142,49): warning :                auto str = kTurnLaneNames.find(1u << i);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(142,49): warning :                                               ~~~^~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(179,38): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(179,38): warning :            lanemask |= turnlane_mask->second;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/turnlanes.h(179,38): warning :                                       ^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(52,8): warning : ‘valhalla::baldr::SignInfo::is_route_num_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(52,8): warning :    bool is_route_num_;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(52,8): warning :         ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(51,14): warning : ‘valhalla::baldr::Sign::Type valhalla::baldr::SignInfo::type_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/signinfo.h(22,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(118,22): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(118,22): warning :        l->set_heading(*pl.heading_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(118,22): warning :                       ^~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(120,33): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(120,33): warning :      l->set_heading_tolerance(pl.heading_tolerance_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(120,33): warning :                               ~~~^~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(121,35): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(121,35): warning :      l->set_node_snap_tolerance(pl.node_snap_tolerance_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(121,35): warning :                                 ~~~^~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(126,22): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(126,22): warning :      l->set_radius(pl.radius_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(126,22): warning :                    ~~~^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,29): warning : conversion to ‘float’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,62): warning : conversion to ‘float’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,57): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(127,57): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(128,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(128,37): warning :      l->set_street_side_tolerance(pl.street_side_tolerance_);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(128,37): warning :                                   ~~~^~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(208,51): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(208,51): warning :        l.heading_tolerance_ = loc.heading_tolerance();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(208,51): warning :                               ~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(211,55): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(211,55): warning :        l.node_snap_tolerance_ = loc.node_snap_tolerance();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(211,55): warning :                                 ~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(217,43): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(217,43): warning :        l.search_cutoff_ = loc.search_cutoff();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(217,43): warning :                           ~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(220,59): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(220,59): warning :        l.street_side_tolerance_ = loc.street_side_tolerance();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/pathlocation.h(220,59): warning :                                   ~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(60,23): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(60,23): warning :      currentcost_ = (c - (c % bucketsize));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(60,23): warning :                     ~~~^~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(70,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(70,48): warning :      size_t bucketcount = (range / bucketsize_) + 1;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/double_bucket_queue.h(70,48): warning :                           ~~~~~~~~~~~~~~~~~~~~~~^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(50,23): warning : conversion to ‘unsigned char:7’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(50,23): warning :        daterange.dow = dow;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(50,23): warning :                        ^~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(64,29): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(64,29): warning :        daterange.begin_hrs = begin_hrs;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(64,29): warning :                              ^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(78,30): warning : conversion to ‘unsigned char:6’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(78,30): warning :        daterange.begin_mins = begin_mins;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(78,30): warning :                               ^~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(90,31): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(90,31): warning :        daterange.begin_month = begin_month;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(90,31): warning :                                ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(105,33): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(105,33): warning :        daterange.begin_day_dow = begin_day_dow;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(105,33): warning :                                  ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(118,30): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(118,30): warning :        daterange.begin_week = begin_week;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(118,30): warning :                               ^~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(132,27): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(132,27): warning :        daterange.end_hrs = end_hrs;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(132,27): warning :                            ^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(146,28): warning : conversion to ‘unsigned char:6’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(146,28): warning :        daterange.end_mins = end_mins;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(146,28): warning :                             ^~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(158,29): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(158,29): warning :        daterange.end_month = end_month;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(158,29): warning :                              ^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(173,31): warning : conversion to ‘unsigned char:5’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(173,31): warning :        daterange.end_day_dow = end_day_dow;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(173,31): warning :                                ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(186,28): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(186,28): warning :        daterange.end_week = end_week;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/baldr/timedomain.h(186,28): warning :                             ^~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :          sortcost_(sortcost), distance_(dist) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :                                             ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(54,99): warning : conversion to ‘unsigned char:7’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :          sortcost_(sortcost), distance_(dist) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :                                             ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,52): warning : conversion to ‘unsigned char:7’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,52): warning :          edgeid_(edgeid), opp_index_(edge->opp_index()), opp_local_idx_(edge->opp_local_idx()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,52): warning :                                      ~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,91): warning : conversion to ‘unsigned char:7’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,91): warning :          edgeid_(edgeid), opp_index_(edge->opp_index()), opp_local_idx_(edge->opp_local_idx()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(55,91): warning :                                                                         ~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(56,15): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(56,15): warning :          mode_(static_cast<uint32_t>(mode)), endnode_(edge->endnode()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(56,15): warning :                ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning : conversion to ‘long unsigned int:48’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :          sortcost_(sortcost), distance_(dist) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(61,44): warning :                                             ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(57,14): warning : conversion to ‘unsigned char:6’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(57,14): warning :          use_(static_cast<uint32_t>(edge->use())),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(57,14): warning :               ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,25): warning : conversion to ‘unsigned char:3’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,25): warning :          classification_(static_cast<uint32_t>(edge->classification())), shortcut_(edge->shortcut()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,25): warning :                          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,97): warning : conversion to ‘unsigned char:1’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,97): warning :          classification_(static_cast<uint32_t>(edge->classification())), shortcut_(edge->shortcut()),
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(58,97): warning :                                                                                    ~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(94,22): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(94,22): warning :      path_distance_ = path_distance;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(94,22): warning :                       ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(524,13): warning : ‘valhalla::sif::BDEdgeLabel::transition_cost_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(521,32): warning : ‘unsigned char:1 valhalla::sif::BDEdgeLabel::not_thru_pruning_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(377,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(377,3): warning :    BDEdgeLabel(const uint32_t predecessor,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(377,3): warning :    ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(388,65): warning : conversion to ‘long unsigned int:63’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(388,65): warning :          transition_cost_(tc), not_thru_pruning_(not_thru_pruning) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(388,65): warning :                                                                  ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(524,13): warning : ‘valhalla::sif::BDEdgeLabel::transition_cost_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(521,32): warning : ‘unsigned char:1 valhalla::sif::BDEdgeLabel::not_thru_pruning_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(405,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(405,3): warning :    BDEdgeLabel(const uint32_t predecessor,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(405,3): warning :    ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(415,89): warning : conversion to ‘long unsigned int:63’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(415,89): warning :          opp_edgeid_(oppedgeid), transition_cost_(tc), not_thru_pruning_(not_thru_pruning) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(415,89): warning :                                                                                          ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(478,22): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(478,22): warning :      path_distance_ = path_distance;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(478,22): warning :                       ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning : conversion to ‘unsigned int:21’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning :          transit_operator_(transit_operator), has_transit_(has_transit) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning :                                                                       ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(564,70): warning : conversion to ‘short unsigned int:10’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(588,22): warning : conversion to ‘unsigned int:25’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(588,22): warning :      path_distance_ = path_distance;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(588,22): warning :                       ^~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(590,16): warning : conversion to ‘unsigned int:21’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(590,16): warning :      blockid_ = blockid;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/edgelabel.h(590,16): warning :                 ^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,29): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,29): warning :        max_up_transitions *= factor;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,29): warning :                              ^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,26): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘float’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,26): warning :        max_up_transitions *= factor;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/hierarchylimits.h(90,26): warning :        ~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/dynamiccost.h(578,17): warning : conversion to ‘float’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/dynamiccost.h(578,17): warning :        penalty = static_cast<uint32_t>(kMaxFerryPenalty * (1.0f - use_ferry * 2.0f));
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/sif/dynamiccost.h(578,17): warning :                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(318,96): warning : typedef ‘using queue_t = class std::map<T, std::_List_iterator<std::basic_fstream<char> >, std::function<bool(const T&, const T&)> >’ locally defined but not used [-Wunused-local-typedefs]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(571,25): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(571,25): warning :        for (int i = 0; i < sizeof(header_t); i++) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(571,25): warning :                        ~~^~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,19): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,19): warning :        return rsum == usum || rsum == sum;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,19): warning :               ~~~~~^~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,35): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,35): warning :        return rsum == usum || rsum == sum;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/midgard/sequence.h(577,35): warning :                               ~~~~~^~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/odin/enhancedtrippath.h(544,39): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘double’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/odin/enhancedtrippath.h(544,39): warning :      return mutable_node_->elapsed_time();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/odin/enhancedtrippath.h(544,39): warning :             ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(82,9): warning : ‘valhalla::thor::AStarHeuristic::costfactor_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(82,9): warning :    float costfactor_;                         // Cost factor - ensures the cost estimate
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(82,9): warning :          ^~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(81,33): warning : ‘valhalla::midgard::DistanceApproximator valhalla::thor::AStarHeuristic::distapprox_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/astarheuristic.h(20,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(29,12): warning : conversion to ‘unsigned char:4’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(29,12): warning :      set_ = static_cast<uint32_t>(set);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(29,12): warning :             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(30,14): warning : conversion to ‘unsigned int:28’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(30,14): warning :      index_ = index;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(30,14): warning :               ^~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(101,36): warning : conversion to ‘unsigned char:4’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(101,36): warning :        p->second[edgeid.id()].set_ =(uint32_t) static_cast<uint32_t>(set);  // svk added (uint32_t)
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/thor/edgestatus.h(101,36): warning :                                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(36,30): warning : conversion to ‘long unsigned int:46’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(120,13): warning : conversion to ‘unsigned char:4’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(120,13): warning :      mode_ = static_cast<uint32_t>(mode);
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(120,13): warning :              ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(142,57): warning : conversion to ‘unsigned int:31’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(167,40): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::meili::Label>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(167,40): warning :        const uint32_t idx = labels_.size();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(167,40): warning :                             ~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(184,40): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::meili::Label>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(184,40): warning :        const uint32_t idx = labels_.size();
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/routing.h(184,40): warning :                             ~~~~~~~~~~~~^~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(140,67): warning : conversion to ‘valhalla::meili::StateId::Time {aka unsigned int}’ from ‘std::vector<std::vector<valhalla::meili::State> >::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(140,92): warning : conversion to ‘valhalla::meili::StateId::Id {aka unsigned int}’ from ‘std::vector<valhalla::meili::State>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(150,12): warning : conversion to ‘valhalla::meili::StateId::Time {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(150,12): warning :      return time;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(150,12): warning :             ^~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(165,62): warning : conversion to ‘valhalla::meili::StateId::Time {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(165,62): warning :      if (state.stateid() != StateId(expected_time, expected_id)) {
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(165,62): warning :                                                               ^
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/state.h(165,62): warning : conversion to ‘valhalla::meili::StateId::Id {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/emission_cost_model.h(32,24): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/emission_cost_model.h(32,24): warning :      return sq_distance * inv_double_sq_sigma_z_;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/emission_cost_model.h(32,24): warning :             ~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/topk_search.h(124,36): warning : ‘valhalla::meili::EnlargedViterbiSearch::clone_end_time_’ will be initialized after [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/topk_search.h(119,41): warning : ‘std::unordered_map<valhalla::meili::StateId, valhalla::meili::StateId>& valhalla::meili::EnlargedViterbiSearch::initial_origins_’ [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/topk_search.h(47,3): warning : when initialized here [-Wreorder]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/topk_search.h(47,3): warning :    EnlargedViterbiSearch(IViterbiSearch& vs,
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/topk_search.h(47,3): warning :    ^~~~~~~~~~~~~~~~~~~~~
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/transition_cost_model.h(65,12): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/transition_cost_model.h(65,12): warning :      return clk_dist;
+/home/oem/projects/mkr_valhalla_linux_lib/valhalla/meili/transition_cost_model.h(65,12): warning :             ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(113,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(113,20): warning :   for (int i = 0; i < shape.size(); i++)
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(113,20): warning :                   ~~^~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(149,43): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(149,43): warning :    rMnv->set_azimuth(maneuver.begin_heading());
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(149,43): warning :                      ~~~~~~~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(155,41): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(155,41): warning :    rStep->set_distance(maneuver.length() * 1000.0);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(155,41): warning :                        ~~~~~~~~~~~~~~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(157,32): warning : conversion to ‘float’ from ‘google::protobuf::uint32 {aka unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(157,32): warning :    rStep->set_time(maneuver.time());
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(157,32): warning :                    ~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(170,30): warning : conversion to ‘float’ from ‘unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(170,30): warning :   rLeg->set_distance(trip_time);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(170,30): warning :                               ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(186,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(186,20): warning :   for (int j = 0; j < pnts.size(); j++)
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(186,20): warning :                   ~~^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(262,32): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘std::vector<valhalla::baldr::Location>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(262,32): warning :   uint32_t n = locations.size() - 1;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(262,32): warning :                ~~~~~~~~~~~~~~~~~^~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(375,11): warning : unused variable ‘rv’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(375,11): warning :       bool rv = process_vleg(vleg, rO, rLeg, options);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(375,11): warning :            ^~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(202,7): warning : unused variable ‘multi_run’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(202,7): warning :   bool multi_run = false;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(202,7): warning :        ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(203,7): warning : unused variable ‘match_test’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(203,7): warning :   bool match_test = false;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(203,7): warning :        ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(204,11): warning : unused variable ‘iterations’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(204,11): warning :   uint32_t iterations=0;
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(204,11): warning :            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(274,8): warning : unused variable ‘max_timedep_distance’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(274,8): warning :   float max_timedep_distance =
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(274,8): warning :         ^~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(446,21): warning : conversion to ‘int’ from ‘std::vector<float>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(446,21): warning :   int size = vIn.size();
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(446,21): warning :              ~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(457,17): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(457,17): warning :    p0.set_lat(lat);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(457,17): warning :                  ^
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(458,17): warning : conversion to ‘float’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(458,17): warning :    p0.set_lng(lon);
+C:\My\UC\UCLinux\mkr_linux\mkr_routing\src\valhalla_opt_route.cc(458,17): warning :                  ^
+  Archiving objects
+  mkr_routing.vcxproj -> C:\My\UC\UCLinux\mkr_linux\mkr_routing\bin\x64\Release\libmkr_routing.a

@@ -1,0 +1,14 @@
+
+package udorx_pbf;
+
+
+//option optimize_for = LITE_RUNTIME;
+
+import "udorx_common.proto";
+
+// [START java_declaration]
+option java_package = "com.mkr.models.proto";
+option java_outer_classname = "CommPackets";
+// [END java_declaration]
+
+

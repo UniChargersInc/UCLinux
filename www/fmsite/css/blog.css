@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+    font-size: 13px;
+}
+
+.wrap {
+    width: 100%;
+    margin: auto;
+    height:100%;
+    background: rgb(66, 135, 176);
+}
+
+.header {
+    margin: auto;
+    width: 80%;
+    min-height: 120px;
+    border-radius: 0px 0px 5px 5px;
+    line-height: 30px;
+    text-align: center;
+    text-align: center;
+    line-height: 40px;
+    padding-bottom: 10px;
+    font-size: 28px;
+    padding-top: 20px;
+    height: 150px;
+    background: rgb(66, 135, 176);
+}
+.top_logo {
+    background: url("../logos/logo_dark_green_2.png") no-repeat 5px -5px;
+    width: 190px;
+    height: 114px;
+    padding-right: 50px;
+    float: left;
+    display: block;
+}
+.top_menu {
+    padding-right: 20px;
+    font-size: 16px;
+    float: right;
+}
+
+.top_menu a {
+    padding: 0px 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    float: left;
+    display: block;
+    cursor: pointer;
+}
+
+.top_menu a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+
+/*-----------------------------------------------------------------*/
+.nav {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    margin-bottom: 12px;
+}
+/*-------blog-----------*/
+.blogleft {
+    width: 20%;
+    float: left;
+    min-height: 140px;
+   
+   
+}
+.blogcenter {
+    width: 60%;
+    float: left;
+    height: auto;
+    
+    
+}
+
+.blogright {
+    width: 20%;
+    float: left;
+    min-height: 140px;
+    
+}
+.blogright img {
+    margin-top:20px;
+}
+.btn-primary {
+color: #fff;
+background-color: #428bca;
+border-color: #357ebd;
+}
+.btn-primary:hover {
+    color: blue;
+    background-color: green;
+}
+.btnblog {
+    display: inline-block;
+    width: 20%;
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+/*------------------------------------------------------------------*/
+
+.nav1 {
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    margin-bottom: 12px;
+    background:white;
+}
+
+
+.container {
+    background: #ccc;
+}
+
+.left {
+    width: 30%;
+    height: 200px;
+    float: left;
+    background: #ffd800;
+}
+
+.right {
+    width: 70%;
+    height: 200px;
+    float: left;
+    background: #00d800;
+}
+
+.clear {
+    clear: both;
+}
+
+/*======================footer=================*/
+.footer {
+    height: 180px;
+    background: #000000;
+    font-size: 14px;
+    color:white;
+}
+.footer-text {
+    display: block;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.footer a {
+    color: blueviolet;
+    /*text-decoration: none;*/
+}
+.footer a:hover {
+    color:yellow;
+ }
+.grid_3, .grid_4, .grid_5{
+    display: inline;
+    float: left;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.container_12 {
+    width: 80%;
+    margin: 0 auto;
+   
+}
+
+.container_12 .grid_3 {
+    width: 130px;
+}
+
+.container_12 .grid_4 {
+    width: 300px;
+}
+.spacer-1 {
+    width: 100%;
+    /*padding: 2px 0;*/
+    margin-top:16px;
+    background: url(../images/spacer-1.gif) right top repeat-y;
+}
+.indent-top2 {
+    padding-top: 25px;
+}
+
+.prev-indent-bot {
+    margin-bottom: 10px;
+}
+.list-services {
+    padding: 22px 0 0 40px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.list-services li {
+    float: left;
+    padding: 0 4px 0 0;
+    list-style-type: none;
+    
+}
+
+.list-services a {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url(../images/social-icons.jpg) 0 0 no-repeat;
+}
+
+.list-services .item-2 {
+    background-position: -36px 0;
+}
+
+.list-services .item-3 {
+    background-position: -72px 0;
+}
+
+.list-services .item-4 {
+    background-position: -108px 0;
+}
+
+/*==============blog container================*/
+/*============for chat================*/
+
+/*.mkrwa_list_item span.chat_list_item {
+    font-weight: bold;
+    min-width: 100px;
+    float: left;
+    text-align: center;
+    color: #4a4;
+}*/
+.blog_container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    min-height: 100px;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.blog_darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.blog_container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.blog_container img {
+    float: left;
+    max-width: 140px;
+    width: 100%;
+    height:140px;
+    margin-right: 20px;
+    border-radius: 10%;
+}
+
+img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+    /*object-fit: cover;*/
+    width: 32px;
+    /*max-height:32px;*/
+    height: 32px;
+}
+
+.blog_time-right {
+    float: right;
+    margin-left: 20px;
+    margin-right: 0;
+    color: #aaa;
+}
+
+.blog_time-left {
+    float: left;
+    color: #999;
+}

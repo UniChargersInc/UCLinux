@@ -1,0 +1,32 @@
+
+# TODO
+
+This library is actually not complete.
+
+## C++ side
+
+ - There is no special handling of booleans - we just get the native behaviour 
+   of Cereal with I believe should conform to the json spec and support only
+   true or false. Some back ends may have out of spec implementations
+   that send other values, for example with capitalization (e.g. False) or
+   integers (e.g. 0 and 1). If this is truly an issue then cereal::boolean
+   needs to become a fleshed out struct instead of an alias for the native
+   boolean type.
+
+ - More thoroughly worked examples showing how the optional fields works and 
+   how this code can be deployed into a working product.
+
+## On the auto generation Python side:
+
+This is more of a wish list
+
+  - There could be a "schema-to-unit-tests.py" that accompanies the 
+    "schema-to-cpp-header2.py" for the auto generation of all the protocol 
+    related unit tests you could possible imagine.. In fact u could advocate
+    for a unit test driven approach where the we start writing both the unit 
+    tests and solve related issues on the C++ side above in parallel. Unit
+    test ideas include:
+
+    - Check encoding/decoding correctness - go for maximum coverage.
+    - Check exceptions are thrown on invalid enum types.
+

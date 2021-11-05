@@ -1,0 +1,80 @@
+﻿  alloc.c
+  base64-decode.c
+  context.c
+c:\my\linux\mkr_linux\websockets\wsock\context.c(159): warning C4133: '=': incompatible types - from 'pollfd *' to 'libwebsocket_pollfd *'
+c:\my\linux\mkr_linux\websockets\wsock\context.c(178): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\context.c(185): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\my\linux\mkr_linux\websockets\wsock\context.c(78): warning C4101: 'p': unreferenced local variable
+c:\my\linux\mkr_linux\websockets\wsock\context.c(80): warning C4101: 'i': unreferenced local variable
+  handshake.c
+c:\my\linux\mkr_linux\websockets\wsock\handshake.c(141): warning C4018: '<': signed/unsigned mismatch
+  header.c
+c:\my\linux\mkr_linux\websockets\wsock\header.c(105): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\my\linux\mkr_linux\websockets\wsock\header.c(163): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\my\linux\mkr_linux\websockets\wsock\header.c(205): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  libwebsockets.c
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(544): warning C4244: '=': conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(546): warning C4244: '=': conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(567): warning C4244: '=': conversion from 'unsigned __int64' to 'unsigned long', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(568): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(551): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(556): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(563): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(684): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+c:\my\linux\mkr_linux\websockets\wsock\libwebsockets.c(762): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  lws-plat-win.c
+c:\my\linux\mkr_linux\websockets\wsock\lws-plat-win.c(196): warning C4244: '=': conversion from 'long' to 'SHORT', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\lws-plat-win.c(344): warning C4244: '=': conversion from '__int64' to 'ULONG', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\lws-plat-win.c(333): warning C4996: 'inet_addr': Use inet_pton() or InetPton() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(1831): note: see declaration of 'inet_addr'
+c:\my\linux\mkr_linux\websockets\wsock\lws-plat-win.c(336): warning C4996: 'gethostbyname': Use getaddrinfo() or GetAddrInfoW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\um\winsock2.h(2219): note: see declaration of 'gethostbyname'
+  output.c
+c:\my\linux\mkr_linux\websockets\wsock\output.c(348): warning C4244: '=': conversion from 'short' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\output.c(369): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\output.c(375): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\output.c(376): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\output.c(393): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\output.c(394): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\output.c(395): warning C4267: '=': conversion from 'size_t' to 'unsigned char', possible loss of data
+  parsers.c
+c:\my\linux\mkr_linux\websockets\wsock\parsers.c(115): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\parsers.c(145): warning C4244: '=': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\parsers.c(372): warning C4244: '=': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\parsers.c(498): warning C4244: '=': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\parsers.c(505): warning C4244: '=': conversion from 'unsigned short' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\parsers.c(904): warning C4018: '<': signed/unsigned mismatch
+  pollfd.c
+  server-handshake.c
+c:\my\linux\mkr_linux\websockets\wsock\server-handshake.c(211): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\server-handshake.c(212): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\server-handshake.c(216): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\server-handshake.c(236): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\my\linux\mkr_linux\websockets\wsock\server-handshake.c(184): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\stdio.h(1774): note: see declaration of 'sprintf'
+  server.c
+c:\my\linux\mkr_linux\websockets\wsock\server.c(273): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\my\linux\mkr_linux\websockets\wsock\server.c(276): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+c:\my\linux\mkr_linux\websockets\wsock\server.c(376): warning C4996: 'stricmp': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _stricmp. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(549): note: see declaration of 'stricmp'
+  service.c
+c:\my\linux\mkr_linux\websockets\wsock\service.c(402): warning C4244: 'function': conversion from 'time_t' to 'unsigned int', possible loss of data
+  sha-1.c
+c:\my\linux\mkr_linux\websockets\wsock\sha-1.c(215): warning C4267: '+=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\sha-1.c(222): warning C4267: '+=': conversion from 'size_t' to 'unsigned char', possible loss of data
+c:\my\linux\mkr_linux\websockets\wsock\sha-1.c(253): warning C4267: '+=': conversion from 'size_t' to 'unsigned char', possible loss of data
+  ssl.c
+c:\my\linux\mkr_linux\websockets\wsock\ssl.c(33): warning C4996: 'strncpy': This function or variable may be unsafe. Consider using strncpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.17763.0\ucrt\string.h(338): note: see declaration of 'strncpy'
+  W_websockets.vcxproj -> C:\MY\Linux\mkr_linux\Release\W_websockets.lib

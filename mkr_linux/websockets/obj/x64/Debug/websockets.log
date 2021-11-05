@@ -1,0 +1,23 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  header.c
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(54,20): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(54,20): warning :   memcpy(*p, value, length);
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(54,20): warning :                     ^~~~~~
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(108,31): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(108,31): warning :   wsi->u.http.content_length = content_length;
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(108,31): warning :                                ^~~~~~~~~~~~~~
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(109,31): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(109,31): warning :   wsi->u.http.content_remain = content_length;
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(109,31): warning :                                ^~~~~~~~~~~~~~
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(201,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(201,37): warning :   m = libwebsocket_write(wsi, start, p - start, LWS_WRITE_HTTP_HEADERS);
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(201,37): warning :                                      ^
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(206,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(206,37): warning :   m = libwebsocket_write(wsi, start, n, LWS_WRITE_HTTP);
+C:\My\Linux\mkr_linux\websockets\wsock\header.c(206,37): warning :                                      ^
+  Archiving objects
+  websockets.vcxproj -> C:\My\Linux\mkr_linux\websockets\bin\x64\Debug\libwebsockets.a

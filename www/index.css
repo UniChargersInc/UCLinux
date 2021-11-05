@@ -1,0 +1,160 @@
+﻿
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url("m_files/main_bg.jpg");
+    /* background-size: auto;*/
+    background-size: cover;
+    height: 100%;
+    background-position: center;
+    font-family: sans-serif;
+}
+
+.main_bg {
+    background-image: url("m_files/main_bg.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    /*background-size: cover;*/
+    margin-bottom: 10px;
+    /*https://stackoverflow.com/questions/20565736/my-background-image-get-cut-off-at-the-bottom
+     min-height:776px;
+  width: 100%;
+    height:100vh; */
+}
+
+.header, .content, .footer {
+    width: 100%;
+    position: fixed;
+}
+
+.header {
+    height: 150px;
+}
+
+
+.h_column {
+    float: left;
+    width: 50%;
+    height: 150px;
+}
+
+.h_column_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.h_column_img1 {
+    display: block;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.content {
+    /*background: red;*/
+    top: 150px;
+    bottom: 120px;
+}
+
+
+/* Style the footer */
+.footer {
+    width: 100%;
+    text-align: center;
+    color: white;
+    bottom: 0;
+    height: 120px;
+}
+
+.f_col1, .f_col2, .f_col3 {
+    float: left;
+    height: 120px;
+}
+
+.f_col1 {
+    width: 20%;
+}
+
+.f_col2 {
+    width: 60%;
+    background: url("m_files/pl.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.f_col3 {
+    width: 20%;
+}
+
+.rh_column {
+    width: 80%;
+    height: 70%;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+    background: url("m_files/menu_main.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.top_menu {
+    width: 400px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding-right: 20px;
+    font-size: 20px;
+    float: right;
+}
+
+    .top_menu a {
+        padding: 0px 15px;
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        float: left;
+        display: block;
+        cursor: pointer;
+    }
+
+        .top_menu a:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 6px;
+        }
+
+.button-center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 2px solid #4CAF50;
+    border-radius: 6px;
+}
+
+.button {
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.button-center a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+}
+
+

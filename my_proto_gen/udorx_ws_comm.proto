@@ -1,0 +1,85 @@
+
+package udorx_pbf;
+
+import "udorx_comm.proto";
+import "udorx_common.proto";
+
+
+
+ message AssetData
+    {
+	   required int32 ID=1;//AssetID;
+        required int32 cid=2;//ClientID;
+	   required int32 grID=3;//GroupID;
+        required string username=4;
+        
+        required string Desc=5;//Description { get; set; }
+        
+        required string Did=6;//DeviceID { get; set; }
+       
+
+        required float lat=7;
+	   required float  lon=8;//required GEO_POINT_T center;//string  Center;
+        required int32 Spd=9; // Speed
+        required float Cog=10;//Direction;
+        required int64 TS=11;//LocalTimeStamp;
+        required int64 ITS=12;//InsertedTime;
+        required string Sensors=13;
+        required string Address=14;
+        required int32 type=15;       // asset type
+}
+
+
+message ClsGroup
+    {
+        required int32 ID=1;//GroupID { get; set; }
+
+        required string Desc=2;//Description { get; set; }
+
+        required string Img=3;//MapImage { get; set; }
+		required int32  Type=4;
+    }
+
+message PPointLL
+{
+ required float lat=1;
+ required float lon=2;
+}
+ message PoiData
+ {
+        required string ID=1;
+        required int32 grID=2;
+        required string Name=3;
+       
+        required float Radius=4;
+        required int32 Type=5;
+		required int32 color=6;
+        repeated PPointLL pnts=7;
+}
+
+
+message ClsLogin
+{
+	required CLogin lgn=1;
+      
+ 	repeated AssetData assets=2; //required AssetDataList assets=6; 
+    repeated ClsGroup a_groups=3; //optional  AssetGroupList a_groups=7;
+   
+ 	repeated PoiData pois=4;//optional PoiDataList pois=8;
+    repeated ClsGroup p_groups=5; //optional  PoiGroupList p_groups=9;
+	
+}
+
+
+message PEmplList
+{
+repeated PEmpl list=1;   //resource_list=1;
+
+}
+
+message RttHBList
+{
+	 repeated RttHB events=1;     //corresponds in JS events:Array[n]
+	 optional PCSList cs_list=2;  // 
+}
+

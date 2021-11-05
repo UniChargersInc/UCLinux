@@ -1,0 +1,437 @@
+
+.content_area_1 {
+    margin: 0px auto;
+    width: 100%;
+    height: 190px;
+    /* background: rgb(120, 165, 115); */
+    background:rgb(48, 152, 80);
+}
+
+.content_area {
+	margin: 0px auto; width: 1014px;
+	background-color:white;
+}
+@media all and (max-width:1024px)
+{
+.content_area {
+	width: 100%; padding-right: 10px; padding-left: 10px; box-sizing: border-box;
+}
+}
+
+
+.grid {
+	width: 100%; display: flex; flex-wrap: wrap; justify-content: center; -webkit-flex-wrap: wrap; -moz-flex-wrap: wrap; -webkit-justify-content: center; -moz-justify-content: center; -ms-justify-content: center;
+}
+
+/*============================================================*/
+
+.unid_hdr {
+	width: 80%;
+	
+	margin:0 auto;
+	/*background: rgb(120, 165, 115);  */
+	padding-top:20px;
+    padding-bottom:20px;
+	/*background:url(../images/border-bot.gif) left bottom repeat-x;*/
+	
+}
+.logo_unid_left{
+	float:left;
+	width:18%;
+}
+.logo_inid_slogan{
+	float:left;
+	width:80%;
+    
+}
+
+.centered {
+	text-align: center;
+}
+
+.t-margin25 {
+	margin-top: 25px;
+}
+.cell-padding :first-child.cell {
+	padding-left: 30px;
+}
+.cell-padding :last-child.cell {
+	padding-right: 30px;
+}
+.t-padded-10 {
+	padding-top: 10px;
+}
+
+.cell {
+	padding: 0px 30px; flex:1 0 160px; box-sizing: border-box; -webkit-flex: 1 0 190px; -moz-flex: 1 0 190px;
+}
+.cell-center {
+	align-self: center; -webkit-align-self: center; -moz-align-self: center; -ms-align-self: center;
+}
+.cell-top {
+	align-self: flex-start; -webkit-align-self: flex-start; -moz-align-self: flex-start; -ms-align-self: flex-start;
+}
+.filler {
+	flex:1 1 10px; -webkit-flex: 1 1 10px; -moz-flex: 1 1 10px;
+}
+
+.features_block .features_img a {
+	vertical-align: top; display: inline-block;
+}
+/*
+h3 {
+	margin: 12.5px 0px; color: rgb(78, 78, 78); font-size: 1.6em; font-weight: 400;
+}*/
+h2 {
+	margin: 12.5px 0px; color: rgb(78, 78, 78); line-height: 2em; font-size: 1.6em; font-weight: 400;
+}
+h2.main_title {
+	font-size: 1.4em;
+}
+h2.main_title {
+	color: rgb(78, 78, 78); font-weight: 400;
+}
+h2.main_title a {
+	color: rgb(78, 78, 78); font-weight: 400;
+}
+/*
+h2.main_title a:hover {
+	color: rgb(48, 152, 80); text-decoration: none;
+}*/
+h2.main_title a:focus {
+	color: rgb(48, 152, 80); text-decoration: none;
+}
+
+.my_charging_station_sol {
+    width: 100%;
+    height: 420px;
+    margin: 0 auto;
+    background: url(../img/feature-bg.jpg) no-repeat center top fixed;
+    background-size: cover !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+.btn {
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+
+
+    font-size: 24px;
+   
+    line-height: 2.0;
+    text-align: center;
+   
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 8px;
+}
+
+/*center div*/
+.cbtn {
+     margin: auto;
+    width: 50%;
+   /* border: 3px solid green; */
+}
+
+.btn-primary:hover {
+    color: blue;
+    background-color:green;
+}
+
+
+
+.my_empty {
+	width:100%;
+	height:40px;
+	margin:0 auto;
+	/*background-color:#0009FF;*/
+	background:url(../images/border-bot.gif) left bottom repeat-x;
+	
+}
+.my_empty_1 {
+	width:100%;
+	height:400px;
+	margin:0 auto;
+	/*background-color:#0009FF;*/
+	background:url(../images/border-bot.gif) left bottom repeat-x;
+	
+}
+.my_empty_2 {
+	width:100%;
+	height:100px;
+	margin:0 auto;
+	background-color:white;
+
+}
+
+.footer {
+	width:100%;
+	padding:39px 0;
+	/*background:url(../images/footer-tail.gif) left top repeat-x;*/
+	/*background-color: #E6E7F0;*/
+    background-color: #000000;
+}
+.footer-text {
+	display:block;
+	padding-left:40px;
+	padding-top:20px;
+}
+.list-services {
+	padding:12px 0 0 40px;
+	margin-bottom:12px;
+	overflow:hidden;
+}
+.list-services li {
+	float:left;
+	padding:0 4px 0 0;
+    list-style-type: none;
+}
+.list-services a {
+	display:block;
+	width:26px;
+	height:26px;
+	background:url(../images/social-icons.jpg) 0 0 no-repeat;
+}
+.list-services .item-2 {
+	background-position:-36px 0;
+}
+.list-services .item-3 {
+	background-position:-72px 0;
+}
+.list-services .item-4 {
+	background-position:-108px 0;
+}
+.indent-top2 {
+	padding-top:15px;
+}
+.prev-indent-bot {
+	margin-bottom:10px;
+}
+
+.grid_1, .grid_2, .grid_3, .grid_4, .grid_5, .grid_6, .grid_7, .grid_8, .grid_9, .grid_10, .grid_11, .grid_12 {
+	display:inline;
+	float: left;
+	position: relative;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.container_12 {
+	width:80%;
+    margin:0 auto;
+}
+.container_12 .grid_3 {
+	width:130px;
+}
+.container_12 .grid_4 {
+	width:300px;
+}
+
+.spacer-1 {
+	width:100%;
+	padding:2px 0;
+	background:url(../images/spacer-1.gif) right top repeat-y;
+}
+
+.wrapper
+{
+	width:80%;
+    margin:0 auto;
+}
+.wrapper li a:hover
+{
+	color:blue;
+}
+
+.cu_wrapper {
+    width: 50%;
+    margin: 0 auto;
+}
+.cu_wrapper_1
+{
+	width:50%;
+    margin:0 auto;
+    overflow:hidden;
+}
+.cu_msg_wrapper
+{
+	width:100%;
+    margin-bottom:10px;
+}
+.extra-wrap {
+	overflow:hidden;
+}
+#reg_notif {
+    color:blue;
+    display:none;
+	font-size: 14px;
+}
+
+/* http://sonspring.com/journal/clearing-floats */
+
+.clear {
+	clear: both;
+	display: block;
+	overflow: hidden;
+	visibility: hidden;
+	width: 0;
+	height: 0;
+}
+
+/*--------------services.css--------*/
+.srv-wrapper-components
+{
+    background-color:white;
+    width:100%;
+    height:1050px;
+
+}
+.srv_wrapper {
+    width: 50%;
+    margin: 0 auto;
+    height:100%;
+}
+.groupingTop {
+	position: relative; 
+
+}
+.groupingTop > img {
+	width: 100%;
+}
+.groupingTop .groupingTopText {
+	left: 20px;
+	top: 60px;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	position: absolute;
+	width: 686px;
+}
+.groupingTop .groupingTopText h2 {
+	width: 276px; color: rgb(255, 255, 255); line-height: 29px; font-size: 35px;
+}
+.groupingTop .groupingTopText h2 span {
+	display: block;
+}
+.groupingTop .groupingTopText div {
+	width: 260px;
+}
+.featureTop1.groupingTop .groupingTopBg {
+	
+}
+.clearfix {
+	-ms-zoom: 1;
+}
+
+.m_table { 
+ 
+  display: table; 
+  width:100%;
+  background-color:white;
+  margin-top:20px;
+} 
+.m_TRow
+    {
+        display: table-row;
+        /*background: url(/files/images/img07.gif) repeat-x rgb(255, 255, 255);*/
+    }
+.m_TCell { 
+
+  display: table-cell; 
+  width:33%;
+
+   /*border: solid;
+        border-width: thin; */
+        padding-left: 5px;
+        padding-right: 5px;
+} 
+.m_THeading
+    {
+        display: table-row;
+        font-weight: bold;
+        text-align: center;
+    }
+
+.m_TCell img {      
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    /*width: 89px; height: 88px; margin-right: 10px; margin-bottom: 15px; vertical-align: middle;*/
+}
+
+.hos_info_main {
+	width:80%;
+	height:520px;
+	margin:0px auto;
+}
+.hos_grid_1
+{
+	width:34%;
+	float:left;
+	height:520px;
+}
+.hos_grid_2
+{
+	width:30%;
+	float:left;
+	height:520px;
+}
+.hos_grid_3
+{
+	width:34%;
+	float:left;
+	height:520px;
+    
+}
+.hos_grid_2 img {      
+    display: block;
+   /* margin-left: auto;
+    margin-right: auto;*/
+	margin: auto;
+    padding-top:38px;        /*align to center could not do it elegant*/
+}
+.hos_row_title{
+	float:left;
+	width:70%;
+	height:100%;
+}
+.hos_row_img{
+	float:left;
+	width:30%;
+    height:100%;
+	
+    text-align: center;
+}
+
+.hos_row_img img
+{
+	display: inline-block;
+    padding-top:38px;        /*align to center could not do it elegant*/
+}
+
+.hos_row_title h3
+{
+	font-size:24px;
+	color:white;
+	text-align:center;
+}
+.hos_row_title h2 {
+    
+    font-size:18px;
+	padding-left:0px;
+	color:white;
+	text-align:center;
+}
+.hos_wrapper {
+    width:100%;
+    height:33%;
+}
+
+
+

@@ -1,0 +1,111 @@
+﻿@charset "utf-8";
+/*
+body {
+	background-color: #C0C0C0;
+	color: #000;
+	font-family: "Varela Round", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 1.5em;
+	background:url(../images/content-tail.gif) center top repeat;
+}
+*/
+.content_area_address {
+	margin: 0px auto; 
+    width: 90%;
+    height:200px;
+}
+
+input {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	-webkit-appearance: none;
+}
+
+/* ---------- contact_us ---------- */
+#contact_us textarea {
+	float:left;
+	height:100px;
+	min-height:100px;
+	max-height:120px;
+	width:90%;
+	
+	font-size:13px;
+	line-height:1.23em;
+	color:0;
+	padding:5px 10px;
+	margin:0px auto;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+	border:none;
+	background:#eee;
+	overflow:auto;
+	outline:none;
+}
+#contact_us {
+	margin: 0px auto;
+	margin-top:50px;
+	width: 80%;
+}
+
+#contact_us h2 {
+	/*background-color: #f95252;*/
+	background-color: #3148DE;
+	-webkit-border-radius: 20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	color: #fff;
+	font-size: 20px;
+	padding: 10px 16px;
+}
+/*
+#contact_us h2 span[class*="fontawesome-"] {
+	margin-right: 14px;
+}
+*/
+#contact_us fieldset {
+	background-color: #fff;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+	padding: 20px 26px;
+}
+
+#contact_us fieldset p {
+	color: #777;
+	margin-bottom: 14px;
+}
+
+#contact_us fieldset p:last-child {
+	margin-bottom: 0;
+}
+
+#contact_us fieldset input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#contact_us fieldset input[type="text"], #contact_us fieldset input[type="password"] {
+	background-color: #eee;
+	color: #777;
+	padding: 4px 10px;
+	width: 328px;
+}
+
+#contact_us fieldset input[type="submit"] {
+	background-color: #3148DE;  /*#33cc77;*/
+	color: #fff;
+	display: block;
+	margin: 0 auto;
+	padding: 4px 0;
+	width: 100px;
+}
+
+#contact_us fieldset input[type="submit"]:hover {
+	/*background-color: #28ad63;*/
+	background-color: #9148DE;
+	
+}
+

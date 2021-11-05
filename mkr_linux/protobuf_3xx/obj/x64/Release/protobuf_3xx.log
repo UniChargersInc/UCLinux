@@ -1,0 +1,55 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  text_format.cc
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\io\coded_stream.h(1139,20): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\io\coded_stream.h(1139,20): warning :      int size = end - target;
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\io\coded_stream.h(1139,20): warning :                 ~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(89,27): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(93,27): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(178,36): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(178,36): warning :      if ('A' <= *i && *i <= 'Z') *i += 'a' - 'A';
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(178,36): warning :                                  ~~~^~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(186,36): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(186,36): warning :      if ('a' <= *i && *i <= 'z') *i += 'A' - 'a';
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(186,36): warning :                                  ~~~^~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(357,18): warning : conversion to ‘google::protobuf::int32 {aka int}’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(357,18): warning :      return strtol(nptr, endptr, base);
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(357,18): warning :             ~~~~~~^~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(364,19): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(364,19): warning :      return strtoul(nptr, endptr, base);
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\stubs\strutil.h(364,19): warning :             ~~~~~~~^~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(177,34): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(177,34): warning :    if (locations == NULL || index >= locations->size()) {
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(177,34): warning :                             ~~~~~~^~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(190,30): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(190,30): warning :    if (trees == NULL || index >= trees->size()) {
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(190,30): warning :                         ~~~~~~^~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(714,62): warning : conversion to ‘int’ from ‘google::protobuf::int64 {aka long long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(714,62): warning :            enum_value = enum_type->FindValueByNumber(int_value);
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(714,62): warning :                                                               ^
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1137,24): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1137,24): warning :          indent_.size() < initial_indent_level_ * 2) {
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1137,24): warning :          ~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1147,31): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1147,31): warning :      Print(str.data(), str.size());
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1147,31): warning :                        ~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1152,23): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1152,23): warning :      Print(text, strlen(text));
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1152,23): warning :                  ~~~~~~^~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1191,41): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1191,41): warning :        Write(indent_.data(), indent_.size());
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1191,41): warning :                              ~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1263,61): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1280,61): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1302,61): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1568,21): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1568,21): warning :    for (int i = 0; i < fields.size(); i++) {
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1568,21): warning :                    ~~^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1790,16): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1790,16): warning :        if (size < value.size()) {
+C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\google\protobuf\text_format.cc(1790,16): warning :            ~~~~~^~~~~~~~~~~~~~
+  Archiving objects
+  protobuf_3xx.vcxproj -> C:\My\UC\UCLinux\mkr_linux\protobuf_3xx\bin\x64\Release\libprotobuf_3xx.a

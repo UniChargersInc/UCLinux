@@ -1,0 +1,46 @@
+img.logo.menu{
+	width: 50%;
+}
+
+.sidebar-nav {
+    margin-top: 0;
+}
+
+.sidebar-nav p:first-child{
+	text-align: center;
+}
+
+.sidebar  > ul > li {
+        font-weight: 700;
+        margin: 0;
+		color:red; !important;
+}
+
+.sidebar-nav ul li p{
+	font-weight: 1900;
+	color:red; !important;
+}
+/*
+.sidebar-nav ul li a.section-link{
+	font-weight: 900;
+	color:darkblue; !important;
+}
+
+.sidebar-nav ul ul li p a.section-link{
+	font-weight: 400;
+	color:dodgerblue;
+}*/
+
+.sidebar-nav ul li a{
+	font-weight: bold;
+	font-size:22px;
+	color:darkblue; 
+	text-align: left;
+}
+
+.sidebar-nav ul ul li a{
+	font-weight: bold;
+	font-size:18px;
+	color:dodgerblue;
+}
+

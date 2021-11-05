@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head> 
+	
+		<title>Grizzl-E Smart OCPP Portal Connection Guide</title> 
+		<style>
+		
+
+			h1   {
+				font-family: 'Open Sans';
+				font-style: normal;
+				text-decoration: bold; 
+				font-size: 24px; 
+			}
+			
+			h2	{
+				font-family: 'Open Sans'; 
+				font-style: normal; 
+				text-decoration: bold;
+				font-size: 20px;
+			}
+			
+			h3	{
+				font-family: 'Open Sans'; 
+				font-style: normal; 
+				text-decoration: bold; 
+				font-size: 18px;
+			}
+				
+			
+			p    {
+			font-family: 'Open Sans'; 
+			font-style: normal; 
+			font-size: 16px;
+			}
+			
+			
+			.accordion {
+				background-color: #eee;
+				color: #444;
+				cursor: pointer;
+				padding: 1vw;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 16px;
+				font-family: 'Open Sans';
+				transition: 0.4s;
+			}
+
+			.active, .accordion:hover {
+				background-color: #ccc; 
+			}
+
+			.panel {
+				padding: 0 1vw;
+				display: none;
+				background-color: white;
+				overflow: hidden;
+			}
+			
+			
+		
+			ol {
+				font-family: 'Open Sans'; 
+				font-size: 16px;
+				line-height: 1.6;
+			}
+			
+			ul {
+				font-family: 'Open Sans'; 
+				font-size: 16px;
+				line-height: 1.6;
+			}
+			
+			#customers {
+				font-family: 'Open Sans';
+				font-size: 16px; 
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			#customers td, #customers th {
+				border: 1px solid #ddd;
+				padding: 1.5vw;
+				width: 50%;
+			}
+
+			#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+			#customers tr:hover {background-color: #ddd;}
+
+			#customers th {
+				padding-top: 2vw;
+				padding-bottom: 2vw;
+				font-family: 'Open Sans'; 
+				text-align: left;
+				background-color: #5FB3CE;
+				color: white;
+			}
+			
+			#blank	{
+				font-family: 'Open Sans';
+				font-size: 16px;
+				width: 40%;
+			}	
+				
+			#blank td {
+				border: 0px;
+				padding: 2vw;
+			}	
+			
+			
+		</style>
+	</head>
+	
+	<body> 
+		<h1>Connect to United Chargers OCPP Portal</h1>
+			<body> 
+		<button class="accordion">Step 1: Create an Account</button>
+			<div class="panel">
+			
+			<p>Create an Account</p>
+				<ol>
+					<li>On acharger.ca select the <b>Login</b> button.</li>
+					<li>Select the <b>Sign Up</b> button.</li>
+					<li>Enter your Full Name and Email Address.</li>
+					<li>Create a Username and Password.</li>
+					<li>Select the <b>Register</b> button.</li>
+				</ol>
+				
+				<p>Login to Account</p>
+				<ol>
+					<li>Select the <b>Login</b> button.</li>
+					<li>Enter Username and Password.</li>
+					<li>Select the <b>Sign In</b> button.</li>
+				</ol>
+				
+				<p>Forgot Password</p>
+				<ol>
+					<li>Send an email to info@unitedchargers.com.</li>
+					<li>Include the following information:
+						<ul>
+							<li>Username</li>
+							<li>Email</li>
+							<li>Charger Serial Number</li>
+						</ul>
+					</li>	
+				</ol>
+			</div>
+			
+			<button class="accordion">Step 2: Add Device</button>
+			<div class="panel">
+			<p>Once you have logged on to acharger.ca:</p>
+				<ol>
+					<li>Go to the Charging Stations tab.</li>
+					<li>Select the <b>Add</b> button from the top menu.</li>
+					
+				<img src="Add_device.png" width="25%" alt="Add a Device">
+					<li>Enter the Charger Serial Number into the Serial Number Field.</li>
+						<ul>
+							<li>Note: Other information on the unit can be filled out but is not necessary. Only the Serial Number is needed.</li>
+						</ul>
+					<li>Select the <b>Create</b> button.</li>
+				</ol>
+			</div>	
+				
+				
+			<button class="accordion">Step 3: Wi-Fi Configuration</button>
+			<div class="panel">	
+						
+			
+			<p>Grizzl-E Smart only connects to a 2.4ghz Wi-FI frequency. Ensure your network has a dedicated 2.4ghz WI-Fi band with its own SSID. Before connecting Grizzl-E Smart, check the network frequency in network properties on your 
+				PC or Android.</p> 
+			<p>For Dual Band 2.4ghz/5ghz Routers, do one of the following:</p>
+			<ul>
+				<li>Create a separate SSID for the 2.4ghz and 5ghz networks - for example, network_name and network_name-5G.</li>
+				<li>On Routers that have the ability, turn off 5G band and connect to 2.4ghz band.</li>
+				<li>Install a 2.4ghz Wi-Fi extender with a separate extension network for the charger.</li>
+				<li>Grizzl-E Smart will charge with or without a Wi-Fi connection, Without a Wi-Fi connection OCPP Smart Features will not be available.</li> 
+			</ul>	
+				<p>Before connecting to the network, check the strength and Encryption type of the Wi-Fi signal:</p>
+				<ol> 
+					<li>Plug in the charger. Ensure indicator light is alternating blue and purple</li> 
+					<li>Open the Wi-Fi settings on your phone or desktop</li> 
+					<li>Select the network <b>UC_Smart_[ChargerSerial#]</b>.</li> 
+					<li>Open the internet browser on your device.</li> 
+					<li>Open the internet browser on your device.</li>
+					<li> A webpage will load. Select the <b>Show Available Networks</b> button.</li>
+					<li> A list of available networks will display with RSII Strength and Encryption Type.</li> 
+				</ol>
+			
+				<p>Signal Strength</p>
+				<table id="customers"
+					<tr>
+						<th>RSII in dBm</td> 
+						<th>Signal Strength</td>
+					</tr> 
+					 
+					<tr> 
+						<td>50</td>
+												<td>Excellent</td> 
+					</tr>
+					<tr>
+						<td>60</td> 
+						<td>Very Good</td> 
+					</tr>
+					<tr> 
+						<td>70</td>
+						<td>Good</td>
+					</tr> 
+					<tr>	
+						<td>80</td> 
+						<td>Low</td>
+					</tr>
+					<tr>
+						<td>90</td> 
+						<td>Very Low</td>
+					</tr>
+					<tr> 
+						<td>0</td>
+						<td>No Signal</td>
+					</tr> 
+				</table> 
+				
+				<p>The RSSI must be between 50-79 to update the charger and use smart features. If the RSSI reading is above 80 install a Wi-Fi repeater to increase the signal strength or move the Wi-Fi router closer to the charger.</p>
+
+			</div>			
+		
+		<button class="accordion">Step 4: Connect Charger To Wi-Fi Network</button>
+			<div class="panel">
+					
+				<p>To connect your Grizzl-E Smart to Wi-Fi:</p>  
+				<ol>
+					<li>Ensure charger is plugged in and indicator light is Alternating Blue/Purple.</li>
+					<li>Open the Wi-Fi settings on your computer or cell phone.</li>
+					<li>Select the network <b>UC_Smart_[ChargerSerial#]</b>*.</li>
+					<li>Open your browser.</li>
+					<li>Enter the IP address <b>192.168.4.1</b> into the browser search bar.</li>
+					<li>A webpage will load. Select the Enter Router Credentials button.</li>
+				<img src="enter_credentials.png" width="25%" alt="Enter Network Credentials">	
+					<li>Enter the SSID** and Password for your Wi-Fi network. Leave acharger.ca in the Portal URL.</li>
+					<li>Select the <b>Enter Credentials</b> button.</li>
+					<li>Verify that you are connected. If connection is successful the indicator light will alternate between Blue and Light Blue.</li>
+					<li>Disconnect your smartphone from UC_Smart_#### and re-connect to your local network.</li>
+					<li>Close the browser page.</li>
+				</ol>
+				<p>*Note: Your device may state that the Wi-Fi network is not connected to the internet. Continue without Internet until the end of the procedure.</p>
+				<p>**SSID is the network name.</p>
+				
+			
+		</div>
+			
+			
+		
+			
+		<button class="accordion">Step 5: Ensure Device is Connected</button>
+			<div class="panel">
+			
+						
+				<img src="Charger_Status.png" alt="Charging Station" width="50%" height="auto">
+				<p>After Connecting the device to the Wi-Fi network and adding the device ensure the device is connected to acharger.ca.</p>
+				<p>The connection status will show red with <b>Connected</b>. The indicator light on the charger will be alternating Blue/Turquoise</p>
+				
+				<p>If the device shows as Not Connected to the acharger.ca portal try the following steps:</p>
+				<ul>
+					<li>Ensure the Indicator light on the device is alternating between Blue and Turquoise.</li>
+					<li>Wait 2 minutes for the charger and portal to establish a connection.</li>
+					<li>Refresh the acharger.ca page and log back in.</li>
+					<li>Power Cycle the Charger by unplugging it and plugging it back in.</li> 
+					<li>Ensure the serial number on acharger.ca matches the one on the label.</li>
+					<li>Reset the Wi-Fi Board as described in the <a href="https://grizzl-e.com/grizzl-e-smart-manual/" target="blank">User Manual</a></li>
+				</ul>
+			</div>
+			
+			
+			
+			<br>
+	
+		<h1>Connect to AmpUp OCPP Portal</h1>
+		<button class="accordion">Step 1: Wi-Fi Configuration</button>
+			<div class="panel">
+			<p>Grizzl-E Smart only connects to a 2.4ghz Wi-FI frequency. Ensure your network has a dedicated 2.4ghz WI-Fi band with its own SSID. Before connecting Grizzl-E Smart, check the network frequency in network properties on your 
+				PC or Android.</p> 
+			<p>For Dual Band 2.4ghz/5ghz Routers, do one of the following:</p>
+			<ul>
+				<li>Create a separate SSID for the 2.4ghz and 5ghz networks — for example, network_name and network_name-5G.</li>
+				<li>On Routers that have the ability, turn off 5G band and connect to 2.4ghz band.</li>
+				<li>Install a 2.4ghz Wi-Fi extender with a separate extension network for the charger.</li>
+				<li>Grizzl-E Smart will charge with or without a Wi-Fi connection, Without a Wi-Fi connection OCPP Smart Features will not be available.</li> 
+			</ul>	
+				<p>Before connecting to the network, check the strength and Encryption type of the Wi-Fi signal:</p>
+				<ol> 
+					<li>Plug in the charger. Ensure indicator light is alternating blue and purple</li> 
+					<li>Open the Wi-Fi settings on your phone or desktop</li> 
+					<li>Select the network <b>UC_Smart_[ChargerSerial#]</b>.</li> 
+					<li>Open the internet browser on your device.</li> 
+					<li>Open the internet browser on your device.</li>
+					<li> A webpage will load. Select the <b>Show Available Networks</b> button.</li>
+					<li> A list of available networks will display with RSII Strength and Encryption Type.</li> 
+				</ol>
+			
+				<p>Signal Strength</p>
+				<table id="customers"
+					<tr>
+						<th>RSII in dBm</td> 
+						<th>Signal Strength</td>
+					</tr> 
+					 
+					<tr> 
+						<td>50</td>
+												<td>Excellent</td> 
+					</tr>
+					<tr>
+						<td>60</td> 
+						<td>Very Good</td> 
+					</tr>
+					<tr> 
+						<td>70</td>
+						<td>Good</td>
+					</tr> 
+					<tr>	
+						<td>80</td> 
+						<td>Low</td>
+					</tr>
+					<tr>
+						<td>90</td> 
+						<td>Very Low</td>
+					</tr>
+					<tr> 
+						<td>0</td>
+						<td>No Signal</td>
+					</tr> 
+				</table> 
+				
+				<p>The RSSI must be between 50-79 to update the charger and use smart features. If the RSSI reading is above 80 install a Wi-Fi repeater to increase the signal strength or move the Wi-Fi router closer to the charger.</p>
+
+			</div>
+			
+			
+		<button class="accordion">Step 2: Connect to Wi-Fi Network</button>
+			<div class="panel">
+			
+		<p>To connect your Grizzl-E Smart to Wi-Fi:</p>  
+				<ol>
+					<li>Ensure charger is plugged in and indicator light is Alternating Blue/Purple.</li>
+					<li>Open the Wi-Fi settings on your computer or cell phone.</li>
+					<li>Select the network <b>UC_Smart_[ChargerSerial#]</b>*.</li>
+					<li>Open your browser.</li>
+					<li>Enter the IP address <b>192.168.4.1</b> into the browser search bar.</li>
+					<li>A webpage will load. Select the Enter Router Credentials button.</li>
+				<img src="enter_credentials.png" width="25%" alt="Enter Network Credentials">	
+					<li>Enter the SSID** and Password for your Wi-Fi network.</li>
+					<li>In the Portal URL field enter the following URL: <b>centralsystem.ampup.io/ocpp/united-chargers/[ChargerSerial#].</b> Use the Charger Serial Number found on the white label.</li>
+					<li>Select the <b>Enter Credentials</b> button.</li>
+					<li>Verify that you are connected. If connection is successful the indicator light will alternate between Blue and Light Blue.</li>
+					<li>Disconnect your smartphone from UC_Smart_#### and re-connect to your local network.</li>
+					<li>Close the browser page.</li>
+				</ol>
+				<p>*Note: Your device may state that the Wi-Fi network is not connected to the internet. Continue without Internet until the end of the procedure.</p>
+				<p>**SSID is the network name.</p>
+				
+			</div>	
+		<button class="accordion">Step 3: Set Up Charger on AmpUp</button>
+			<div class="panel">
+			
+				<p>To set up your Grizzl-E Smart Charger on AmpUp:</p>
+				<ol>
+					<li>Download the AmpUp App from the Apple Store or Google Play.</li>
+					<li>Create an Account on the AmpUp app.</li>
+					<li>From the home screen/log in screen, tap the profile icon in the top left.</li>
+				<img src="AmpUPMap.png" width="12.5%" alt="Profile Icon">
+					<li>Select the User Settings Icon above your name.</li>
+				<img src="AmpUP1.png" width="12.5%" alt="AmpUp User Settings Icon">
+					<li>Select the <b>My Home Charger</b> field.</li>
+					<li>Select the <b>Add Charger</b> button.</li>
+					<li>Select Grizzl-E from the Charger Brand drop down list.</li>
+					<li>Enter the Charger Serial Number in the <b>Charger ID:</b> field.</li>
+					<li>Fill any other optional information about the charger.</li>
+				</ol>
+				</div>
+	<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+			panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+			});
+			}
+		</script>
+	
+	</body> 
+</html>

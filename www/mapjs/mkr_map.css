@@ -1,0 +1,65 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+#legend {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-family: sans-serif;
+}
+
+    #legend div {
+        display: inline-block;
+        padding: 5px;
+        margin: 0;
+    }
+
+
+
+#foo_right_bottom {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+#foo_center_bottom {
+    position: fixed;
+    left: 50%;
+    bottom: 0px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+/* slide panel*/
+.panel {
+    width: 300px;
+    float: left;
+    height: 550px;
+    background: #d9dada;
+    position: relative;
+    left: -300px;
+    transition: 0.5s;
+}
+
+.slider-arrow {
+    padding: 5px;
+    width: 10px;
+    float: left;
+    background: #d9dada;
+    font: 400 14px Arial;
+    font-weight: bold;
+    color: #000;
+    text-decoration: none;
+    position: relative;
+    left: -300px;
+    transition: 0.5s;
+}
+

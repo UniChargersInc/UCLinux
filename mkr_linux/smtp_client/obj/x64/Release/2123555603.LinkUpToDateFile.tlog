@@ -1,0 +1,1 @@
+ar -rsc  "/home/mkr/projects/smtp_client/bin/x64/Release/libsmtp_client.a" /home/mkr/projects/smtp_client/obj/x64/Release/base64.o /home/mkr/projects/smtp_client/obj/x64/Release/CSmtp.o /home/mkr/projects/smtp_client/obj/x64/Release/md5.o /home/mkr/projects/smtp_client/obj/x64/Release/mx_lookup.o /home/mkr/projects/smtp_client/obj/x64/Release/send_email.o

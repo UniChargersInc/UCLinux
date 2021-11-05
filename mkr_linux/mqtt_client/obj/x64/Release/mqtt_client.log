@@ -1,0 +1,46 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  mosquittopp.cpp
+cc1plus : warning : /usr/bin/openssl: not a directory
+  logging_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  memory_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  messages_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  mosquitto.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  net_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  read_handle.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  read_handle_client.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  read_handle_shared.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  send_client_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  send_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  socks_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  srv_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  thread_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  time_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  tls_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  util_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+C:\My\UC\UCLinux\mkr_linux\mqtt_client\lib_src\util_mosq.c(73,41): warning : ‘remaining_bytes[4]’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+C:\My\UC\UCLinux\mkr_linux\mqtt_client\lib_src\util_mosq.c(73,41): warning :    packet->payload[i+1] = remaining_bytes[i];
+C:\My\UC\UCLinux\mkr_linux\mqtt_client\lib_src\util_mosq.c(73,41): warning :                           ~~~~~~~~~~~~~~~^~~
+  will_mosq.c
+cc1 : warning : /usr/bin/openssl: not a directory
+  Archiving objects
+  mqtt_client.vcxproj -> C:\My\UC\UCLinux\mkr_linux\mqtt_client\bin\x64\Release\libmqtt_client.a

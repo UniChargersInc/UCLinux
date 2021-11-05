@@ -1,0 +1,532 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  alloc.c
+  base64-decode.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(64,17): warning : conversion to ‘unsigned char’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(64,17): warning :      triple[i] = *in++;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(64,17): warning :                  ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(115,9): warning : conversion to ‘unsigned char’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(115,9): warning :      v = *in++;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(115,9): warning :          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(116,9): warning : conversion to ‘unsigned char’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(118,10): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(122,17): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(122,17): warning :        quad[i] = v - 1;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(122,17): warning :                  ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(133,13): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(133,13): warning :     *out++ = quad[0] << 2 | quad[1] >> 4;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(133,13): warning :              ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(135,13): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(135,13): warning :     *out++ = quad[1] << 4 | quad[2] >> 2;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(135,13): warning :              ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(137,13): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(137,13): warning :     *out++ = ((quad[2] << 6) & 0xc0) | quad[3];
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(137,13): warning :              ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(167,11): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(167,11): warning :            strlen(plaintext[test]), buf, sizeof buf);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\base64-decode.c(167,11): warning :            ^~~~~~
+  context.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(155,37): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(155,37): warning :       sizeof(struct libwebsocket *)) *
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(155,37): warning :                                      ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(129,47): message : in definition of macro ‘lwsl_notice’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(129,47): message :  #define lwsl_notice(...) _lws_log(LLL_NOTICE, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(129,47): message :                                                ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(158,79): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(158,79): warning :   context->fds =(struct pollfd*) lws_zalloc(sizeof(struct libwebsocket_pollfd) *
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(158,79): warning :                                                                                ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(78,8): warning : unused variable ‘p’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(78,8): warning :   char *p;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\context.c(78,8): warning :         ^
+  handshake.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(114,7): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(114,7): warning :    len -= (buf - last_char);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(114,7): warning :        ^~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(50,36): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(141,21): message : in expansion of macro ‘min’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(141,21): message :     body_chunk_len = min(wsi->u.http.content_remain,len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(141,21): message :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(50,19): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(141,21): message : in expansion of macro ‘min’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(141,21): message :     body_chunk_len = min(wsi->u.http.content_remain,len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(141,21): message :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(143,8): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(143,8): warning :     len -= body_chunk_len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(143,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(149,11): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(149,11): warning :       buf, body_chunk_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(149,11): warning :            ^~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(146,9): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(146,9): warning :      n = wsi->protocol->callback(
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(146,9): warning :          ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(159,10): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(159,10): warning :       n = wsi->protocol->callback(
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\handshake.c(159,10): warning :           ^~~
+  header.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(54,20): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(54,20): warning :   memcpy(*p, value, length);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(54,20): warning :                     ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(108,31): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(108,31): warning :   wsi->u.http.content_length = content_length;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(108,31): warning :                                ^~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(109,31): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(109,31): warning :   wsi->u.http.content_remain = content_length;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(109,31): warning :                                ^~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(201,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(201,37): warning :   m = libwebsocket_write(wsi, start, p - start, LWS_WRITE_HTTP_HEADERS);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(201,37): warning :                                      ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(206,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(206,37): warning :   m = libwebsocket_write(wsi, start, n, LWS_WRITE_HTTP);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\header.c(206,37): warning :                                      ^
+  libwebsockets.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(173,11): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(173,11): warning :            eff_buf.token_len) != eff_buf.token_len) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(173,11): warning :            ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(288,28): warning : suggest braces around empty body in an ‘else’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(288,28): warning :        wsi->mode, old_state);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(288,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(311,55): warning : suggest braces around empty body in an ‘if’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(315,52): warning : suggest braces around empty body in an ‘if’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(365,11): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(365,11): warning :      name, name_len, NULL, 0, 0))
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(365,11): warning :            ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(696,29): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(696,29): warning :   context->http_proxy_port = atoi(p + 1);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(696,29): warning :                              ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(748,125): warning : suggest braces around empty body in an ‘else’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(879,9): warning : negative integer implicitly converted to unsigned type [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(879,9): warning :   return -1;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.c(879,9): warning :          ^
+  lws-plat-unix.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(14,53): warning : conversion to ‘long long unsigned int’ from ‘__suseconds_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(14,53): warning :   return ((unsigned long long)tv.tv_sec * 1000000LL) + tv.tv_usec;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(14,53): warning :                                                      ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(20,47): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(20,47): warning :   return read(context->fd_random, (char *)buf, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(20,47): warning :                                                ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(20,9): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(20,9): warning :   return read(context->fd_random, (char *)buf, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(20,9): warning :          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(123,25): warning : conversion to ‘nfds_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(123,25): warning :   n = poll(context->fds, context->fds_count, timeout_ms);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(123,25): warning :                          ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(153,16): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(153,16): warning :                 context->fds[wsi->position_in_fds_table].events & POLLIN;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(153,16): warning :                 ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(258,31): warning : conversion to ‘__uid_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(258,31): warning :    struct passwd *p = getpwuid(info->uid);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(258,31): warning :                                ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(261,27): warning : conversion to ‘__gid_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(261,27): warning :     initgroups(p->pw_name, info->gid);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(261,27): warning :                            ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(262,15): warning : conversion to ‘__uid_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(262,15): warning :     if (setuid(info->uid))
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(262,15): warning :                ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(270,14): warning : conversion to ‘__gid_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(270,14): warning :    if (setgid(info->gid))
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(270,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(278,65): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(278,65): warning :   context->lws_lookup = lws_zalloc(sizeof(struct libwebsocket *) * context->max_fds);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(278,65): warning :                                                                  ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(468,13): warning : conversion to ‘long unsigned int’ from ‘__off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(468,13): warning :   *filelen = stat_buf.st_size;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(468,13): warning :              ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(475,33): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(475,33): warning :   return inet_ntop(af, src, dst, cnt);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\lws-plat-unix.c(475,33): warning :                                  ^~~
+  output.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(105,10): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(105,10): warning :    return len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(105,10): warning :           ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(130,38): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(130,38): warning :   n = lws_ssl_capable_write(wsi, buf, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(130,38): warning :                                       ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(151,30): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(151,30): warning :    wsi->truncated_send_offset += n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(151,30): warning :                               ^~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(152,27): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(152,27): warning :    wsi->truncated_send_len -= n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(152,27): warning :                            ^~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(157,8): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(157,8): warning :     n = real_len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(157,8): warning :         ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(197,13): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(197,13): warning :     real_len - n > wsi->truncated_send_allocation) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(197,13): warning :              ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(200,45): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(200,45): warning :    wsi->truncated_send_allocation = real_len - n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(200,45): warning :                                              ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(200,36): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(200,36): warning :    wsi->truncated_send_allocation = real_len - n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(200,36): warning :                                     ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(201,52): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(201,52): warning :    wsi->truncated_send_malloc = lws_malloc(real_len - n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(201,52): warning :                                                     ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message : in definition of macro ‘lws_malloc’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :  #define lws_malloc(S) lws_realloc(NULL, S)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(204,19): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(204,19): warning :           real_len - n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(204,19): warning :                    ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message : in definition of macro ‘lwsl_err’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :  #define lwsl_err(...) _lws_log(LLL_ERR, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :                                          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(209,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(209,37): warning :   wsi->truncated_send_len = real_len - n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(209,37): warning :                                      ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(209,28): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(209,28): warning :   wsi->truncated_send_len = real_len - n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(209,28): warning :                             ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(210,55): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(210,55): warning :   memcpy(wsi->truncated_send_malloc, buf + n, real_len - n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(210,55): warning :                                                        ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(215,9): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(215,9): warning :   return real_len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(215,9): warning :          ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(288,22): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(288,22): warning :   eff_buf.token_len = len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(288,22): warning :                       ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(314,8): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(314,8): warning :   len = eff_buf.token_len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(314,8): warning :         ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(347,14): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(347,14): warning :      buf[0] = wsi->u.ws.close_reason >> 8;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(347,14): warning :               ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(348,14): warning : conversion to ‘unsigned char’ from ‘short int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(348,14): warning :      buf[1] = wsi->u.ws.close_reason;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(348,14): warning :               ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(368,16): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(368,16): warning :     buf[-pre] = n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(368,16): warning :                 ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(369,20): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(369,20): warning :     buf[-pre + 1] = len | is_masked_bit;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(369,20): warning :                     ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(373,17): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(373,17): warning :      buf[-pre] = n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(373,17): warning :                  ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(375,21): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(375,21): warning :      buf[-pre + 2] = len >> 8;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(375,21): warning :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(376,21): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(376,21): warning :      buf[-pre + 3] = len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(376,21): warning :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(379,17): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(379,17): warning :      buf[-pre] = n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(379,17): warning :                  ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(383,22): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(383,22): warning :       buf[-pre + 3] = len >> 48;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(383,22): warning :                       ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(384,22): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(384,22): warning :       buf[-pre + 4] = len >> 40;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(384,22): warning :                       ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(385,22): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(385,22): warning :       buf[-pre + 5] = len >> 32;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(385,22): warning :                       ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(392,21): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(392,21): warning :      buf[-pre + 6] = len >> 24;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(392,21): warning :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(393,21): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(393,21): warning :      buf[-pre + 7] = len >> 16;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(393,21): warning :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(394,21): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(394,21): warning :      buf[-pre + 8] = len >> 8;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(394,21): warning :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(395,21): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(395,21): warning :      buf[-pre + 9] = len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(395,21): warning :                      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(469,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(469,18): warning :               len + pre + post);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(469,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(469,24): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(469,24): warning :               len + pre + post);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(469,24): warning :                         ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(495,51): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(495,51): warning :   n = lws_issue_raw_ext_access(wsi, buf - pre, len + pre + post);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(495,51): warning :                                                    ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(495,57): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(495,57): warning :   n = lws_issue_raw_ext_access(wsi, buf - pre, len + pre + post);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(495,57): warning :                                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(499,15): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(499,15): warning :   if (n == len + pre + post) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(499,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(499,21): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(499,21): warning :   if (n == len + pre + post) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(499,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(502,10): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(502,10): warning :    return orig_len;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(502,10): warning :           ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(138,12): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(138,12): warning :    amount = read(fd, buf, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(138,12): warning :             ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(536,3): message : in expansion of macro ‘compatible_file_read’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(536,3): message :    compatible_file_read(n, wsi->u.http.fd, context->service_buffer,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(536,3): message :    ^~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(542,24): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(542,24): warning :     wsi->u.http.filepos += n;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(542,24): warning :                         ^~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(543,57): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(543,57): warning :     m = libwebsocket_write(wsi, context->service_buffer, n,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(543,57): warning :                                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(584,27): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(584,27): warning :   n = recv(wsi->sock, buf, len, 0);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(584,27): warning :                            ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(584,6): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(584,6): warning :   n = recv(wsi->sock, buf, len, 0);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(584,6): warning :       ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(602,27): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(602,27): warning :   n = send(wsi->sock, buf, len, MSG_NOSIGNAL);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(602,27): warning :                            ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(602,6): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(602,6): warning :   n = send(wsi->sock, buf, len, MSG_NOSIGNAL);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(602,6): warning :       ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(610,30): warning : suggest braces around empty body in an ‘if’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(610,30): warning :     lws_set_blocking_send(wsi);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\output.c(610,30): warning :                               ^
+  parsers.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(33,6): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(33,6): warning :   c = tolower(c);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(33,6): warning :       ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(145,33): warning : conversion to ‘unsigned char’ from ‘short unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(145,33): warning :   wsi->u.hdr.ah->frag_index[h] = wsi->u.hdr.ah->next_frag_index;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(145,33): warning :                                  ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(170,12): warning : conversion to ‘signed char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(170,12): warning :    return c - '0';
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(170,12): warning :           ~~^~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(173,18): warning : conversion to ‘signed char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(173,18): warning :    return c - 'a' + 10;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(173,18): warning :           ~~~~~~~~^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(176,18): warning : conversion to ‘signed char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(176,18): warning :    return c - 'A' + 10;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(176,18): warning :           ~~~~~~~~^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(194,46): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(194,46): warning :   wsi->u.hdr.ah->data[wsi->u.hdr.ah->pos++] = c;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(194,46): warning :                                               ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(258,20): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(258,20): warning :     if (char_to_hex(c) < 0) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(258,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(266,27): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(266,27): warning :     wsi->u.hdr.esc_stash = c;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(266,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(271,20): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(271,20): warning :     if (char_to_hex(c) < 0) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(271,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(276,42): warning : conversion to ‘unsigned char’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(276,42): warning :      if (libwebsocket_parse(context, wsi, wsi->u.hdr.esc_stash) < 0)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(276,42): warning :                                           ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(282,18): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(282,18): warning :       char_to_hex(c);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(282,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(281,8): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(281,8): warning :     c = (char_to_hex(wsi->u.hdr.esc_stash) << 4) |
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(281,8): warning :         ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(372,8): warning : conversion to ‘unsigned char’ from ‘short unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(372,8): warning :         wsi->u.hdr.ah->next_frag_index;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(372,8): warning :         ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(407,46): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(407,46): warning :      lextable_decode(wsi->u.hdr.lextable_pos, c);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(407,46): warning :                                               ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(407,5): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(407,5): warning :      lextable_decode(wsi->u.hdr.lextable_pos, c);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(407,5): warning :      ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(445,8): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(445,8): warning :     n = ((unsigned int)lextable[wsi->u.hdr.lextable_pos] << 8) |
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(445,8): warning :         ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(498,8): warning : conversion to ‘unsigned char’ from ‘short unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(498,8): warning :         wsi->u.hdr.ah->next_frag_index;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(498,8): warning :         ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(505,8): warning : conversion to ‘unsigned char’ from ‘short unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(505,8): warning :         wsi->u.hdr.ah->next_frag_index;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(505,8): warning :         ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(546,11): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(546,11): warning :            atoi(lws_hdr_simple_ptr(wsi, WSI_TOKEN_VERSION));
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(546,11): warning :            ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(707,32): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(707,32): warning :    wsi->u.ws.rx_packet_length = c << 8;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(707,32): warning :                                 ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(825,48): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(825,48): warning :            (wsi->u.ws.rx_user_buffer_head++)] = c;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(825,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(829,8): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(829,8): warning :         c ^ wsi->u.ws.frame_masking_nonce_04[
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(829,8): warning :         ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(910,45): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(910,45): warning :      wsi->u.ws.ping_payload_buf = lws_malloc(wsi->u.ws.rx_user_buffer_head
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(910,45): warning :                                              ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message : in definition of macro ‘lws_malloc’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :  #define lws_malloc(S) lws_realloc(NULL, S)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(912,36): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(912,36): warning :      wsi->u.ws.ping_payload_alloc = wsi->u.ws.rx_user_buffer_head;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(912,36): warning :                                     ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(918,5): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(918,5): warning :      wsi->u.ws.rx_user_buffer_head);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(918,5): warning :      ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(920,33): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(920,33): warning :     wsi->u.ws.ping_payload_len = wsi->u.ws.rx_user_buffer_head;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(920,33): warning :                                  ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(960,31): warning : suggest braces around empty body in an ‘if’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(960,31): warning :               wsi->u.ws.opcode);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(960,31): warning :                                ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(986,43): warning : suggest braces around empty body in an ‘if’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(986,43): warning :          lwsl_info("Doing pong callback\n");
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(986,43): warning :                                            ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(995,7): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(995,7): warning :        eff_buf.token_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\parsers.c(995,7): warning :        ^~~~~~~
+  pollfd.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\pollfd.c(156,28): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\pollfd.c(156,28): warning :   pa.events = pfd->events = (pfd->events & ~_and) | _or;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\pollfd.c(156,28): warning :                             ^
+  server-handshake.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server-handshake.c(188,46): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server-handshake.c(188,46): warning :   libwebsockets_SHA1(context->service_buffer, n, hash);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server-handshake.c(188,46): warning :                                               ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server-handshake.c(249,9): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server-handshake.c(249,9): warning :          p - response, LWS_WRITE_HTTP_HEADERS);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server-handshake.c(249,9): warning :          ^
+  server.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(87,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(87,33): warning :         (struct sockaddr_in *)v, n) < 0) {
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(87,33): warning :                                  ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(98,22): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(98,22): warning :   n = bind(sockfd, v, n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(98,22): warning :                       ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(156,27): warning : conversion to ‘unsigned char:2’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(156,27): warning :   wsi->rxflow_change_to &= ~LWS_RXFLOW_PENDING_CHANGE;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(156,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(285,37): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(285,37): warning :            wsi->user_space, uri_ptr, uri_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(285,37): warning :                                      ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(298,34): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(298,34): warning :         wsi->user_space, uri_ptr, uri_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(298,34): warning :                                   ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(556,7): warning : conversion to ‘int’ from ‘size_t {aka const long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(556,7): warning :    n = wsi->protocol->rx_buffer_size;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(556,7): warning :        ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(560,41): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(560,41): warning :    wsi->u.ws.rx_user_buffer = lws_malloc(n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(560,41): warning :                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message : in definition of macro ‘lws_malloc’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :  #define lws_malloc(S) lws_realloc(NULL, S)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1130,34): warning : conversion to ‘unsigned char:2’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1130,34): warning :  #define LWS_SSL_ENABLED(context) (context->use_ssl)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1130,34): warning :                                   ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(605,21): message : in expansion of macro ‘LWS_SSL_ENABLED’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(605,21): message :   new_wsi->use_ssl = LWS_SSL_ENABLED(context);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(605,21): message :                      ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(733,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(733,33): warning :         context->service_buffer, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(733,33): warning :                                  ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(910,109): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(910,109): warning :   if (lws_add_http_header_by_token(context, wsi, WSI_TOKEN_HTTP_CONTENT_TYPE, (unsigned char *)content_type, strlen(content_type), &p, end))
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(910,109): warning :                                                                                                              ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(918,28): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(918,28): warning :    memcpy(p, other_headers, other_headers_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(918,28): warning :                             ^~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(926,8): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(926,8): warning :         p - response, LWS_WRITE_HTTP_HEADERS);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(926,8): warning :         ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(957,31): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(957,31): warning :     lws_rxflow_cache(wsi, buf, n, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(957,31): warning :                                ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(957,34): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(957,34): warning :     lws_rxflow_cache(wsi, buf, n, len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\server.c(957,34): warning :                                   ^~~
+  service.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(170,13): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(170,13): warning :              eff_buf.token_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(170,13): warning :              ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(327,34): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(327,34): warning :   wsi->rxflow_buffer = lws_malloc(len - n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(327,34): warning :                                   ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message : in definition of macro ‘lws_malloc’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :  #define lws_malloc(S) lws_realloc(NULL, S)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\private-libwebsockets.h(1223,41): message :                                          ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(330,38): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(330,38): warning :   memcpy(wsi->rxflow_buffer, buf + n, len - n);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(330,38): warning :                                       ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(402,57): warning : conversion to ‘unsigned int’ from ‘time_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(402,57): warning :     if (libwebsocket_service_timeout_check(context, wsi, now))
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(402,57): warning :                                                          ^~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(531,28): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(576,12): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(576,12): warning :             eff_buf.token_len);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(576,12): warning :             ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(591,36): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(590,14): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(590,14): warning :     pending = pending > sizeof(context->service_buffer)?
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\service.c(590,14): warning :               ^~~~~~~
+  sha-1.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(215,12): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(215,12): warning :    COUNT += padlen;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(215,12): warning :             ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(222,11): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(222,11): warning :   COUNT += (padlen - 8);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(222,11): warning :            ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(253,12): warning : conversion to ‘unsigned char’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(253,12): warning :    COUNT += copysiz;
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\sha-1.c(253,12): warning :             ^~~~~~~
+  ssl.c
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(33,47): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(33,47): warning :   strncpy(buf, info->ssl_private_key_password, size);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(33,47): warning :                                                ^~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(36,9): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(36,9): warning :   return strlen(buf);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(36,9): warning :          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(73,25): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(73,25): warning :           x509_ctx, ssl, preverify_ok);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(73,25): warning :                          ^~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(131,11): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(131,11): warning :    error = ERR_get_error();
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(131,11): warning :            ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(133,28): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(133,28): warning :     error, ERR_error_string(error,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(133,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message : in definition of macro ‘lwsl_err’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :  #define lwsl_err(...) _lws_log(LLL_ERR, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :                                          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(139,11): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(139,11): warning :    error = ERR_get_error();
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(139,11): warning :            ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(141,28): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(141,28): warning :     error, ERR_error_string(error,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(141,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message : in definition of macro ‘lwsl_err’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :  #define lwsl_err(...) _lws_log(LLL_ERR, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :                                          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(197,12): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(197,12): warning :     error = ERR_get_error();
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(197,12): warning :             ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(201,22): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(201,22): warning :      ERR_error_string(error,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(201,22): warning :                       ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message : in definition of macro ‘lwsl_err’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :  #define lwsl_err(...) _lws_log(LLL_ERR, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :                                          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(212,13): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(212,13): warning :      error = ERR_get_error();
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(212,13): warning :              ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(216,24): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(216,24): warning :        ERR_error_string(error,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(216,24): warning :                         ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message : in definition of macro ‘lwsl_err’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :  #define lwsl_err(...) _lws_log(LLL_ERR, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :                                          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(499,30): warning : suggest braces around empty body in an ‘if’ statement [-Wempty-body]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(499,30): warning :     lws_set_blocking_send(wsi);
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(499,30): warning :                               ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(547,23): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(547,23): warning :       ERR_error_string(SSL_get_error(new_wsi->ssl, 0), NULL));
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(547,23): warning :                        ^
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message : in definition of macro ‘lwsl_err’
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :  #define lwsl_err(...) _lws_log(LLL_ERR, __VA_ARGS__)
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\libwebsockets.h(131,41): message :                                          ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(608,7): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(608,7): warning :    n = recv(wsi->sock, context->service_buffer,
+C:\My\UC\UCLinux\mkr_linux\websockets\wsock\ssl.c(608,7): warning :        ^~~~
+  Archiving objects
+  websockets.vcxproj -> C:\My\UC\UCLinux\mkr_linux\websockets\bin\x64\Release\libwebsockets.a

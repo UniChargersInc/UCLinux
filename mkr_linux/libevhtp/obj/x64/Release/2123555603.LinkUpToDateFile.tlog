@@ -1,0 +1,1 @@
+ar -rsc  "/home/mkr/projects/libevhtp/bin/x64/Release/liblibevhtp.a" /home/mkr/projects/libevhtp/obj/x64/Release/evhtp.o /home/mkr/projects/libevhtp/obj/x64/Release/evthr.o /home/mkr/projects/libevhtp/obj/x64/Release/htparse.o

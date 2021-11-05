@@ -1,0 +1,1537 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  buffer.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(633,49): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(633,49): warning :    if ((chain = evbuffer_expand_singlechain(buf, size)) == NULL)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(633,49): warning :                                                  ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(637,29): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(637,29): message :    vec[0].iov_len = (size_t) CHAIN_SPACE_LEN(chain);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(637,29): message :                              ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(641,34): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(641,34): warning :    if (_evbuffer_expand_fast(buf, size, n_vecs)<0)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(641,34): warning :                                   ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(689,40): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(689,40): message :    if ((size_t)vec[0].iov_len > (size_t)CHAIN_SPACE_LEN(buf->last))
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(689,40): message :                                         ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(702,6): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(702,6): message :   if (CHAIN_SPACE_LEN(*firstchainp) == 0) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(702,6): message :       ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(713,32): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(713,32): message :        (size_t)vec[i].iov_len > CHAIN_SPACE_LEN(chain))
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(713,32): message :                                 ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(793,19): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(793,19): warning :    chain->misalign += chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(793,19): warning :                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(793,22): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(793,22): warning :    chain->misalign += chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(793,22): warning :                       ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1004,21): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1004,21): warning :      chain->misalign += chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1004,21): warning :                      ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1004,24): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1004,24): warning :      chain->misalign += chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1004,24): warning :                         ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1014,20): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1014,20): warning :     chain->misalign += remaining;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1014,20): warning :                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1014,23): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1014,23): warning :     chain->misalign += remaining;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1014,23): warning :                        ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1036,27): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1036,27): warning :    if (evbuffer_drain(buf, n)<0)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1036,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1084,11): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1084,11): warning :   result = nread;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1084,11): warning :            ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1162,18): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1162,18): warning :   chain->misalign += datlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1162,18): warning :                   ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1162,21): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1162,21): warning :   chain->misalign += datlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1162,21): warning :                      ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1197,10): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1197,10): warning :    size = buf->total_len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1197,10): warning :           ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1212,19): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1212,19): warning :   remaining = size - chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1212,19): warning :                    ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1212,14): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1212,14): warning :   remaining = size - chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1212,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1219,13): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1219,13): warning :    remaining -= tmp->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1219,13): warning :              ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1219,16): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1219,16): warning :    remaining -= tmp->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1219,16): warning :                 ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1224,7): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1224,7): message :    if (CHAIN_SPACE_LEN(chain) < size - chain->off) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1224,7): message :        ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1224,37): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1224,37): warning :    if (CHAIN_SPACE_LEN(chain) < size - chain->off) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1224,37): warning :                                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1230,14): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1230,14): warning :    tmp->off = size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1230,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1231,8): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1231,8): warning :    size -= old_off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1231,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1231,11): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1231,11): warning :    size -= old_off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1231,11): warning :            ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1233,31): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1233,31): warning :   } else if (chain->buffer_len - chain->misalign >= (size_t)size) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1233,31): warning :                                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1238,14): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1238,14): warning :    tmp->off = size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1238,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1239,8): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1239,8): warning :    size -= old_off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1239,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1239,11): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1239,11): warning :    size -= old_off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1239,11): warning :            ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1242,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1242,33): warning :    if ((tmp = evbuffer_chain_new(size)) == NULL) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1242,33): warning :                                  ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1247,14): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1247,14): warning :    tmp->off = size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1247,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1259,8): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1259,8): warning :    size -= chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1259,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1259,11): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1259,11): warning :    size -= chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1259,11): warning :            ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1270,51): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1270,51): warning :    memcpy(buffer, chain->buffer + chain->misalign, size);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1270,51): warning :                                                    ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1272,14): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1272,14): warning :    chain->off -= size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1272,14): warning :               ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1315,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1315,33): warning :     it->_internal.pos_in_chain = cp - buffer;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1315,33): warning :                                  ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,28): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,28): warning :     it->pos += (cp - buffer - i);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,12): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,12): warning :     it->pos += (cp - buffer - i);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,15): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,15): warning :     it->pos += (cp - buffer - i);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1316,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1319,11): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1319,11): warning :    it->pos += chain->off - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1319,11): warning :            ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1319,14): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1319,14): warning :    it->pos += chain->off - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1319,14): warning :               ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1337,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1364,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1364,33): warning :     it->_internal.pos_in_chain = cp - buffer;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1364,33): warning :                                  ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,29): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,29): warning :     it->pos += (cp - buffer) - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,29): warning :                              ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,12): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,12): warning :     it->pos += (cp - buffer) - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,15): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,15): warning :     it->pos += (cp - buffer) - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1365,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1368,11): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1368,11): warning :    it->pos += chain->off - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1368,11): warning :            ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1368,14): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1368,14): warning :    it->pos += chain->off - i;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1368,14): warning :               ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1422,39): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1422,39): warning :   return chain->buffer[chain->misalign + off];
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1422,39): warning :                                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1422,22): warning : conversion to ‘char’ from ‘unsigned char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1422,22): warning :   return chain->buffer[chain->misalign + off];
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1422,22): warning :          ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1451,17): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1451,17): warning :    extra_drain = evbuffer_strspn(&it2, "\r\n");
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1451,17): warning :                  ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1518,14): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1518,14): warning :   n_to_copy = it.pos;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1518,14): warning :               ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1669,22): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1669,22): warning :     chain->misalign = chain->buffer_len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1669,22): warning :                       ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1676,20): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1676,20): warning :     chain->misalign -= datlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1676,20): warning :                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1676,23): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1676,23): warning :     chain->misalign -= datlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1676,23): warning :                        ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1704,18): warning : conversion to ‘ev_misalign_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1704,18): warning :   tmp->misalign = tmp->buffer_len - datlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1704,18): warning :                   ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1756,17): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1756,17): message :   if (*chainp && CHAIN_SPACE_LEN(*chainp) == 0)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1756,17): message :                  ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1771,6): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1771,6): message :   if (CHAIN_SPACE_LEN(chain) >= datlen) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1771,6): message :       ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1801,6): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1801,6): message :   if (CHAIN_SPACE_LEN(chain) < chain->buffer_len / 8 ||
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1801,6): message :       ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1807,22): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1807,22): message :    if (chain->next && CHAIN_SPACE_LEN(chain->next) >= datlen) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1807,22): message :                       ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1885,28): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1885,28): message :     size_t space = (size_t) CHAIN_SPACE_LEN(chain);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1885,28): message :                             ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1934,21): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1934,21): message :     avail = (size_t) CHAIN_SPACE_LEN(chain);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(1934,21): message :                      ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2048,6): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2048,6): message :   if (CHAIN_SPACE_LEN(*firstchainp) == 0) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2048,6): message :       ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2054,27): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2054,27): message :    size_t avail = (size_t) CHAIN_SPACE_LEN(chain);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2054,27): message :                            ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2055,24): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2055,24): warning :    if (avail > (howmuch - so_far) && exact)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2055,24): warning :                         ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2056,20): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2056,20): warning :     avail = howmuch - so_far;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2056,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2118,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2118,33): warning :   if (_evbuffer_expand_fast(buf, howmuch, NUM_READ_IOVEC) == -1) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2118,33): warning :                                  ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2152,7): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2152,7): warning :    n = readv(fd, vecs, nvecs);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2152,7): warning :        ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2189,27): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2189,27): message :    size_t space = (size_t) CHAIN_SPACE_LEN(*chainp);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2189,27): message :                            ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2198,19): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2198,19): warning :     (*chainp)->off += remaining;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2198,19): warning :                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2208,17): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2208,17): warning :   buf->total_len += n;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2208,17): warning :                  ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2209,20): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2209,20): warning :   buf->n_add_for_cb += n;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2209,20): warning :                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2295,12): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2295,12): warning :     howmuch -= chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2295,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2295,15): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2295,15): warning :     howmuch -= chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2295,15): warning :                ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2314,6): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2314,6): warning :   n = writev(fd, iov, i);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2314,6): warning :       ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2357,9): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2357,9): warning :   return (res);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2357,9): warning :          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2388,13): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2388,13): warning :    howmuch = buffer->total_len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2388,13): warning :              ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2416,26): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2416,26): warning :    evbuffer_drain(buffer, n);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2416,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2441,44): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2441,44): warning :    search = evbuffer_pullup(buffer, ptr.pos + len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2441,44): warning :                                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2441,36): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2441,36): warning :    search = evbuffer_pullup(buffer, ptr.pos + len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2441,36): warning :                                     ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2461,14): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2461,14): warning :    pos->pos = position;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2461,14): warning :               ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2472,12): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2472,12): warning :    pos->pos += position;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2472,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2472,15): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2472,15): warning :    pos->pos += position;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2472,15): warning :                ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2512,15): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka const long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2512,15): warning :       pos->pos + len > buf->total_len)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2512,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2577,31): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2577,31): warning :     pos._internal.pos_in_chain += p - start_at;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2577,31): warning :                                ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2593,12): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2593,12): warning :     pos.pos += chain->off - pos._internal.pos_in_chain;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2593,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2593,15): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2593,15): warning :     pos.pos += chain->off - pos._internal.pos_in_chain;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2593,15): warning :                ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2620,16): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2620,16): warning :    len_so_far = chain->off
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2620,16): warning :                 ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2626,21): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2626,21): warning :     vec[0].iov_len = len_so_far;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2626,21): warning :                      ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2636,9): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2636,9): warning :    len = buffer->total_len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2636,9): warning :          ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2652,14): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2652,14): warning :    len_so_far += chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2652,14): warning :               ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2652,17): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2652,17): warning :    len_so_far += chain->off;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2652,17): warning :                  ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(133,45): warning : conversion to ‘long unsigned int’ from ‘ev_misalign_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2690,20): message : in expansion of macro ‘CHAIN_SPACE_LEN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2690,20): message :    space = (size_t) CHAIN_SPACE_LEN(chain);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2690,20): message :                     ^~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2707,15): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2707,15): warning :     chain->off += sz;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2707,15): warning :                ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2708,19): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2708,19): warning :     buf->total_len += sz;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2708,19): warning :                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2709,22): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2709,22): warning :     buf->n_add_for_cb += sz;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2709,22): warning :                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2716,49): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2716,49): warning :    if ((chain = evbuffer_expand_singlechain(buf, sz + 1)) == NULL)
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2716,49): warning :                                                  ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2801,61): warning : conversion to ‘long unsigned int’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2801,61): warning :       (ev_uint64_t)offset > (ev_uint64_t)(EVBUFFER_CHAIN_MAX - length))
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2801,61): warning :                                                              ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2820,23): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2820,23): warning :    chain->buffer_len = length + offset;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2820,23): warning :                        ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2821,16): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2821,16): warning :    chain->off = length;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2821,16): warning :                 ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2832,25): warning : conversion to ‘long unsigned int’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2832,25): warning :     outbuf->n_add_for_cb += length;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2832,25): warning :                          ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2839,29): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2839,29): warning :    void *mapped = mmap(NULL, length + offset, PROT_READ,
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2839,29): warning :                              ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2862,19): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2862,19): warning :     munmap(mapped, length);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2862,19): warning :                    ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2868,23): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2868,23): warning :    chain->buffer_len = length + offset;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2868,23): warning :                        ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2869,16): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2869,16): warning :    chain->off = length + offset;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2869,16): warning :                 ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2880,25): warning : conversion to ‘long unsigned int’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2880,25): warning :     outbuf->n_add_for_cb += length;
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2880,25): warning :                          ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2885,27): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2885,27): warning :     evbuffer_drain(outbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2885,27): warning :                            ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2910,38): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2910,38): warning :     read = evbuffer_readfile(tmp, fd, to_read);
+C:\My\UC\UCLinux\mkr_linux\libevent2\buffer.c(2910,38): warning :                                       ^~~~~~~
+  bufferevent.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(86,35): warning : conversion to ‘bufferevent_suspend_flags {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(86,35): warning :   bufev_private->read_suspended &= ~what;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(86,35): warning :                                    ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(110,36): warning : conversion to ‘bufferevent_suspend_flags {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(110,36): warning :   bufev_private->write_suspended &= ~what;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(110,36): warning :                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(400,10): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(400,10): warning :   return (evbuffer_remove(bufev->input, data, size));
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(400,10): warning :          ~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(491,20): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(491,20): warning :   bufev->enabled &= ~event;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(491,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(507,20): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(507,20): warning :   bufev->enabled &= ~event;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent.c(507,20): warning :                     ^
+  bufferevent_filter.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(154,39): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(154,39): warning :   if (evbuffer_remove_buffer(src, dst, lim) == 0)
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(154,39): warning :                                        ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(295,12): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(295,12): warning :     limit = bev->wm_read.high -
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(295,12): warning :             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(349,13): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(349,13): warning :      limit = bevf->underlying->wm_write.high -
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_filter.c(349,13): warning :              ^~~~
+  bufferevent_openssl.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(152,35): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(152,35): warning :    r = evbuffer_remove(input, out, outlen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(152,35): warning :                                    ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(176,61): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(176,61): warning :   if (bufev->wm_write.high && bufev->wm_write.high <= (outlen+inlen)) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(176,61): warning :                                                              ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(182,11): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(182,11): warning :    inlen = bufev->wm_write.high - outlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(182,11): warning :            ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(186,27): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(186,27): warning :   evbuffer_add(output, in, inlen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(186,27): warning :                            ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(227,37): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(227,37): warning :   return bio_bufferevent_write(b, s, strlen(s));
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(227,37): warning :                                      ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(534,46): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(534,46): warning :   _bufferevent_run_eventcb(&bev_ssl->bev.bev, event);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(534,46): warning :                                               ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(555,55): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(555,55): warning :    _bufferevent_decrement_write_buckets(&bev_ssl->bev, w);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(555,55): warning :                                                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(557,54): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(557,54): warning :    _bufferevent_decrement_read_buckets(&bev_ssl->bev, r);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(557,54): warning :                                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(580,11): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(580,11): warning :   atmost = _bufferevent_get_read_max(&bev_ssl->bev);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(580,11): warning :            ^~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(591,49): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(591,49): warning :    r = SSL_read(bev_ssl->ssl, space[i].iov_base, space[i].iov_len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(591,49): warning :                                                  ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(598,23): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(598,23): warning :     space[i].iov_len = r;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(598,23): warning :                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(647,12): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(647,12): warning :    atmost = bev_ssl->last_write;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(647,12): warning :             ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(649,12): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(649,12): warning :    atmost = _bufferevent_get_write_max(&bev_ssl->bev);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(649,12): warning :             ^~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(668,7): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(668,7): warning :        space[i].iov_len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(668,7): warning :        ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(686,27): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(686,27): warning :      bev_ssl->last_write = space[i].iov_len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(686,27): warning :                            ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(694,27): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(694,27): warning :      bev_ssl->last_write = space[i].iov_len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(694,27): warning :                            ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(706,26): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(706,26): warning :    evbuffer_drain(output, n_written);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(706,26): warning :                           ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(749,12): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(749,12): warning :    result = wm->high - evbuffer_get_length(input);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(749,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(757,12): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(757,12): warning :    result = limit;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(757,12): warning :             ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(874,17): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(874,17): warning :     n_to_write = wm->high - evbuffer_get_length(target);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(874,17): warning :                  ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(929,47): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(929,47): warning :    _bufferevent_run_eventcb(&bev_ssl->bev.bev, event);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(929,47): warning :                                                ^~~~~
+/home/mkr/extLibs/openssl-1.0.2l/include/openssl/bio.h(521,34): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+/home/mkr/extLibs/openssl-1.0.2l/include/openssl/bio.h(521,34): warning :  # define BIO_get_fd(b,c)         BIO_ctrl(b,BIO_C_GET_FD,0,(char *)c)
+/home/mkr/extLibs/openssl-1.0.2l/include/openssl/bio.h(521,34): warning :                                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(1203,10): message : in expansion of macro ‘BIO_get_fd’
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(1203,10): message :      fd = BIO_get_fd(bio, NULL);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(1203,10): message :           ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(1374,22): warning : unused variable ‘pRet’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(1374,22): warning :   struct bufferevent *pRet= &bev_ssl->bev.bev;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_openssl.c(1374,22): warning :                       ^~~~
+  bufferevent_pair.c
+  bufferevent_ratelim.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(61,25): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(61,25): warning :     bucket->read_limit = cfg->read_maximum;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(61,25): warning :                          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(63,26): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(63,26): warning :     bucket->write_limit = cfg->write_maximum;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(63,26): warning :                           ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(65,24): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(65,24): warning :    bucket->read_limit = cfg->read_rate;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(65,24): warning :                         ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(66,25): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(66,25): warning :    bucket->write_limit = cfg->write_rate;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(66,25): warning :                          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(95,25): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(95,25): warning :   if ((cfg->read_maximum - bucket->read_limit) / n_ticks < cfg->read_rate)
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(95,25): warning :                          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(96,24): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(96,24): warning :    bucket->read_limit = cfg->read_maximum;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(96,24): warning :                         ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(98,22): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(98,22): warning :    bucket->read_limit += n_ticks * cfg->read_rate;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(98,22): warning :                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(98,25): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(98,25): warning :    bucket->read_limit += n_ticks * cfg->read_rate;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(98,25): warning :                          ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(101,26): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(101,26): warning :   if ((cfg->write_maximum - bucket->write_limit) / n_ticks < cfg->write_rate)
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(101,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(102,25): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(102,25): warning :    bucket->write_limit = cfg->write_maximum;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(102,25): warning :                          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(104,23): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(104,23): warning :    bucket->write_limit += n_ticks * cfg->write_rate;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(104,23): warning :                        ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(104,26): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(104,26): warning :    bucket->write_limit += n_ticks * cfg->write_rate;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(104,26): warning :                           ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(137,52): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(137,52): warning :   ev_uint64_t msec = (ev_uint64_t)tv->tv_sec * 1000 + tv->tv_usec / 1000;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(137,52): warning :                                                     ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(169,21): warning : conversion to ‘unsigned int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(169,21): warning :   r->msec_per_tick = (tick_len->tv_sec * 1000) +
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(169,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(300,41): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(300,41): warning :    bev->rate_limiting->group->total_read += bytes;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(300,41): warning :                                          ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(338,44): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(338,44): warning :    bev->rate_limiting->group->total_written += bytes;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(338,44): warning :                                             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(457,10): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(457,10): warning :   which = _evutil_weakrand() % group->n_members;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(457,10): warning :           ^~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(502,30): warning : conversion to ‘unsigned char:1’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(502,30): warning :   g->pending_unsuspend_read = again;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(502,30): warning :                               ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(521,31): warning : conversion to ‘unsigned char:1’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(521,31): warning :   g->pending_unsuspend_write = again;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(521,31): warning :                                ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(683,30): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(683,30): warning :    g->rate_limit.read_limit = cfg->read_maximum;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(683,30): warning :                               ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(685,31): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka const long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(685,31): warning :    g->rate_limit.write_limit = cfg->write_maximum;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(685,31): warning :                                ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(693,48): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(693,48): warning :   bufferevent_rate_limit_group_set_min_share(g, g->configured_min_share);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(693,48): warning :                                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(707,28): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(707,28): warning :   g->configured_min_share = share;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(707,28): warning :                             ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(716,17): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(716,17): warning :   g->min_share = share;
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_ratelim.c(716,17): warning :                  ^~~~~
+  bufferevent_sock.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_sock.c(150,13): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_sock.c(150,13): warning :    howmuch = bufev->wm_read.high - evbuffer_get_length(input);
+C:\My\UC\UCLinux\mkr_linux\libevent2\bufferevent_sock.c(150,13): warning :              ^~~~~
+  epoll.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(215,12): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(215,12): warning :      events |= EPOLLET;
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(215,12): warning :             ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(215,15): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(215,15): warning :      events |= EPOLLET;
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(215,15): warning :                ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(264,17): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(264,17): warning :    epev.events = events;
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(264,17): warning :                  ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :  #define EV_CHANGE_ADD     0x01
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(360,21): message : in expansion of macro ‘EV_CHANGE_ADD’
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(360,21): message :    ch.write_change = EV_CHANGE_ADD |
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(360,21): message :                      ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :  #define EV_CHANGE_ADD     0x01
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(363,20): message : in expansion of macro ‘EV_CHANGE_ADD’
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(363,20): message :    ch.read_change = EV_CHANGE_ADD |
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(363,20): message :                     ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(407,60): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(407,60): warning :   res = epoll_wait(epollop->epfd, events, epollop->nevents, timeout);
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(407,60): warning :                                                             ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(424,14): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(424,14): warning :    int what = events[i].events;
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(424,14): warning :               ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(449,19): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(449,19): warning :        new_nevents * sizeof(struct epoll_event));
+C:\My\UC\UCLinux\mkr_linux\libevent2\epoll.c(449,19): warning :                    ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message : in definition of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :                                                    ^~
+  evdns.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(783,8): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(783,8): warning :         cb->reply.data.a.addrcount, cb->ttl,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(783,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(783,36): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(783,36): warning :         cb->reply.data.a.addrcount, cb->ttl,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(783,36): warning :                                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(787,22): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(787,22): warning :     cb->user_callback(cb->err, 0, 0, cb->ttl, NULL, user_pointer);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(787,22): warning :                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(787,37): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(787,37): warning :     cb->user_callback(cb->err, 0, 0, cb->ttl, NULL, user_pointer);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(787,37): warning :                                      ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(792,48): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(792,48): warning :     cb->user_callback(DNS_ERR_NONE, DNS_PTR, 1, cb->ttl,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(792,48): warning :                                                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(795,22): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(795,22): warning :     cb->user_callback(cb->err, 0, 0, cb->ttl, NULL, user_pointer);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(795,22): warning :                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(795,37): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(795,37): warning :     cb->user_callback(cb->err, 0, 0, cb->ttl, NULL, user_pointer);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(795,37): warning :                                      ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(801,8): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(801,8): warning :         cb->reply.data.aaaa.addrcount, cb->ttl,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(801,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(801,39): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(801,39): warning :         cb->reply.data.aaaa.addrcount, cb->ttl,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(801,39): warning :                                        ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(805,22): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(805,22): warning :     cb->user_callback(cb->err, 0, 0, cb->ttl, NULL, user_pointer);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(805,22): warning :                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(805,37): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(805,37): warning :     cb->user_callback(cb->err, 0, 0, cb->ttl, NULL, user_pointer);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(805,37): warning :                                      ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(870,21): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(870,21): warning :     u16 error_code = (flags & 0x000f) - 1;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(870,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(931,37): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(931,37): warning :    reply_schedule_callback(req, ttl, error, NULL);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(931,37): warning :                                      ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1054,32): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1054,32): warning :    if (name_parse(req->request, req->request_len, &k, \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1054,32): warning :                                 ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1073,3): message : in expansion of macro ‘TEST_NAME’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1073,3): message :    TEST_NAME;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1073,3): message :    ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(131,18): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1102,17): message : in expansion of macro ‘MIN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1102,17): message :     addrtocopy = MIN(MAX_V4_ADDRS - reply.data.a.addrcount, (unsigned)addrcount);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1102,17): message :                  ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1108,20): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1108,20): warning :         packet + j, 4*addrtocopy);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1108,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1110,27): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1110,27): warning :     reply.data.a.addrcount += addrtocopy;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1110,27): warning :                            ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(131,18): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1140,17): message : in expansion of macro ‘MIN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1140,17): message :     addrtocopy = MIN(MAX_V6_ADDRS - reply.data.aaaa.addrcount, (unsigned)addrcount);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1140,17): message :                  ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1146,20): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1146,20): warning :         packet + j, 16*addrtocopy);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1146,20): warning :                     ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1147,30): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1147,30): warning :     reply.data.aaaa.addrcount += addrtocopy;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1147,30): warning :                               ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1251,54): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1251,54): warning :    q = mm_malloc(sizeof(struct evdns_server_question) + namelen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1251,54): warning :                                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message : in definition of macro ‘mm_malloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :  #define mm_malloc(sz) event_mm_malloc_(sz)
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1256,29): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1256,29): warning :    memcpy(q->name, tmp_name, namelen+1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1256,29): warning :                              ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1365,17): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1365,17): warning :    const int r = recvfrom(ns->socket, (void*)packet,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1365,17): warning :                  ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1403,7): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1403,7): warning :    r = recvfrom(s->socket, (void*)packet, sizeof(packet), 0,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1403,7): warning :        ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1425,47): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1425,47): warning :    int r = sendto(port->socket, req->response, (int)req->response_len, 0,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1425,47): warning :                                                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1425,11): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1425,11): warning :    int r = sendto(port->socket, req->response, (int)req->response_len, 0,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1425,11): warning :            ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1551,27): warning : conversion to ‘int’ from ‘off_t {aka const long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1551,27): warning :     return table->labels[i].pos;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1551,27): warning :            ~~~~~~~~~~~~~~~~^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1618,29): warning : conversion to ‘size_t {aka const long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1618,29): warning :     const size_t label_len = end - start;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1618,29): warning :                              ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1620,18): warning : conversion to ‘long unsigned int’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1620,18): warning :     if ((size_t)(j+label_len+1) > buf_len) return -2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1620,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1629,29): warning : conversion to ‘size_t {aka const long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1629,29): warning :     const size_t label_len = name - start;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1629,29): warning :                              ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1631,18): warning : conversion to ‘long unsigned int’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1631,18): warning :     if ((size_t)(j+label_len+1) > buf_len) return -2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1631,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1783,15): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1783,15): warning :   item->type = type;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1783,15): warning :                ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1784,29): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1784,29): warning :   item->dns_question_class = class;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1784,29): warning :                              ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1785,14): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1785,14): warning :   item->ttl = ttl;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1785,14): warning :               ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1798,33): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1798,33): warning :     if (!(item->data = mm_malloc(datalen))) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1798,33): warning :                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message : in definition of macro ‘mm_malloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :  #define mm_malloc(sz) event_mm_malloc_(sz)
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1803,20): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1803,20): warning :     item->datalen = datalen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1803,20): warning :                     ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1804,29): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1804,29): warning :     memcpy(item->data, data, datalen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1804,29): warning :                              ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1892,10): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1892,10): warning :   flags = req->base.flags;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1892,10): warning :           ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1893,11): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1893,11): warning :   flags |= (0x8000 | err);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1893,11): warning :            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1960,22): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1960,22): warning :   req->response_len = j;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1960,22): warning :                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1987,42): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1987,42): warning :   r = sendto(port->socket, req->response, (int)req->response_len, 0,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1987,42): warning :                                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1987,6): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1987,6): warning :   r = sendto(port->socket, req->response, (int)req->response_len, 0,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(1987,6): warning :       ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2138,12): warning : conversion to ‘int’ from ‘socklen_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2138,12): warning :   return req->addrlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2138,12): warning :          ~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2194,6): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2194,6): warning :   r = sendto(server->socket, (void*)req->request, req->request_len, 0,
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2194,6): warning :       ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2507,32): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2507,32): warning :   memcpy(&ns->address, address, addrlen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2507,32): warning :                                 ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2508,16): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2508,16): warning :   ns->addrlen = addrlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2508,16): warning :                 ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2551,24): warning : conversion to ‘in_addr_t {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2551,24): warning :   sin.sin_addr.s_addr = address;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2551,24): warning :                         ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2626,45): warning : conversion to ‘int’ from ‘socklen_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2626,45): warning :   res = _evdns_nameserver_add_impl(base, sa, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2626,45): warning :                                              ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2749,6): warning : conversion to ‘uint16_t {aka const short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2749,6): warning :       type, CLASS_INET, req->request, request_max_len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2749,6): warning :       ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2753,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2753,21): warning :   req->request_len = rlen;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2753,21): warning :                      ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2756,22): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2756,22): warning :   req->request_type = type;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(2756,22): warning :                       ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3134,54): warning : conversion to ‘long unsigned int’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3134,54): warning :     char *const newname = (char *) mm_malloc(base_len + need_to_append_dot + postfix_len + 1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3134,54): warning :                                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message : in definition of macro ‘mm_malloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :  #define mm_malloc(sz) event_mm_malloc_(sz)
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3134,75): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3134,75): warning :     char *const newname = (char *) mm_malloc(base_len + need_to_append_dot + postfix_len + 1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3134,75): warning :                                                                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message : in definition of macro ‘mm_malloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :  #define mm_malloc(sz) event_mm_malloc_(sz)
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3138,61): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3138,61): warning :     memcpy(newname + base_len + need_to_append_dot, postfix, postfix_len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3138,61): warning :                                                              ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3139,21): warning : conversion to ‘long unsigned int’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3139,21): warning :     newname[base_len + need_to_append_dot + postfix_len] = 0;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3139,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3139,42): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3139,42): warning :     newname[base_len + need_to_append_dot + postfix_len] = 0;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3139,42): warning :                                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3293,16): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3293,16): warning :   const int r = strtol(str, &endptr, 10);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3293,16): warning :                 ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning :  #define mm_calloc(count, size) event_mm_calloc_((count), (size))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3341,14): message : in expansion of macro ‘mm_calloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3341,14): message :   new_heads = mm_calloc(n_heads, sizeof(struct request*));
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3341,14): message :               ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3448,35): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3448,35): warning :    base->global_outgoing_addrlen = len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(3448,35): warning :                                    ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4075,26): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4075,26): warning :    memcpy(&he->addr, &ss, socklen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4075,26): warning :                           ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4432,47): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4432,47): warning :    memcpy(addrp, ((char*)addresses)+i*addrlen, addrlen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4432,47): warning :                                                ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4433,32): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4433,32): warning :    ai = evutil_new_addrinfo(sa, socklen, &data->hints);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4433,32): warning :                                 ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4513,45): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4513,45): warning :    ai_new = evutil_new_addrinfo(&e->addr.sa, e->addrlen, hints);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4513,45): warning :                                              ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4588,63): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4588,63): warning :   if (!evdns_getaddrinfo_fromhosts(dns_base, nodename, &hints, port, &res)) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\evdns.c(4588,63): warning :                                                                ^~~~
+  event.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(91,7): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(91,7): warning :    h = *cp << 7;
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(91,7): warning :        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(408,23): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(408,23): warning :            return 1000 + i;                                              \
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(408,23): warning :                   ~~~~~^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(193,1): message : in expansion of macro ‘HT_GENERATE’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(193,1): message :  HT_GENERATE(event_debug_map, event_debug_entry, node, hash_debug_entry,
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(193,1): message :  ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(410,24): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(410,24): warning :            return 10000 + i;                                             \
+C:\My\UC\UCLinux\mkr_linux\libevent2\ht-internal.h(410,24): warning :                   ~~~~~~^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(193,1): message : in expansion of macro ‘HT_GENERATE’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(193,1): message :  HT_GENERATE(event_debug_map, event_debug_entry, node, hash_debug_entry,
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(193,1): message :  ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning :  #define mm_calloc(count, size) event_mm_calloc_((count), (size))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(904,8): message : in expansion of macro ‘mm_calloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(904,8): message :   tmp = mm_calloc((i + 1), sizeof(char *));
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(904,8): message :         ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(960,13): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(960,13): warning :   cfg->flags |= flag;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(960,13): warning :              ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning :  #define mm_calloc(count, size) event_mm_calloc_((count), (size))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(45,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1025,4): message : in expansion of macro ‘mm_calloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1025,4): message :     mm_calloc(npriorities, sizeof(struct event_list));
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1025,4): message :     ^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1221,5): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1221,5): warning :     n*sizeof(struct common_timeout_queue *));
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1221,5): warning :      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message : in definition of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :                                                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1280,16): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘__suseconds_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1280,16): warning :     usec_mask = delay.tv_usec & ~MICROSECONDS_MASK;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1280,16): warning :                 ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1787,16): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1787,16): warning :    ev->ev_pri = base->nactivequeues / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1787,16): warning :                 ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1805,15): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1805,15): warning :   ev->ev_pri = base->nactivequeues/2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1805,15): warning :                ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1870,15): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1870,15): warning :   ev->ev_pri = pri;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(1870,15): warning :                ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2017,6): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2017,6): warning :   r = write(base->th_notify_fd[1], buf, 1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2017,6): warning :       ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2031,7): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2031,7): warning :    r = write(base->th_notify_fd[0], (void*) &msg, sizeof(msg));
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2031,7): warning :        ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2330,17): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2330,17): warning :    ev->ev_res |= res;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2330,17): warning :                  ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2338,15): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2338,15): warning :   ev->ev_res = res;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2338,15): warning :                ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2547,18): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2547,18): warning :   ev->ev_flags &= ~queue;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2547,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2621,18): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2621,18): warning :   ev->ev_flags |= queue;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event.c(2621,18): warning :                   ^~~~~
+  event_tagging.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(121,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(121,18): warning :     data[off/2] = (data[off/2] & 0xf0) | (number & 0x0f); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(121,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message : in expansion of macro ‘ENCODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message :   ENCODE_INT_INTERNAL(data, number);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(123,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘uint32_t {aka unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(123,18): warning :     data[off/2] = (data[off/2] & 0x0f) |  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(123,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message : in expansion of macro ‘ENCODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message :   ENCODE_INT_INTERNAL(data, number);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(133,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(133,12): warning :   data[0] = (data[0] & 0x0f) | ((nibbles & 0x0f) << 4);  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(133,12): warning :             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message : in expansion of macro ‘ENCODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message :   ENCODE_INT_INTERNAL(data, number);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(141,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(121,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(121,18): warning :     data[off/2] = (data[off/2] & 0xf0) | (number & 0x0f); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(121,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message : in expansion of macro ‘ENCODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message :   ENCODE_INT_INTERNAL(data, number);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(123,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘uint64_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(123,18): warning :     data[off/2] = (data[off/2] & 0x0f) |  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(123,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message : in expansion of macro ‘ENCODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message :   ENCODE_INT_INTERNAL(data, number);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(133,12): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(133,12): warning :   data[0] = (data[0] & 0x0f) | ((nibbles & 0x0f) << 4);  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(133,12): warning :             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message : in expansion of macro ‘ENCODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message :   ENCODE_INT_INTERNAL(data, number);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(147,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(155,28): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(155,28): warning :   evbuffer_add(evbuf, data, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(155,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(163,28): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(163,28): warning :   evbuffer_add(evbuf, data, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(163,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(189,29): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(189,29): warning :    evbuffer_add(evbuf, data, bytes);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(189,29): warning :                              ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(208,10): warning : conversion to ‘ssize_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(214,10): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(214,10): warning :    number |= (lower & 0x7f) << shift;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(214,10): warning :           ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(274,26): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(274,26): warning :   evtag_encode_int(evbuf, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(274,26): warning :                           ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(275,28): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(275,28): warning :   evbuffer_add(evbuf, data, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(275,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(286,26): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(286,26): warning :   evtag_encode_int(evbuf, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(286,26): warning :                           ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(287,28): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(287,28): warning :   evbuffer_add(evbuf, data, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(287,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(301,38): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘__time_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(301,38): warning :   int len = encode_int_internal(data, tv->tv_sec);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(301,38): warning :                                       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(302,41): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘__suseconds_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(302,41): warning :   len += encode_int_internal(data + len, tv->tv_usec);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(302,41): warning :                                          ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(303,34): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(303,34): warning :   evtag_marshal(evbuf, tag, data, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(303,34): warning :                                   ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,46): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,46): warning :   ev_ssize_t len = evbuffer_get_length(evbuf) - offset;  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,46): warning :                                               ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message : in expansion of macro ‘DECODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message :   DECODE_INT_INTERNAL(number, 8, pnumber, evbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,19): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,19): warning :   ev_ssize_t len = evbuffer_get_length(evbuf) - offset;  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,19): warning :                    ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message : in expansion of macro ‘DECODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message :   DECODE_INT_INTERNAL(number, 8, pnumber, evbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(334,11): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(334,11): warning :     number |= (data[nibbles >> 1] & 0xf0) >> 4; \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(334,11): warning :            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message : in expansion of macro ‘DECODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message :   DECODE_INT_INTERNAL(number, 8, pnumber, evbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(356,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,46): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,46): warning :   ev_ssize_t len = evbuffer_get_length(evbuf) - offset;  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,46): warning :                                               ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message : in expansion of macro ‘DECODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message :   DECODE_INT_INTERNAL(number, 16, pnumber, evbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,19): warning : conversion to ‘ssize_t {aka long int}’ from ‘size_t {aka long unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,19): warning :   ev_ssize_t len = evbuffer_get_length(evbuf) - offset;  \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(309,19): warning :                    ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message : in expansion of macro ‘DECODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message :   DECODE_INT_INTERNAL(number, 16, pnumber, evbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(334,11): warning : conversion to ‘uint64_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(334,11): warning :     number |= (data[nibbles >> 1] & 0xf0) >> 4; \
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(334,11): warning :            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message : in expansion of macro ‘DECODE_INT_INTERNAL’
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message :   DECODE_INT_INTERNAL(number, 16, pnumber, evbuf, offset);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(363,2): message :   ^~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(371,25): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(371,25): warning :    evbuffer_drain(evbuf, res);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(371,25): warning :                          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(381,25): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(381,25): warning :    evbuffer_drain(evbuf, res);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(381,25): warning :                          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(405,11): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(405,11): warning :   *plength += res + len;
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(405,11): warning :            ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(441,9): warning : conversion to ‘int’ from ‘uint32_t {aka unsigned int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(441,9): warning :   return (len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(441,9): warning :          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(450,24): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(450,24): warning :   evbuffer_drain(evbuf, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(450,24): warning :                         ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(465,51): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(465,51): warning :   if (evbuffer_add(dst, evbuffer_pullup(src, len), len) == -1)
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(465,51): warning :                                                    ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(468,22): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(468,22): warning :   evbuffer_drain(src, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(468,22): warning :                       ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(559,23): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(559,23): warning :   *pstring = mm_malloc(tag_len + 1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(559,23): warning :                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message : in definition of macro ‘mm_malloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :  #define mm_malloc(sz) event_mm_malloc_(sz)
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(564,35): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(564,35): warning :   evbuffer_remove(evbuf, *pstring, tag_len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(564,35): warning :                                    ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(594,24): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(594,24): warning :   evbuffer_drain(evbuf, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\event_tagging.c(594,24): warning :                         ^~~
+  evmap.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning :                                                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(211,18): message : in expansion of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(211,18): message :    tmp = (void **)mm_realloc(map->entries, nentries * msize);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(211,18): message :                   ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(216,7): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(216,7): warning :        (nentries - map->nentries) * msize);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(216,7): warning :        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(321,9): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(321,9): warning :     old, (ev->ev_events & EV_ET) | res, extra) == -1)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(321,9): warning :          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(382,15): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(382,15): warning :   ctx->nread = nread;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(382,15): warning :                ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(383,16): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(383,16): warning :   ctx->nwrite = nwrite;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(383,16): warning :                 ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(476,38): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(476,38): warning :    event_active_nolock(ev, EV_SIGNAL, ncalls);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(476,38): warning :                                       ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(600,15): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(600,15): warning :       new_size * sizeof(struct event_change));
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(600,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message : in definition of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :                                                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :  #define EV_CHANGE_ADD     0x01
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(665,25): message : in expansion of macro ‘EV_CHANGE_ADD’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(665,25): message :    change->read_change = EV_CHANGE_ADD |
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(665,25): message :                          ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :  #define EV_CHANGE_ADD     0x01
+C:\My\UC\UCLinux\mkr_linux\libevent2\changelist-internal.h(70,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(669,26): message : in expansion of macro ‘EV_CHANGE_ADD’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(669,26): message :    change->write_change = EV_CHANGE_ADD |
+C:\My\UC\UCLinux\mkr_linux\libevent2\evmap.c(669,26): message :                           ^~~~~~~~~~~~~
+  evrpc.c
+  evthread.c
+  evutil.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(164,61): warning : conversion to ‘long unsigned int’ from ‘__off_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(164,61): warning :   while ((r = read(fd, mem+read_so_far, N_TO_READ(st.st_size - read_so_far))) > 0) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(164,61): warning :                                                              ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(162,23): message : in definition of macro ‘N_TO_READ’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(162,23): message :  #define N_TO_READ(x) (x)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(162,23): message :                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(164,14): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(164,14): warning :   while ((r = read(fd, mem+read_so_far, N_TO_READ(st.st_size - read_so_far))) > 0) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(164,14): warning :               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(165,15): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(165,15): warning :    read_so_far += r;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(165,15): warning :                ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(488,27): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(488,27): warning :   if (connect(*fd_ptr, sa, socklen) < 0) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(488,27): warning :                            ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(647,38): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(647,38): warning :  #define EVUTIL_AI_LIBEVENT_ALLOCATED 0x80000000
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(647,38): warning :                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(689,18): message : in expansion of macro ‘EVUTIL_AI_LIBEVENT_ALLOCATED’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(689,18): message :   res->ai_flags = EVUTIL_AI_LIBEVENT_ALLOCATED;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(689,18): message :                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1273,17): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1273,17): warning :   hints.ai_flags &= ~ALL_NONNATIVE_AI_FLAGS;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1273,17): warning :                  ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1388,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1388,21): warning :   if (!(ai->ai_flags & EVUTIL_AI_LIBEVENT_ALLOCATED)) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1388,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1621,8): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1621,8): warning :         (((ev_uint16_t)addr->s6_addr[2*i])<<8) + addr->s6_addr[2*i+1];
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1621,8): warning :         ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1671,20): warning : conversion to ‘long unsigned int’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1671,20): warning :          sizeof(buf)-(cp-buf), "%x", (unsigned)words[i]);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1671,20): warning :                     ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1705,24): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1705,24): warning :    addr->s_addr = htonl((a<<24) | (b<<16) | (c<<8) | d);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1705,24): warning :                         ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1737,15): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1737,15): warning :     words[6] = (byte1<<8) | byte2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1737,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1738,15): warning : conversion to ‘uint16_t {aka short unsigned int}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1738,15): warning :     words[7] = (byte3<<8) | byte4;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1738,15): warning :                ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1785,25): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1785,25): warning :       sizeof(ev_uint16_t)*nToMove);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1785,25): warning :                          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1786,49): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1786,49): warning :     memset(&words[gapPos], 0, sizeof(ev_uint16_t)*gapLen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1786,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1789,26): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1789,26): warning :     out->s6_addr[2*i  ] = words[i] >> 8;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1789,26): warning :                           ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1790,26): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1790,26): warning :     out->s6_addr[2*i+1] = words[i] & 0xff;
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1790,26): warning :                           ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1826,31): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1826,31): warning :    memcpy(buf, ip_as_string+1, len);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1826,31): warning :                                ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1843,29): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1843,29): warning :    memcpy(buf, ip_as_string, cp-ip_as_string);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1843,29): warning :                              ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1878,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1878,18): warning :    memset(out, 0, *outlen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1878,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1897,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1897,18): warning :    memset(out, 0, *outlen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(1897,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2033,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2033,1): message :  IMPL_CTYPE_FN(ISALPHA)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2033,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2033,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2033,1): message :  IMPL_CTYPE_FN(ISALPHA)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2033,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2034,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2034,1): message :  IMPL_CTYPE_FN(ISALNUM)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2034,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2034,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2034,1): message :  IMPL_CTYPE_FN(ISALNUM)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2034,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2035,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2035,1): message :  IMPL_CTYPE_FN(ISSPACE)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2035,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2035,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2035,1): message :  IMPL_CTYPE_FN(ISSPACE)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2035,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2036,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2036,1): message :  IMPL_CTYPE_FN(ISDIGIT)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2036,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2036,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2036,1): message :  IMPL_CTYPE_FN(ISDIGIT)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2036,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2037,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2037,1): message :  IMPL_CTYPE_FN(ISXDIGIT)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2037,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2037,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2037,1): message :  IMPL_CTYPE_FN(ISXDIGIT)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2037,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2038,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2038,1): message :  IMPL_CTYPE_FN(ISPRINT)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2038,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2038,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2038,1): message :  IMPL_CTYPE_FN(ISPRINT)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2038,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2039,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2039,1): message :  IMPL_CTYPE_FN(ISLOWER)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2039,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2039,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2039,1): message :  IMPL_CTYPE_FN(ISLOWER)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2039,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :    ev_uint8_t u = c;     \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2030,18): warning :                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2040,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2040,1): message :  IMPL_CTYPE_FN(ISUPPER)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2040,1): message :  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :    return !!(EVUTIL_##name##_TABLE[(u >> 5) & 7] & (1 << (u & 31))); \
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2031,49): warning :                                                  ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2040,1): message : in expansion of macro ‘IMPL_CTYPE_FN’
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2040,1): message :  IMPL_CTYPE_FN(ISUPPER)
+C:\My\UC\UCLinux\mkr_linux\libevent2\evutil.c(2040,1): message :  ^~~~~~~~~~~~~
+  evutil_rand.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(101,13): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(101,13): warning :    rs.s[n] = n;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(101,13): warning :              ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(114,10): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(114,10): warning :    rs.i = (rs.i + 1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(114,10): warning :           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(116,10): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(116,10): warning :    rs.j = (rs.j + si + dat[n % datlen]);
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(116,10): warning :           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(136,11): warning : conversion to ‘long unsigned int’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(136,11): warning :    numread += result;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(136,11): warning :            ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(266,7): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(266,7): warning :    n = read(fd, buf, sizeof(buf));
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(266,7): warning :        ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(275,28): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(275,28): warning :       entropy[nybbles/2] |= nyb;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(275,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(277,28): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(277,28): warning :       entropy[nybbles/2] |= nyb<<4;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(277,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(307,6): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(307,6): warning :   n = read_all(fd, buf, sizeof(buf));
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(307,6): warning :       ^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(429,9): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(429,9): warning :   rs.i = (rs.i + 1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(429,9): warning :          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(431,9): warning : conversion to ‘unsigned char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(431,9): warning :   rs.j = (rs.j + si);
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(431,9): warning :          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(443,8): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(443,8): warning :   val = arc4_getbyte() << 24;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(443,8): warning :         ^~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(444,6): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(444,6): warning :   val |= arc4_getbyte() << 16;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(444,6): warning :       ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(445,6): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(445,6): warning :   val |= arc4_getbyte() << 8;
+C:\My\UC\UCLinux\mkr_linux\libevent2\.\arc4random.c(445,6): warning :       ^~
+  http.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(633,29): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(633,29): warning :    evcon->max_headers_size = new_max_headers_size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(633,29): warning :                              ^~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(642,26): warning : conversion to ‘uint64_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(642,26): warning :    evcon->max_body_size = new_max_body_size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(642,26): warning :                           ^~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(997,16): warning : conversion to ‘long unsigned int’ from ‘int64_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(997,16): warning :    req->ntoread -= n;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(997,16): warning :                 ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(997,19): warning : conversion to ‘int64_t {aka long int}’ from ‘long unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(997,19): warning :    req->ntoread -= n;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(997,19): warning :                    ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(1482,15): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(1482,15): warning :   req->major = major;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(1482,15): warning :                ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(1483,15): warning : conversion to ‘char’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(1483,15): warning :   req->minor = minor;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(1483,15): warning :                ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(2727,11): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(2727,11): warning :   for (i = j = 0; i < length; i++) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(2727,11): warning :            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3083,41): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3083,41): warning :   evhttp_get_request(http, nfd, peer_sa, peer_socklen);
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3083,41): warning :                                          ^~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3142,6): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3142,6): warning :       flags,
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3142,6): warning :       ^~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(218,23): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(218,23): warning :  #define EV_UINT64_MAX ((((ev_uint64_t)0xffffffffUL) << 32) | 0xffffffffUL)
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(218,23): warning :                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(238,21): message : in expansion of macro ‘EV_UINT64_MAX’
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(238,21): message :  #define EV_SIZE_MAX EV_UINT64_MAX
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(238,21): message :                      ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3203,36): message : in expansion of macro ‘EV_SIZE_MAX’
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3203,36): message :   evhttp_set_max_headers_size(http, EV_SIZE_MAX);
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3203,36): message :                                     ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(218,23): warning : conversion of unsigned constant value to negative integer [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(218,23): warning :  #define EV_UINT64_MAX ((((ev_uint64_t)0xffffffffUL) << 32) | 0xffffffffUL)
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(218,23): warning :                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(238,21): message : in expansion of macro ‘EV_UINT64_MAX’
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(238,21): message :  #define EV_SIZE_MAX EV_UINT64_MAX
+C:\My\UC\UCLinux\mkr_linux\libevent2\include\event2\util.h(238,21): message :                      ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3204,33): message : in expansion of macro ‘EV_SIZE_MAX’
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3204,33): message :   evhttp_set_max_body_size(http, EV_SIZE_MAX);
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3204,33): message :                                  ^~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3382,36): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3382,36): warning :    http->default_max_headers_size = max_headers_size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3382,36): warning :                                     ^~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3391,33): warning : conversion to ‘uint64_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3391,33): warning :    http->default_max_body_size = max_body_size;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3391,33): warning :                                  ^~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3617,11): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3617,11): warning :      len = p - host;
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3617,11): warning :            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3694,31): warning : conversion to ‘short unsigned int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3694,31): warning :    http->base, NULL, hostname, atoi(portname));
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(3694,31): warning :                                ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4051,20): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘ssize_t {aka long int}’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4051,20): warning :    memcpy(buf, s+1, n_chars);
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4051,20): warning :                     ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4109,24): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4109,24): warning :   uri->host = mm_malloc(eos-cp+1);
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4109,24): warning :                         ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message : in definition of macro ‘mm_malloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :  #define mm_malloc(sz) event_mm_malloc_(sz)
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(44,40): message :                                         ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4114,24): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4114,24): warning :   memcpy(uri->host, cp, eos-cp);
+C:\My\UC\UCLinux\mkr_linux\libevent2\http.c(4114,24): warning :                         ^~~
+  listener.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\listener.c(244,20): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\listener.c(244,20): warning :    if (bind(fd, sa, socklen)<0) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\listener.c(244,20): warning :                     ^~~~~~~
+  log.c
+  poll.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(139,25): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(139,25): warning :         pop->event_count * sizeof(struct pollfd));
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(139,25): warning :                          ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message : in definition of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :                                                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(148,28): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(148,28): warning :        sizeof(struct pollfd)*nfds);
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(148,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(165,24): warning : conversion to ‘nfds_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(165,24): warning :   res = poll(event_set, nfds, msec);
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(165,24): warning :                         ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(165,30): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(165,30): warning :   res = poll(event_set, nfds, msec);
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(165,30): warning :                               ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(183,6): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(183,6): warning :   i = random() % nfds;
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(183,6): warning :       ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(204,42): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(204,42): warning :    evmap_io_active(base, event_set[i].fd, res);
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(204,42): warning :                                           ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(234,22): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(234,22): warning :       tmp_event_count * sizeof(struct pollfd));
+C:\My\UC\UCLinux\mkr_linux\libevent2\poll.c(234,22): warning :                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message : in definition of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :                                                    ^~
+  select.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(137,15): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(137,15): warning :    size_t sz = sop->event_fdsz;
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(137,15): warning :                ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(153,9): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(153,9): warning :          sop->event_fdsz);
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(153,9): warning :          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(155,9): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(155,9): warning :          sop->event_fdsz);
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(155,9): warning :          ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(180,6): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(180,6): warning :   i = random() % nfds;
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(180,6): warning :       ^~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(193,28): warning : conversion to ‘short int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(193,28): warning :    evmap_io_active(base, i, res);
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(193,28): warning :                             ^~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning :                                                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(209,20): message : in expansion of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(209,20): message :   if ((readset_in = mm_realloc(sop->event_readset_in, fdsz)) == NULL)
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(209,20): message :                     ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,50): warning :                                                   ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(212,21): message : in expansion of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(212,21): message :   if ((writeset_in = mm_realloc(sop->event_writeset_in, fdsz)) == NULL) {
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(212,21): message :                      ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(225,6): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(225,6): warning :       fdsz - sop->event_fdsz);
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(225,6): warning :       ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(227,6): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(227,6): warning :       fdsz - sop->event_fdsz);
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(227,6): warning :       ^~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(67,27): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(67,27): warning :   (DIV_ROUNDUP(n, NFDBITS) * sizeof(fd_mask))
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(67,27): warning :                            ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(261,23): message : in expansion of macro ‘SELECT_ALLOC_SIZE’
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(261,23): message :    while (fdsz < (int) SELECT_ALLOC_SIZE(fd + 1))
+C:\My\UC\UCLinux\mkr_linux\libevent2\select.c(261,23): message :                        ^~~~~~~~~~~~~~~~~
+  signal.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :    unsigned parent = (e->ev_timeout_pos.min_heap_idx - 1) / 2;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(101,21): warning :                      ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :     min_heap_shift_up_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(108,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning : conversion to ‘unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :     min_heap_shift_down_(s, e->ev_timeout_pos.min_heap_idx, last);
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(110,28): warning :                             ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :   (s->p[hole_index] = s->p[parent])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(138,67): warning :                                                                    ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(142,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :   (s->p[hole_index] = s->p[min_child])->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(153,70): warning :                                                                       ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning : conversion to ‘int’ from ‘unsigned int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :      (s->p[hole_index] = e)->ev_timeout_pos.min_heap_idx = hole_index;
+C:\My\UC\UCLinux\mkr_linux\libevent2\minheap-internal.h(157,59): warning :                                                            ^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(154,21): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘char’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(154,21): warning :     ev_uint8_t sig = signals[i];
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(154,21): warning :                      ^~~~~~~
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(229,39): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(229,39): warning :    p = mm_realloc(sig->sh_old, new_max * sizeof(*sig->sh_old));
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(229,39): warning :                                        ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message : in definition of macro ‘mm_realloc’
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :  #define mm_realloc(p, sz) event_mm_realloc_((p), (sz))
+C:\My\UC\UCLinux\mkr_linux\libevent2\mm-internal.h(47,51): message :                                                    ^~
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(235,38): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(235,38): warning :    memset((char *)p + sig->sh_old_max * sizeof(*sig->sh_old),
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(235,38): warning :                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(236,38): warning : conversion to ‘long unsigned int’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(236,38): warning :        0, (new_max - sig->sh_old_max) * sizeof(*sig->sh_old));
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(236,38): warning :                                       ^
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(389,8): warning : conversion to ‘uint8_t {aka unsigned char}’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(389,8): warning :   msg = sig;
+C:\My\UC\UCLinux\mkr_linux\libevent2\signal.c(389,8): warning :         ^~~
+  strlcpy.c
+C:\My\UC\UCLinux\mkr_linux\libevent2\strlcpy.c(72,18): warning : conversion to ‘size_t {aka long unsigned int}’ from ‘long int’ may change the sign of the result [-Wsign-conversion]
+C:\My\UC\UCLinux\mkr_linux\libevent2\strlcpy.c(72,18): warning :   return (s - src - 1); /* count does not include NUL */
+C:\My\UC\UCLinux\mkr_linux\libevent2\strlcpy.c(72,18): warning :          ~~~~~~~~~^~~~
+  Archiving objects
+  libevent2.vcxproj -> C:\My\UC\UCLinux\mkr_linux\libevent2\bin\x64\Release\liblibevent2.a

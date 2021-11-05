@@ -1,0 +1,64 @@
+/*
+ * Copyright (c) 2016 CartoDB. All rights reserved.
+ * Copying and using this code is allowed only according
+ * to license terms, as given in https://cartodb.com/terms/
+ */
+
+#ifndef _CARTO_ROUTINGREQUEST_H_
+#define _CARTO_ROUTINGREQUEST_H_
+
+#ifdef _CARTO_ROUTING_SUPPORT
+
+#include "core/MapPos.h"
+
+#include <memory>
+#include <vector>
+
+
+#include <valhalla/proto/directions.pb.h>
+#include <valhalla/proto/options.pb.h>
+#include <valhalla/proto/trip.pb.h>
+
+namespace carto {
+    class Projection;
+
+    /**
+     * A class that defines required attributes for routing (end points, etc).
+     */
+    class RoutingRequest {
+    public:
+        /**
+         * Constructs a new RoutingRequest instance from projection and via points.
+         * @param projection The projection of the points.
+         * @param points The list of points that the route must pass. Must contains at least 2 elements.
+         */
+        RoutingRequest(const std::shared_ptr<Projection>& projection, const std::vector</*MapPos*/valhalla::LatLng>& points);
+        virtual ~RoutingRequest();
+
+        /**
+         * Returns the projection of the points in the request.
+         * @return The projection of the request.
+         */
+        const std::shared_ptr<Projection>& getProjection() const;
+        /**
+         * Returns the point list of the request.
+         * @return The point list of the request.
+         */
+        const std::vector</*MapPos*/valhalla::LatLng>& getPoints() const;
+
+        /**
+         * Creates a string representation of this request object, useful for logging.
+         * @return The string representation of this request object.
+         */
+        std::string toString() const;
+        
+    private:
+        std::shared_ptr<Projection> _projection;
+        std::vector</*MapPos*/valhalla::LatLng> _points;
+    };
+    
+}
+
+#endif
+
+#endif

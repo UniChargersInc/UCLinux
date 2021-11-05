@@ -1,0 +1,1853 @@
+From: "Saved by Internet Explorer 11"
+Subject: Variable length integers
+Date: Tue, 31 Dec 2019 09:31:57 -0500
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01D5BFBD.2546AA90"
+X-MimeOLE: Produced By Microsoft MimeOLE
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01D5BFBD.2546AA90
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://golb.hplar.ch/2019/06/variable-length-int-java.html
+
+=EF=BB=BF<!DOCTYPE HTML>
+<!DOCTYPE html PUBLIC "" ""><HTML lang=3D"en"><HEAD><META =
+content=3D"IE=3D11.0000"=20
+http-equiv=3D"X-UA-Compatible">
+=20
+<META charset=3D"utf-8">=20
+<META name=3D"viewport" content=3D"width=3Ddevice-width, =
+initial-scale=3D1.0">=20
+<TITLE>Variable length integers</TITLE> <LINK =
+href=3D"https://golb.hplar.ch/assets/blog-2.css"=20
+rel=3D"stylesheet"> <LINK title=3D"Ralph's Blog: RSS Feed" =
+href=3D"/feed.rss" rel=3D"alternate"=20
+type=3D"application/rss+xml"> <LINK title=3D"Ralph's Blog: Atom Feed" =
+href=3D"/feed.atom"=20
+rel=3D"alternate" type=3D"application/atom+xml">=20
+<META name=3D"GENERATOR" content=3D"MSHTML 11.00.10570.1001"></HEAD>=20
+<BODY><HEADER><A href=3D"https://golb.hplar.ch/index.html">Home</A> | <A =
+href=3D"https://golb.hplar.ch/feedback/2019-06-variable-length-int-java.h=
+tml">Send=20
+Feedback</A>    =20
+<H1>Variable length integers</H1>
+<P>Published: June 18, 2019&nbsp;&nbsp;=E2=80=A2&nbsp;&nbsp;<A =
+href=3D"https://golb.hplar.ch/index.html?tag=3Djava">java</A></P></HEADER=
+><ARTICLE=20
+class=3D"markdown-body">
+<P>Variable length integers encoding, is an algorithm to compress fixed =
+length=20
+integers into variable length integers to save space when you want to =
+store or=20
+transmit numbers.</P>
+<P>In this blog post, we are looking at a varint implementation for =
+compressing=20
+<CODE>int</CODE>, a datatype that in Java has a fixed length of 32 bits =
+(4=20
+bytes).</P>
+<P>The same algorithms can also be applied to the <CODE>long</CODE> (64 =
+bit)=20
+data type, however, in this blog post, I focus solely on the =
+<CODE>int</CODE>=20
+datatype.</P>
+<H2><A id=3D"introduction" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#intro=
+duction">Introduction</A></H2>
+<P>When you look at the binary representation of <CODE>int</CODE> 300, =
+you see=20
+that the first two bytes don't contain any information and only the last =
+two=20
+bytes are necessary to represent the number 300.</P>
+<PRE><CODE>00000000 00000000 00000001 00101100=0A=
+</CODE></PRE>
+<P>Even worse for the number 100, we only need one byte and the other 3 =
+bytes=20
+don't contain any information.</P>
+<PRE><CODE>00000000 00000000 00000000 01100100=0A=
+</CODE></PRE>
+<P>If you know in advance that a number always fits into 1 or 2 bytes, =
+the=20
+following approach might not be the best solution. You could save much =
+more=20
+bandwidth by choosing a smaller datatype and use a fixed length =
+encoding. In=20
+Java, you switch to <CODE>byte</CODE> or <CODE>short</CODE> if a value =
+always=20
+fits into one or two bytes.</P>
+<P>However, what if you don't know the number range in advance and it =
+could be a=20
+number between -2,147,483,648 to 2,147,483,647 (max range of=20
+<CODE>int</CODE>).</P>
+<P>With varints, we can store a 300 in 2 bytes, a 100 in one byte and =
+1,000,000=20
+in 3 bytes. This can save a lot of space if your application mostly =
+needs to=20
+handle small numbers and only sporadically very big numbers.</P>
+<P>In the following sections, we see how we can convert <CODE>int</CODE> =
+into a=20
+variable length <CODE>int</CODE> and vice versa with the continuation =
+bits=20
+encoding. In the first part, we focus on positive numbers, and in the =
+second=20
+part, we look at a solution for both, negative and positive numbers.</P>
+<H2><A id=3D"positive-only" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#posit=
+ive-only">Positive=20
+only</A></H2>
+<P>In this section, we focus on positive <CODE>int</CODE> and how we can =
+convert=20
+them to and from variable length integers.</P><BR>
+<H3><A id=3D"encoder-fixed-length-int---variable-length-int" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#encod=
+er-fixed-length-int---variable-length-int">Encoder:=20
+fixed length int -&gt; variable length int</A></H3>
+<P>The idea behind this variable length encoding is to split the number =
+into=20
+groups of 7 bits. Then take every group where at least 1 bit is set and =
+always=20
+the least significant (right most) group of 7 bits.</P>
+<P>Add one bit to each 7 bits group as the leftmost bit (most =
+significant bit,=20
+MSB) to form a byte. Set this bit to 1 except in the least significant =
+byte=20
+(rightmost byte) set it to 0. This additional bit is an indicator for =
+the=20
+decoder whether there are more bytes following.</P>
+<P>In the following algorithm, we are going to reverse the order of the =
+bytes.=20
+You could also preserve the order it does not matter as long as the =
+encoder and=20
+decoder agree on the order. This is also the same encoding that <A =
+href=3D"https://developers.google.com/protocol-buffers/"=20
+target=3D"_blank">Protocol Buffers</A> uses.</P>
+<P>Let's see how this works for the number 300.</P>
+<P>300 is represented with the following 4 bytes</P>
+<PRE><CODE>00000000 00000000 00000001 00101100=0A=
+</CODE></PRE>
+<P>The first step is to split these 32 bits into groups of 7.</P>
+<PRE><CODE>0000 0000000 0000000 0000010 0101100=0A=
+</CODE></PRE>
+<P>Take the last group, <CODE>0101100</CODE> and put it first into the =
+result.=20
+Add the second group (from the right), because it contains bits that are =
+set.=20
+Ignore the other 3 groups because none of the bits are set.</P>
+<P>We end up with the following 14 bits</P>
+<PRE><CODE>0101100 0000010=0A=
+</CODE></PRE>
+<P>Starting from the left add 1 as most significant bit to the groups =
+and 0 to=20
+the last group. The final result looks like this. 300 using 4 bytes in =
+fixed=20
+length encoding can be stored as 2 bytes in variable length =
+encoding.</P>
+<PRE><CODE>10101100 00000010=0A=
+</CODE></PRE><BR>
+<P>Next, we are looking at a method that implements this encoding in =
+Java.</P>
+<PRE><CODE class=3D"language-java">  <SPAN class=3D"token =
+keyword">public</SPAN> <SPAN class=3D"token keyword">static</SPAN> <SPAN =
+class=3D"token keyword">byte</SPAN><SPAN class=3D"token =
+punctuation">[</SPAN><SPAN class=3D"token punctuation">]</SPAN> <SPAN =
+class=3D"token function">encodeUInt32</SPAN><SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token keyword">int</SPAN> =
+inputValue<SPAN class=3D"token punctuation">)</SPAN> <SPAN =
+class=3D"token punctuation">{</SPAN>=0A=
+    <SPAN class=3D"token keyword">int</SPAN> value <SPAN class=3D"token =
+operator">=3D</SPAN> inputValue<SPAN class=3D"token punctuation">;</SPAN>=0A=
+    <SPAN class=3D"token keyword">byte</SPAN><SPAN class=3D"token =
+punctuation">[</SPAN><SPAN class=3D"token punctuation">]</SPAN> buffer =
+<SPAN class=3D"token operator">=3D</SPAN> <SPAN class=3D"token =
+keyword">new</SPAN> <SPAN class=3D"token keyword">byte</SPAN><SPAN =
+class=3D"token punctuation">[</SPAN><SPAN class=3D"token =
+number">5</SPAN><SPAN class=3D"token punctuation">]</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+    <SPAN class=3D"token keyword">int</SPAN> position <SPAN =
+class=3D"token operator">=3D</SPAN> <SPAN class=3D"token =
+number">0</SPAN><SPAN class=3D"token punctuation">;</SPAN>=0A=
+</CODE></PRE>
+<P><SMALL class=3D"gh"><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java#L14-L17"=20
+target=3D"_blank">VariableLengthInt.java</A></SMALL></P>
+<P>The method starts with some variable declarations and reserves a =
+buffer of 5=20
+bytes. This is also one of the downsides of this variable length =
+encoding.=20
+Because we are going to split the numbers into groups of 7 bits and add =
+one=20
+additional bit, large number will be encoded in 5 bytes.</P>
+<P>Next, the method starts a loop.</P>
+<PRE><CODE class=3D"language-java">    <SPAN class=3D"token =
+keyword">while</SPAN> <SPAN class=3D"token punctuation">(</SPAN><SPAN =
+class=3D"token boolean">true</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN> <SPAN class=3D"token punctuation">{</SPAN>=0A=
+      <SPAN class=3D"token comment">// ~0x7F =3D 0xffffff80</SPAN>=0A=
+      <SPAN class=3D"token keyword">if</SPAN> <SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token punctuation">(</SPAN>value =
+<SPAN class=3D"token operator">&amp;</SPAN> <SPAN class=3D"token =
+number">0b11111111111111111111111110000000</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN> <SPAN class=3D"token operator">=3D=3D</SPAN> <SPAN =
+class=3D"token number">0</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN> <SPAN class=3D"token punctuation">{</SPAN>=0A=
+        buffer<SPAN class=3D"token punctuation">[</SPAN>position<SPAN =
+class=3D"token operator">++</SPAN><SPAN class=3D"token =
+punctuation">]</SPAN> <SPAN class=3D"token operator">=3D</SPAN> <SPAN =
+class=3D"token punctuation">(</SPAN><SPAN class=3D"token =
+keyword">byte</SPAN><SPAN class=3D"token punctuation">)</SPAN> =
+value<SPAN class=3D"token punctuation">;</SPAN>=0A=
+        <SPAN class=3D"token keyword">break</SPAN><SPAN class=3D"token =
+punctuation">;</SPAN>=0A=
+      <SPAN class=3D"token punctuation">}</SPAN>=0A=
+</CODE></PRE>
+<P><SMALL class=3D"gh"><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java#L19-L24"=20
+target=3D"_blank">VariableLengthInt.java</A></SMALL></P>
+<P>The first check is a bitwise AND where the code looks if there are no =
+bits=20
+set between positions 8 and 32. If that is the case, add the last 7 bits =
+to the=20
+result and stop encoding. Because this is the last group, the MSB has to =
+be 0=20
+which happens here implicitly because with the if check we know that the =
+bit at=20
+position 8 is zero (if it were 1 then the check would return false). The =
+(byte)=20
+cast takes the least significant byte from the 4 bytes.</P>
+<P>Here the if check if we encode <CODE>int</CODE> 300.</P>
+<PRE><CODE>   00000000 00000000 00000001 00101100  (int 300)=0A=
+ &amp; 11111111 11111111 11111111 10000000=0A=
+ =3D 00000000 00000000 00000001 00000000  (int 256)=0A=
+</CODE></PRE>
+<P>The result of the bitwise AND is 256 and the if condition evaluates =
+to false.=20
+The encoder now knows that this is not the last group, so he adds the =
+least=20
+significant 7 bits to the result and sets the MSB to 1</P>
+<PRE><CODE class=3D"language-java">      buffer<SPAN class=3D"token =
+punctuation">[</SPAN>position<SPAN class=3D"token =
+operator">++</SPAN><SPAN class=3D"token punctuation">]</SPAN> <SPAN =
+class=3D"token operator">=3D</SPAN> <SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token keyword">byte</SPAN><SPAN =
+class=3D"token punctuation">)</SPAN> <SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token punctuation">(</SPAN>value =
+<SPAN class=3D"token operator">&amp;</SPAN> <SPAN class=3D"token =
+number">0b1111111</SPAN><SPAN class=3D"token punctuation">)</SPAN> <SPAN =
+class=3D"token operator">|</SPAN> <SPAN class=3D"token =
+number">0b10000000</SPAN><SPAN class=3D"token punctuation">)</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+</CODE></PRE>
+<P><SMALL class=3D"gh"><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java#L26"=20
+target=3D"_blank">VariableLengthInt.java</A></SMALL></P>
+<P>The bitwise AND with 1111111 unsets all bits that are set between =
+positions 8=20
+and 32.</P>
+<PRE><CODE>   00000000 00000000 00000001 00101100 (int 300)=0A=
+ &amp; 00000000 00000000 00000000 01111111=0A=
+ =3D 00000000 00000000 00000000 00101100=0A=
+</CODE></PRE>
+<P>The bitwise OR with 10000000 then sets the bit at position 8.</P>
+<PRE><CODE>   00000000 00000000 00000000 00101100=0A=
+ | 00000000 00000000 00000000 10000000=0A=
+ =3D 00000000 00000000 00000000 10101100=0A=
+</CODE></PRE>
+<P>Moreover, the cast to <CODE>byte</CODE> extracts the least =
+significant=20
+byte</P>
+<PRE><CODE>10101100=0A=
+</CODE></PRE>
+<P>This is the first byte of our result.</P>
+<P>The algorithm then unsigned right shift the variable 7 bits to the =
+right.=20
+This removes the last 7 bits from the input because we already processed =
+
+them.</P>
+<PRE><CODE class=3D"language-java">      value <SPAN class=3D"token =
+operator">&gt;&gt;&gt;=3D</SPAN> <SPAN class=3D"token =
+number">7</SPAN><SPAN class=3D"token punctuation">;</SPAN>=0A=
+</CODE></PRE>
+<P><SMALL class=3D"gh"><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java#L27"=20
+target=3D"_blank">VariableLengthInt.java</A></SMALL></P>
+<PRE><CODE>        00000000 00000000 00000001 00101100 (int 300)=0A=
+ &gt;&gt;&gt; 7  00000000 00000000 00000000 00000010=0A=
+</CODE></PRE>
+<P>The method continues with the loop and runs the if check again. This =
+time=20
+<CODE>value</CODE> is 2 (<CODE>00000000 00000000 00000000 =
+00000010</CODE>).</P>
+<P>Because none of the bits are set between positions 8 and 32 the =
+bitwise AND=20
+returns the number 0 and the condition evaluates to true.</P>
+<PRE><CODE>   00000000 00000000 00000000 00000010 (int 2)=0A=
+ &amp; 11111111 11111111 11111111 10000000=0A=
+ =3D 00000000 00000000 00000000 00000000 (int 0)=0A=
+</CODE></PRE>
+<P>The algorithm extracts the least significant byte (with the =
+<CODE>byte</CODE>=20
+cast) and adds it to the result. This is the last group of the result, =
+with the=20
+MSB set to 0.</P>
+<PRE><CODE>10101100 00000010=0A=
+</CODE></PRE>
+<P>In the temporary <CODE>buffer</CODE> byte array of length 5 only 2 =
+bytes are=20
+relevant, so the method copies these two bytes into a new byte array of =
+length 2=20
+and returns it to the caller.</P>
+<PRE><CODE class=3D"language-java">    <SPAN class=3D"token =
+keyword">byte</SPAN><SPAN class=3D"token punctuation">[</SPAN><SPAN =
+class=3D"token punctuation">]</SPAN> dest <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token keyword">new</SPAN> <SPAN =
+class=3D"token keyword">byte</SPAN><SPAN class=3D"token =
+punctuation">[</SPAN>position<SPAN class=3D"token =
+punctuation">]</SPAN><SPAN class=3D"token punctuation">;</SPAN>=0A=
+    <SPAN class=3D"token class-name">System</SPAN><SPAN class=3D"token =
+punctuation">.</SPAN><SPAN class=3D"token =
+function">arraycopy</SPAN><SPAN class=3D"token =
+punctuation">(</SPAN>buffer<SPAN class=3D"token punctuation">,</SPAN> =
+<SPAN class=3D"token number">0</SPAN><SPAN class=3D"token =
+punctuation">,</SPAN> dest<SPAN class=3D"token punctuation">,</SPAN> =
+<SPAN class=3D"token number">0</SPAN><SPAN class=3D"token =
+punctuation">,</SPAN> position<SPAN class=3D"token =
+punctuation">)</SPAN><SPAN class=3D"token punctuation">;</SPAN>=0A=
+    <SPAN class=3D"token keyword">return</SPAN> dest<SPAN class=3D"token =
+punctuation">;</SPAN>=0A=
+</CODE></PRE>
+<P><SMALL class=3D"gh"><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java#L30-L32"=20
+target=3D"_blank">VariableLengthInt.java</A></SMALL></P><BR>
+<H3><A id=3D"decoder-variable-length-int---fixed-length-int" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#decod=
+er-variable-length-int---fixed-length-int">Decoder:=20
+variable length int -&gt; fixed length int</A></H3>
+<P>The job of the decoder is to loop over the bytes, take the least =
+significant=20
+7 bits of each byte and add them to the result. Check the most =
+significant bit=20
+(MSB), if it is set continue the loop.</P>
+<P>Notice that the decoder needs to know beforehand that this is a =
+variable=20
+length encoded number and that the order of the bytes is reversed. He =
+can't=20
+recognize this just from the byte array he receives. Protocol Buffers =
+does this=20
+by sending additional type information in the encoded byte stream.</P>
+<P>Java implementation of the decoder. The decoder gets a byte array as=20
+parameter and loops over each byte.</P>
+<PRE><CODE class=3D"language-java">  <SPAN class=3D"token =
+keyword">public</SPAN> <SPAN class=3D"token keyword">static</SPAN> <SPAN =
+class=3D"token keyword">int</SPAN> <SPAN class=3D"token =
+function">decodeUInt32</SPAN><SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token keyword">byte</SPAN><SPAN =
+class=3D"token punctuation">[</SPAN><SPAN class=3D"token =
+punctuation">]</SPAN> input<SPAN class=3D"token punctuation">)</SPAN> =
+<SPAN class=3D"token punctuation">{</SPAN>=0A=
+    <SPAN class=3D"token keyword">int</SPAN> result <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token number">0</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+    <SPAN class=3D"token keyword">int</SPAN> shift <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token number">0</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+    <SPAN class=3D"token keyword">for</SPAN> <SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token keyword">int</SPAN> ix <SPAN =
+class=3D"token operator">=3D</SPAN> <SPAN class=3D"token =
+number">0</SPAN><SPAN class=3D"token punctuation">;</SPAN> ix <SPAN =
+class=3D"token operator">&lt;</SPAN> input<SPAN class=3D"token =
+punctuation">.</SPAN>length<SPAN class=3D"token punctuation">;</SPAN> =
+ix<SPAN class=3D"token operator">++</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN> <SPAN class=3D"token punctuation">{</SPAN>=0A=
+      <SPAN class=3D"token keyword">byte</SPAN> b <SPAN class=3D"token =
+operator">=3D</SPAN> input<SPAN class=3D"token =
+punctuation">[</SPAN>ix<SPAN class=3D"token punctuation">]</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+      result <SPAN class=3D"token operator">|=3D</SPAN> <SPAN =
+class=3D"token punctuation">(</SPAN>b <SPAN class=3D"token =
+operator">&amp;</SPAN> <SPAN class=3D"token =
+number">0b1111111</SPAN><SPAN class=3D"token punctuation">)</SPAN> <SPAN =
+class=3D"token operator">&lt;&lt;</SPAN> shift<SPAN class=3D"token =
+punctuation">;</SPAN>=0A=
+      shift <SPAN class=3D"token operator">+=3D</SPAN> <SPAN =
+class=3D"token number">7</SPAN><SPAN class=3D"token punctuation">;</SPAN>=0A=
+      <SPAN class=3D"token keyword">if</SPAN> <SPAN class=3D"token =
+punctuation">(</SPAN><SPAN class=3D"token punctuation">(</SPAN>b <SPAN =
+class=3D"token operator">&amp;</SPAN> <SPAN class=3D"token =
+number">0b10000000</SPAN><SPAN class=3D"token punctuation">)</SPAN> =
+<SPAN class=3D"token operator">=3D=3D</SPAN> <SPAN class=3D"token =
+number">0</SPAN><SPAN class=3D"token punctuation">)</SPAN> <SPAN =
+class=3D"token punctuation">{</SPAN>=0A=
+        <SPAN class=3D"token keyword">return</SPAN> result<SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+      <SPAN class=3D"token punctuation">}</SPAN>=0A=
+    <SPAN class=3D"token punctuation">}</SPAN>=0A=
+    <SPAN class=3D"token keyword">return</SPAN> result<SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+  <SPAN class=3D"token punctuation">}</SPAN>=0A=
+</CODE></PRE>
+<P><SMALL class=3D"gh"><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java#L35-L47"=20
+target=3D"_blank">VariableLengthInt.java</A></SMALL></P>
+<P>Let's see this in action with our encoded number 300: <CODE>input =3D =
+
+[10101100, 00000010]</CODE>.</P>
+<P>The first byte is <CODE>10101100</CODE>, the method extracts the 7 =
+least=20
+significant bits with a bitwise AND with 1111111. The MSB was added by =
+the=20
+encoder, so the decoder has to remove it.</P>
+<PRE><CODE>   10101100=0A=
+ &amp; 01111111=0A=
+ =3D 00101100=0A=
+</CODE></PRE>
+<P>The decoder then bit shifts the result to the left. In the first =
+iteration,=20
+<CODE>shift</CODE> is 0, so nothing happens. The result of this AND and =
+shift=20
+operation is added to the <CODE>result</CODE> with a bitwise OR.</P>
+<P>Because <CODE>result</CODE> is an <CODE>int</CODE>, Java expands the=20
+operators to 4 bytes.</P>
+<PRE><CODE>   00000000 00000000 00000000 00000000 (int 0, initial value =
+of result)=0A=
+ | 00000000 00000000 00000000 00101100=0A=
+ =3D 00000000 00000000 00000000 00101100=0A=
+</CODE></PRE>
+<P>The algorithm now increments <CODE>shift</CODE> by 7 and checks with =
+a=20
+bitwise AND if the MSB is set.</P>
+<PRE><CODE>   10101100=0A=
+ &amp; 10000000=0A=
+ =3D 10000000 (int 128)=0A=
+</CODE></PRE>
+<P>The comparison with 0 evaluates to false and the decoder continues =
+the for=20
+iteration with the next byte from the <CODE>input</CODE> array.</P>
+<P>The next byte is <CODE>00000010</CODE>. Again, the decoder extracts =
+the 7=20
+least significant bits, and in this iteration shifts the result 7 bits =
+to the=20
+left.</P>
+<PRE><CODE>   00000010=0A=
+ &amp; 01111111=0A=
+ =3D 00000010=0A=
+</CODE></PRE>
+<PRE><CODE>               00000010=0A=
+ &lt;&lt; 7 00000001 00000000=0A=
+</CODE></PRE>
+<P>And applies this result to the <CODE>result</CODE> variable with a =
+bitwise=20
+OR.</P>
+<PRE><CODE>   00000000 00000000 00000000 00101100 (result from 1st =
+iteration)=0A=
+ | 00000000 00000000 00000001 00000000 (AND and shift from 2nd iteration)=0A=
+ =3D 00000000 00000000 00000001 00101100 (int 300)=0A=
+</CODE></PRE>
+<P>Next, the decoder checks if the MSB is set</P>
+<PRE><CODE>   00000010=0A=
+ &amp; 10000000=0A=
+ =3D 00000000 (int 0)=0A=
+</CODE></PRE>
+<P>The bitwise AND returns 0, so the comparison with 0 evaluates to =
+true, and=20
+the decoder returns the result.</P><BR>
+<H3><A id=3D"downside" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#downs=
+ide">Downside</A></H3>
+<P>As mentioned above, encoding large numbers like 2,000,000,000 ends up =
+using 5=20
+bytes. So if you know in advance that most <CODE>int</CODE> numbers in =
+your=20
+application will be greater than 268,435,455, stick with the fixed =
+length=20
+encoding of 4 bytes. 268,435,455 is the last number that can be =
+represented with=20
+4 bytes with this encoding.</P>
+<PRE><CODE>2,000,000,000  ---variable length encode---&gt;  10000000 =
+10101000 11010110 10111001 00000111=0A=
+</CODE></PRE>
+<P>Negative numbers have the same problem. A negative <CODE>int</CODE>, =
+like -3,=20
+in Java, is internally encoded like this</P>
+<PRE><CODE>11111111 11111111 11111111 11111101 =3D int -3=0A=
+</CODE></PRE>
+<P>Encoding and decoding with the algorithm above works but every =
+negative=20
+number will be encoded into 5 bytes and if all your numbers are negative =
+would=20
+increase the data size instead of decreasing it.</P>
+<PRE><CODE>// int -3  variable length encoded=0A=
+11111101 11111111 11111111 11111111 00001111=0A=
+</CODE></PRE>
+<P>In the next section, we will see a solution for this problem.</P>
+<H2><A id=3D"negative-and-positive" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#negat=
+ive-and-positive">Negative=20
+and Positive</A></H2>
+<P>A simple solution, if all your numbers are negative, is to convert =
+them to=20
+positive numbers and then run them through the encoder. In Java you can =
+use the=20
+<CODE>java.lang.Math.abs()</CODE> method for this purpose</P>
+<PRE><CODE class=3D"language-java">java<SPAN class=3D"token =
+punctuation">.</SPAN>lang<SPAN class=3D"token punctuation">.</SPAN><SPAN =
+class=3D"token class-name">Math</SPAN><SPAN class=3D"token =
+punctuation">.</SPAN><SPAN class=3D"token function">abs</SPAN><SPAN =
+class=3D"token punctuation">(</SPAN><SPAN class=3D"token =
+operator">-</SPAN><SPAN class=3D"token number">3</SPAN><SPAN =
+class=3D"token punctuation">)</SPAN> <SPAN class=3D"token =
+operator">=3D=3D</SPAN> <SPAN class=3D"token number">3</SPAN>=0A=
+</CODE></PRE>
+<P>Your application then needs to know that these numbers, although =
+represented=20
+as positive numbers, are negative and you need to convert them to =
+negative=20
+before you display them to a user or further process them.</P><BR>
+<P>But what if the input dataset contains a mix of negative and positive =
+
+numbers. For this use case, we can use a smart solution called ZigZag =
+encoding.=20
+With this encoding, every negative number will be converted to a =
+positive=20
+number.<BR> But this would lead to confusion if an algorithm would =
+simply=20
+convert -3 to 3. You could no longer differentiate between a positive 3 =
+and a=20
+negative 3.</P>
+<P>ZigZag encoding has a smart solution for this and encodes the =
+positive=20
+numbers too. Every positive number becomes an even number, and every =
+negative=20
+number becomes an odd number. The encoder doubles every positive number, =
+and for=20
+every negative number, it takes the absolute value, doubles it and =
+subtracts=20
+1.</P>
+<PRE><CODE>-3  -&gt; 5 =0A=
+-2  -&gt; 3=0A=
+-1  -&gt; 1=0A=
+ 0  -&gt; 0=0A=
+ 1  -&gt; 2=0A=
+ 2  -&gt; 4=0A=
+ 3  -&gt; 6=0A=
+=0A=
+ // positive -&gt; 2 * positive=0A=
+ // negative -&gt; 2 * abs(negative) - 1=0A=
+=0A=
+</CODE></PRE>
+<P>The decoder then only has to check if the number is even, divide it =
+by 2, if=20
+odd add 1, divide it by 2 and subtract it from 0.</P>
+<PRE><CODE>even encoded number / 2 -&gt; positive decoded number=0A=
+0 - (odd encoded number + 1) / 2 -&gt; negative decoded number=0A=
+</CODE></PRE>
+<P>Instead of doing this with arithmetic operations, we can do the =
+ZigZag=20
+encoding and decoding with faster bitwise operations.</P><BR>
+<H3><A id=3D"zigzag-encoder" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#zigza=
+g-encoder">ZigZag=20
+Encoder</A></H3>
+<P>The code for the ZigZag encoder looks like this.</P>
+<PRE><CODE>(value &lt;&lt; 1) ^ (value &gt;&gt; 31)=0A=
+</CODE></PRE>
+<P>Let's look at two examples: -3 and 3</P>
+<P>value =3D 3</P>
+<PRE><CODE>       00000000 00000000 00000000 00000011 (int 3)=0A=
+&lt;&lt; 1   00000000 00000000 00000000 00000110 (int 6)=0A=
+&gt;&gt; 31  00000000 00000000 00000000 00000000=0A=
+</CODE></PRE>
+<P>The signed left shift operation by 1 is equivalent to a =
+multiplication by 2.=20
+The signed right shift operation by 31 always result in 0 if the number =
+is=20
+positive. The encoder then bitwise XOR them together.</P>
+<PRE><CODE>   00000000 00000000 00000000 00000110 (int 6, result of =
+&lt;&lt; 1)=0A=
+ ^ 00000000 00000000 00000000 00000000 (result of &gt;&gt; 31)=0A=
+ =3D 00000000 00000000 00000000 00000110 (int 6)=0A=
+</CODE></PRE>
+<P>So for the number 3 we end up with the encoded number 6.</P><BR>
+<P>value =3D -3</P>
+<PRE><CODE>       11111111 11111111 11111111 11111101 (int -3)=0A=
+&lt;&lt; 1   11111111 11111111 11111111 11111010 (int -6)=0A=
+&gt;&gt; 31  11111111 11111111 11111111 11111111 =0A=
+</CODE></PRE>
+<P>The left shift operation by 1 results in a multiplication by 2. The =
+right=20
+shift results in a number where all 32 bit are set. And when the encoder =
+XOR=20
+them together, it results in a positive number.</P>
+<PRE><CODE>   11111111 11111111 11111111 11111010 (int -6, result of =
+&lt;&lt; 1)=0A=
+ ^ 11111111 11111111 11111111 11111111 (result of &gt;&gt; 31)=0A=
+ =3D 00000000 00000000 00000000 00000101 (int 5)=0A=
+</CODE></PRE>
+<P>After the ZigZag encoding, the number is fed into the variable length =
+
+encoding algorithm described above.</P><BR>
+<H3><A id=3D"zigzag-decoder" =
+href=3D"https://golb.hplar.ch/2019/06/variable-length-int-java.html#zigza=
+g-decoder">ZigZag=20
+Decoder</A></H3>
+<P>The Decoder first runs the byte array through the variable length =
+decoder we=20
+discussed above. Then the ZigZag Decoder needs to decode the returned=20
+<CODE>int</CODE> value with the following algorithm.</P>
+<PRE><CODE>(result &gt;&gt;&gt; 1) ^ -(result &amp; 1)=0A=
+</CODE></PRE>
+<P>Again we look at the two numbers -3 and 3. The variable length =
+decoder=20
+returns 5 for -3 and 6 for the number 3.</P>
+<P>encoded 5, decoded -3</P>
+<P>The unsigned right shift is equivalent to a division by 2 and =
+subtraction by=20
+1, if it's an odd number.</P>
+<PRE><CODE>       00000000 00000000 00000000 00000101 (int 5)=0A=
+&gt;&gt;&gt; 1  00000000 00000000 00000000 00000010 (int 2)=0A=
+</CODE></PRE>
+<P>In an odd number, the least significant bit is always set and with a =
+right=20
+shift by 1 the bit gets removed.</P>
+<P>The bitwise AND with 1 is a simple check if a number is odd or even. =
+This=20
+operation returns 1 if it's an odd number and 0 if it's even.</P>
+<PRE><CODE>   00000000 00000000 00000000 00000101=0A=
+ $ 00000000 00000000 00000000 00000001=0A=
+ =3D 00000000 00000000 00000000 00000001=0A=
+</CODE></PRE>
+<P>Then the unary minus operator negates the result (<CODE>1 -&gt; =
+-1</CODE>).=20
+And finally the decoder XOR the two values together</P>
+<PRE><CODE>   00000000 00000000 00000000 00000010 (int 2)=0A=
+ ^ 11111111 11111111 11111111 11111111 (int -1)=0A=
+ =3D 11111111 11111111 11111111 11111101 (int -3)=0A=
+</CODE></PRE>
+<P>And we arrive at the decoded value of -3</P><BR>
+<P>encoded 6, decoded 3</P>
+<P>The unsigned right bit shift is a division by 2</P>
+<PRE><CODE>       00000000 00000000 00000000 00000110 (int 6)=0A=
+&gt;&gt;&gt; 1  00000000 00000000 00000000 00000011 (int 3)=0A=
+</CODE></PRE>
+<P>AND with 1 results in 0 because 6 is an even number</P>
+<PRE><CODE>   00000000 00000000 00000000 00000110 (int 6)=0A=
+ $ 00000000 00000000 00000000 00000001 (int 1)=0A=
+ =3D 00000000 00000000 00000000 00000000 (int 0)=0A=
+</CODE></PRE>
+<P>Lastly XOR the two values together and we arrive at the decoded =
+number 3.</P>
+<PRE><CODE>   00000000 00000000 00000000 00000011 (int 3)=0A=
+ ^ 00000000 00000000 00000000 00000000 (int 0)=0A=
+ =3D 00000000 00000000 00000000 00000011 (int 3)=0A=
+</CODE></PRE><BR>
+<P>This concludes this deep dive into bits and bytes. As mentioned at =
+the=20
+beginning, variable length encoding might not always be the best =
+solution for=20
+compressing numbers, and other methods can save you much more =
+bandwidth.</P>
+<P>Imagine you have two <CODE>int</CODE> a and b and the application =
+only stores=20
+the values 0 to 15 in these two variables.</P>
+<P>The variable length encoding presented here would sure help you by =
+encoding=20
+both variables into one byte each. But you always have to run the =
+variables=20
+through an encoder and decoder. It might be better to switch to a =
+smaller data=20
+type, for this use case <CODE>byte</CODE>, store them in fixed length =
+encoding=20
+and your application no longer needs to encode and decode them.</P>
+<P>With this example, you could even go one step further. Because the =
+values 0=20
+to 15 can be represented with only 4 bits, an application could merge =
+them into=20
+one byte</P>
+<PRE><CODE class=3D"language-java"><SPAN class=3D"token =
+keyword">byte</SPAN> a <SPAN class=3D"token operator">=3D</SPAN> <SPAN =
+class=3D"token number">8</SPAN><SPAN class=3D"token punctuation">;</SPAN>=0A=
+<SPAN class=3D"token keyword">byte</SPAN> b <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token number">3</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+      =0A=
+<SPAN class=3D"token comment">// encode</SPAN>=0A=
+<SPAN class=3D"token keyword">byte</SPAN> encoded <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token punctuation">(</SPAN><SPAN =
+class=3D"token keyword">byte</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN><SPAN class=3D"token punctuation">(</SPAN>a <SPAN =
+class=3D"token operator">&lt;&lt;</SPAN> <SPAN class=3D"token =
+number">4</SPAN> <SPAN class=3D"token operator">|</SPAN> b<SPAN =
+class=3D"token punctuation">)</SPAN><SPAN class=3D"token =
+punctuation">;</SPAN>=0A=
+=0A=
+<SPAN class=3D"token comment">// decode</SPAN>=0A=
+<SPAN class=3D"token keyword">byte</SPAN> decodedA <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token punctuation">(</SPAN><SPAN =
+class=3D"token keyword">byte</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN><SPAN class=3D"token punctuation">(</SPAN>encoded =
+<SPAN class=3D"token operator">&gt;&gt;</SPAN> <SPAN class=3D"token =
+number">4</SPAN> <SPAN class=3D"token operator">&amp;</SPAN> <SPAN =
+class=3D"token number">0b1111</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN><SPAN class=3D"token punctuation">;</SPAN> =0A=
+<SPAN class=3D"token keyword">byte</SPAN> decodedB <SPAN class=3D"token =
+operator">=3D</SPAN> <SPAN class=3D"token punctuation">(</SPAN><SPAN =
+class=3D"token keyword">byte</SPAN><SPAN class=3D"token =
+punctuation">)</SPAN><SPAN class=3D"token punctuation">(</SPAN>encoded =
+<SPAN class=3D"token operator">&amp;</SPAN> <SPAN class=3D"token =
+number">0b1111</SPAN><SPAN class=3D"token punctuation">)</SPAN><SPAN =
+class=3D"token punctuation">;</SPAN>=0A=
+</CODE></PRE><BR>
+<P>For more information about variable length encoding, see the =
+Wikipedia=20
+article about this topic:<BR><A =
+href=3D"https://en.wikipedia.org/wiki/Variable-length_quantity">https://e=
+n.wikipedia.org/wiki/Variable-length_quantity</A></P>
+<P>See also the Java implementation of this algorithm in the Protocol =
+Buffers=20
+library:<BR><A =
+href=3D"https://github.com/protocolbuffers/protobuf/blob/master/java/core=
+/src/main/java/com/google/protobuf/CodedInputStream.java"=20
+target=3D"_blank">CodedInputStream.java</A><BR><A =
+href=3D"https://github.com/protocolbuffers/protobuf/blob/master/java/core=
+/src/main/java/com/google/protobuf/CodedOutputStream.java"=20
+target=3D"_blank">CodedOutputStream.java</A></P>
+<P>The source code of this blog post is hosted on GitHub:<BR><A =
+href=3D"https://github.com/ralscha/blog2019/blob/master/variable-length-i=
+nt/VariableLengthInt.java">https://github.com/ralscha/blog2019/blob/maste=
+r/variable-length-int/VariableLengthInt.java</A></P></ARTICLE><FOOTER><A =
+
+href=3D"https://golb.hplar.ch/index.html">Home</A> | <A =
+href=3D"https://golb.hplar.ch/feed.rss">RSS</A>=20
+| <A href=3D"https://golb.hplar.ch/feed.atom">Atom</A> | <A =
+href=3D"https://golb.hplar.ch/feedback/2019-06-variable-length-int-java.h=
+tml">Send=20
+Feedback</A>   </FOOTER></BODY></HTML>
+
+------=_NextPart_000_0000_01D5BFBD.2546AA90
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: https://golb.hplar.ch/assets/blog-2.css
+
+@font-face {
+	font-family: octicons-link;
+	src: =
+url(data:font/woff;charset=3Dutf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAA=
+AAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAA=
+AAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkA=
+AAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseW=
+YAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8=
+DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgA=
+AAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEb=
+AAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5=
+BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDA=
+DU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmm=
+n1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvab=
+DQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8Jy=
+Vd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF=
+42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDA=
+pSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQ=
+ABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4=
+PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF=
+8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHja=
+TY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e=
+5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgv=
+xwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/y=
+BSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5=
+b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueET=
+Kcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1=
+hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2=
+Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+h=
+D7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzp=
+WIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiI=
+jaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyC=
+lfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIA=
+AAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA=3D=3D) =
+format("woff");
+}
+@font-face {
+	font-family: Source Sans Pro;
+	src: local("Source Sans Pro"), local("SourceSansPro-Regular"), =
+url(fonts/Source_Sans_Pro_400.eot?#iefix) format("embedded-opentype"), =
+url(fonts/Source_Sans_Pro_400.woff) format("woff"), =
+url(fonts/Source_Sans_Pro_400.woff2) format("woff2"), =
+url(fonts/Source_Sans_Pro_400.svg#SourceSansPro) format("svg"), =
+url(fonts/Source_Sans_Pro_400.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Source Sans Pro;
+	src: local("Source Sans Pro Semibold"), =
+local("SourceSansPro-Semibold"), =
+url(fonts/Source_Sans_Pro_600.eot?#iefix) format("embedded-opentype"), =
+url(fonts/Source_Sans_Pro_600.woff) format("woff"), =
+url(fonts/Source_Sans_Pro_600.woff2) format("woff2"), =
+url(fonts/Source_Sans_Pro_600.svg#SourceSansPro) format("svg"), =
+url(fonts/Source_Sans_Pro_600.ttf) format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+@font-face {
+	font-family: Source Serif Pro;
+	src: local("Source Serif Pro"), local("SourceSerifPro-Regular"), =
+url(fonts/Source_Serif_Pro_400.eot?#iefix) format("embedded-opentype"), =
+url(fonts/Source_Serif_Pro_400.woff) format("woff"), =
+url(fonts/Source_Serif_Pro_400.woff2) format("woff2"), =
+url(fonts/Source_Serif_Pro_400.svg#SourceSerifPro) format("svg"), =
+url(fonts/Source_Serif_Pro_400.ttf) format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: Source Serif Pro;
+	src: local("Source Serif Pro Semibold"), =
+local("SourceSerifPro-Semibold"), =
+url(fonts/Source_Serif_Pro_600.eot?#iefix) format("embedded-opentype"), =
+url(fonts/Source_Serif_Pro_600.woff) format("woff"), =
+url(fonts/Source_Serif_Pro_600.woff2) format("woff2"), =
+url(fonts/Source_Serif_Pro_600.svg#SourceSerifPro) format("svg"), =
+url(fonts/Source_Serif_Pro_600.ttf) format("truetype");
+	font-weight: 600;
+	font-style: normal;
+}
+html {
+	line-height: 1.15; -webkit-text-size-adjust: 100%;
+}
+body {
+	margin: 0px;
+}
+main {
+	display: block;
+}
+h1 {
+	margin: 0.67em 0px; font-size: 2em;
+}
+hr {
+	height: 0px; overflow: visible; box-sizing: content-box;
+}
+pre {
+	font-family: monospace,monospace; font-size: 1em;
+}
+a {
+	background-color: transparent;
+}
+abbr[title] {
+	text-decoration: underline; border-bottom-color: currentColor; =
+border-bottom-width: medium; border-bottom-style: none;
+}
+b {
+	font-weight: bolder;
+}
+strong {
+	font-weight: bolder;
+}
+code {
+	font-family: monospace,monospace; font-size: 1em;
+}
+kbd {
+	font-family: monospace,monospace; font-size: 1em;
+}
+samp {
+	font-family: monospace,monospace; font-size: 1em;
+}
+small {
+	font-size: 80%;
+}
+sub {
+	line-height: 0; font-size: 75%; vertical-align: baseline; position: =
+relative;
+}
+sup {
+	line-height: 0; font-size: 75%; vertical-align: baseline; position: =
+relative;
+}
+sub {
+	bottom: -0.25em;
+}
+sup {
+	top: -0.5em;
+}
+img {
+=09
+}
+button {
+	margin: 0px; line-height: 1.15; font-family: inherit; font-size: 100%;
+}
+input {
+	margin: 0px; line-height: 1.15; font-family: inherit; font-size: 100%;
+}
+optgroup {
+	margin: 0px; line-height: 1.15; font-family: inherit; font-size: 100%;
+}
+select {
+	margin: 0px; line-height: 1.15; font-family: inherit; font-size: 100%;
+}
+textarea {
+	margin: 0px; line-height: 1.15; font-family: inherit; font-size: 100%;
+}
+button {
+	overflow: visible;
+}
+input {
+	overflow: visible;
+}
+button {
+	text-transform: none;
+}
+select {
+	text-transform: none;
+}
+[type=3Dbutton] {
+	-webkit-appearance: button;
+}
+[type=3Dreset] {
+	-webkit-appearance: button;
+}
+[type=3Dsubmit] {
+	-webkit-appearance: button;
+}
+button {
+	-webkit-appearance: button;
+}
+fieldset {
+	padding: 0.35em 0.75em 0.62em;
+}
+legend {
+	padding: 0px; color: inherit; display: table; white-space: normal; =
+max-width: 100%; box-sizing: border-box;
+}
+progress {
+	vertical-align: baseline;
+}
+textarea {
+	overflow: auto;
+}
+[type=3Dcheckbox] {
+	padding: 0px; box-sizing: border-box;
+}
+[type=3Dradio] {
+	padding: 0px; box-sizing: border-box;
+}
+[type=3Dsearch] {
+	-webkit-appearance: textfield; outline-offset: -2px;
+}
+details {
+	display: block;
+}
+summary {
+	display: list-item;
+}
+template {
+	display: none;
+}
+[hidden] {
+	display: none;
+}
+.markdown-body {
+	color: rgb(36, 41, 46); line-height: 1.5; font-family: =
+-apple-system,BlinkMacSystemFont,"Segoe =
+UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI =
+Emoji","Segoe UI Symbol"; font-size: 16px; -ms-word-wrap: break-word; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+.markdown-body .pl-c {
+	color: rgb(106, 115, 125);
+}
+.markdown-body .pl-c1 {
+	color: rgb(0, 92, 197);
+}
+.markdown-body .pl-s .pl-v {
+	color: rgb(0, 92, 197);
+}
+.markdown-body .pl-e {
+	color: rgb(111, 66, 193);
+}
+.markdown-body .pl-en {
+	color: rgb(111, 66, 193);
+}
+.markdown-body .pl-s .pl-s1 {
+	color: rgb(36, 41, 46);
+}
+.markdown-body .pl-smi {
+	color: rgb(36, 41, 46);
+}
+.markdown-body .pl-ent {
+	color: rgb(34, 134, 58);
+}
+.markdown-body .pl-k {
+	color: rgb(215, 58, 73);
+}
+.markdown-body .pl-pds {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-s {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-s .pl-pse .pl-s1 {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-sr {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-sr .pl-cce {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-sr .pl-sra {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-sr .pl-sre {
+	color: rgb(3, 47, 98);
+}
+.markdown-body .pl-smw {
+	color: rgb(227, 98, 9);
+}
+.markdown-body .pl-v {
+	color: rgb(227, 98, 9);
+}
+.markdown-body .pl-bu {
+	color: rgb(179, 29, 40);
+}
+.markdown-body .pl-ii {
+	color: rgb(250, 251, 252); background-color: rgb(179, 29, 40);
+}
+.markdown-body .pl-c2 {
+	color: rgb(250, 251, 252); background-color: rgb(215, 58, 73);
+}
+.markdown-body .pl-c2::before {
+	content: "^M";
+}
+.markdown-body .pl-sr .pl-cce {
+	color: rgb(34, 134, 58); font-weight: 700;
+}
+.markdown-body .pl-ml {
+	color: rgb(115, 92, 15);
+}
+.markdown-body .pl-mh {
+	color: rgb(0, 92, 197); font-weight: 700;
+}
+.markdown-body .pl-mh .pl-en {
+	color: rgb(0, 92, 197); font-weight: 700;
+}
+.markdown-body .pl-ms {
+	color: rgb(0, 92, 197); font-weight: 700;
+}
+.markdown-body .pl-mi {
+	color: rgb(36, 41, 46); font-style: italic;
+}
+.markdown-body .pl-mb {
+	color: rgb(36, 41, 46); font-weight: 700;
+}
+.markdown-body .pl-md {
+	color: rgb(179, 29, 40); background-color: rgb(255, 238, 240);
+}
+.markdown-body .pl-mi1 {
+	color: rgb(34, 134, 58); background-color: rgb(240, 255, 244);
+}
+.markdown-body .pl-mc {
+	color: rgb(227, 98, 9); background-color: rgb(255, 235, 218);
+}
+.markdown-body .pl-mi2 {
+	color: rgb(246, 248, 250); background-color: rgb(0, 92, 197);
+}
+.markdown-body .pl-mdr {
+	color: rgb(111, 66, 193); font-weight: 700;
+}
+.markdown-body .pl-ba {
+	color: rgb(88, 96, 105);
+}
+.markdown-body .pl-sg {
+	color: rgb(149, 157, 165);
+}
+.markdown-body .pl-corl {
+	color: rgb(3, 47, 98); text-decoration: underline;
+}
+.markdown-body .octicon {
+	vertical-align: text-top; display: inline-block; fill: currentColor;
+}
+.markdown-body a {
+	background-color: transparent;
+}
+.markdown-body a:active {
+	outline-width: 0px;
+}
+.markdown-body a:hover {
+	outline-width: 0px;
+}
+.markdown-body strong {
+	font-weight: inherit;
+}
+.markdown-body strong {
+	font-weight: bolder;
+}
+.markdown-body h1 {
+	margin: 0.67em 0px; font-size: 2em;
+}
+.markdown-body img {
+=09
+}
+.markdown-body code {
+	font-family: monospace,monospace; font-size: 1em;
+}
+.markdown-body kbd {
+	font-family: monospace,monospace; font-size: 1em;
+}
+.markdown-body pre {
+	font-family: monospace,monospace; font-size: 1em;
+}
+.markdown-body hr {
+	height: 0px; overflow: visible; box-sizing: content-box;
+}
+.markdown-body input {
+	font: inherit; margin: 0px; font-size-adjust: inherit; font-stretch: =
+inherit;
+}
+.markdown-body input {
+	overflow: visible;
+}
+.markdown-body [type=3Dcheckbox] {
+	padding: 0px; box-sizing: border-box;
+}
+.markdown-body * {
+	box-sizing: border-box;
+}
+.markdown-body input {
+	line-height: inherit; font-family: inherit; font-size: inherit;
+}
+.markdown-body a {
+	color: rgb(3, 102, 214); text-decoration: none;
+}
+.markdown-body a:hover {
+	text-decoration: underline;
+}
+.markdown-body strong {
+	font-weight: 600;
+}
+.markdown-body hr {
+	background: 0px 0px; border-width: 0px 0px 1px; border-style: none none =
+solid; border-color: currentColor currentColor rgb(223, 226, 229); =
+margin: 15px 0px; border-image: none; height: 0px; overflow: hidden;
+}
+.markdown-body hr::before {
+	display: table; content: "";
+}
+.markdown-body hr::after {
+	clear: both; display: table; content: "";
+}
+.markdown-body table {
+	border-collapse: collapse; border-spacing: 0;
+}
+.markdown-body td {
+	padding: 0px;
+}
+.markdown-body th {
+	padding: 0px;
+}
+.markdown-body h1 {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body h2 {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body h3 {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body h4 {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body h5 {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body h6 {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body h1 {
+	font-size: 32px; font-weight: 600;
+}
+.markdown-body h2 {
+	font-size: 24px; font-weight: 600;
+}
+.markdown-body h3 {
+	font-size: 20px; font-weight: 600;
+}
+.markdown-body h4 {
+	font-size: 16px; font-weight: 600;
+}
+.markdown-body h5 {
+	font-size: 14px; font-weight: 600;
+}
+.markdown-body h6 {
+	font-size: 12px; font-weight: 600;
+}
+.markdown-body p {
+	margin-top: 0px; margin-bottom: 10px;
+}
+.markdown-body blockquote {
+	margin: 0px;
+}
+.markdown-body ol {
+	padding-left: 0px; margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body ul {
+	padding-left: 0px; margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body ol ol {
+	list-style-type: lower-roman;
+}
+.markdown-body ul ol {
+	list-style-type: lower-roman;
+}
+.markdown-body ol ol ol {
+	list-style-type: lower-alpha;
+}
+.markdown-body ol ul ol {
+	list-style-type: lower-alpha;
+}
+.markdown-body ul ol ol {
+	list-style-type: lower-alpha;
+}
+.markdown-body ul ul ol {
+	list-style-type: lower-alpha;
+}
+.markdown-body dd {
+	margin-left: 0px;
+}
+.markdown-body code {
+	font-family: SFMono-Regular,Consolas,"Liberation =
+Mono",Menlo,Courier,monospace; font-size: 12px;
+}
+.markdown-body pre {
+	font-family: SFMono-Regular,Consolas,"Liberation =
+Mono",Menlo,Courier,monospace; font-size: 12px; margin-top: 0px; =
+margin-bottom: 0px;
+}
+.markdown-body .octicon {
+	vertical-align: text-bottom;
+}
+.markdown-body .pl-0 {
+	padding-left: 0px !important;
+}
+.markdown-body .pl-1 {
+	padding-left: 4px !important;
+}
+.markdown-body .pl-2 {
+	padding-left: 8px !important;
+}
+.markdown-body .pl-3 {
+	padding-left: 16px !important;
+}
+.markdown-body .pl-4 {
+	padding-left: 24px !important;
+}
+.markdown-body .pl-5 {
+	padding-left: 32px !important;
+}
+.markdown-body .pl-6 {
+	padding-left: 40px !important;
+}
+.markdown-body::before {
+	display: table; content: "";
+}
+.markdown-body::after {
+	clear: both; display: table; content: "";
+}
+.markdown-body > :first-child {
+	margin-top: 0px !important;
+}
+.markdown-body > :last-child {
+	margin-bottom: 0px !important;
+}
+.markdown-body a:not([href]) {
+	color: inherit; text-decoration: none;
+}
+.markdown-body .anchor {
+	line-height: 1; padding-right: 4px; margin-left: -20px; float: left;
+}
+.markdown-body .anchor:focus {
+	outline: 0px;
+}
+.markdown-body blockquote {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body dl {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body ol {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body p {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body pre {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body table {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body ul {
+	margin-top: 0px; margin-bottom: 16px;
+}
+.markdown-body hr {
+	margin: 24px 0px; padding: 0px; border: 0px currentColor; border-image: =
+none; height: 0.25em; background-color: rgb(225, 228, 232);
+}
+.markdown-body blockquote {
+	padding: 0px 1em; color: rgb(106, 115, 125); border-left-color: =
+rgb(223, 226, 229); border-left-width: 0.25em; border-left-style: solid;
+}
+.markdown-body blockquote > :first-child {
+	margin-top: 0px;
+}
+.markdown-body blockquote > :last-child {
+	margin-bottom: 0px;
+}
+.markdown-body kbd {
+	border-width: 1px; border-style: solid; border-color: rgb(198, 203, =
+209) rgb(198, 203, 209) rgb(149, 157, 165); padding: 3px 5px; =
+border-radius: 3px; border-image: none; color: rgb(68, 77, 86); =
+line-height: 10px; font-size: 11px; vertical-align: middle; display: =
+inline-block; box-shadow: inset 0px -1px 0px #959da5; background-color: =
+rgb(250, 251, 252);
+}
+.markdown-body h1 {
+	line-height: 1.25; font-weight: 600; margin-top: 24px; margin-bottom: =
+16px;
+}
+.markdown-body h2 {
+	line-height: 1.25; font-weight: 600; margin-top: 24px; margin-bottom: =
+16px;
+}
+.markdown-body h3 {
+	line-height: 1.25; font-weight: 600; margin-top: 24px; margin-bottom: =
+16px;
+}
+.markdown-body h4 {
+	line-height: 1.25; font-weight: 600; margin-top: 24px; margin-bottom: =
+16px;
+}
+.markdown-body h5 {
+	line-height: 1.25; font-weight: 600; margin-top: 24px; margin-bottom: =
+16px;
+}
+.markdown-body h6 {
+	line-height: 1.25; font-weight: 600; margin-top: 24px; margin-bottom: =
+16px;
+}
+.markdown-body h1 .octicon-link {
+	color: rgb(27, 31, 35); vertical-align: middle; visibility: hidden;
+}
+.markdown-body h2 .octicon-link {
+	color: rgb(27, 31, 35); vertical-align: middle; visibility: hidden;
+}
+.markdown-body h3 .octicon-link {
+	color: rgb(27, 31, 35); vertical-align: middle; visibility: hidden;
+}
+.markdown-body h4 .octicon-link {
+	color: rgb(27, 31, 35); vertical-align: middle; visibility: hidden;
+}
+.markdown-body h5 .octicon-link {
+	color: rgb(27, 31, 35); vertical-align: middle; visibility: hidden;
+}
+.markdown-body h6 .octicon-link {
+	color: rgb(27, 31, 35); vertical-align: middle; visibility: hidden;
+}
+.markdown-body h1:hover .anchor {
+	text-decoration: none;
+}
+.markdown-body h2:hover .anchor {
+	text-decoration: none;
+}
+.markdown-body h3:hover .anchor {
+	text-decoration: none;
+}
+.markdown-body h4:hover .anchor {
+	text-decoration: none;
+}
+.markdown-body h5:hover .anchor {
+	text-decoration: none;
+}
+.markdown-body h6:hover .anchor {
+	text-decoration: none;
+}
+.markdown-body h1:hover .anchor .octicon-link {
+	visibility: visible;
+}
+.markdown-body h2:hover .anchor .octicon-link {
+	visibility: visible;
+}
+.markdown-body h3:hover .anchor .octicon-link {
+	visibility: visible;
+}
+.markdown-body h4:hover .anchor .octicon-link {
+	visibility: visible;
+}
+.markdown-body h5:hover .anchor .octicon-link {
+	visibility: visible;
+}
+.markdown-body h6:hover .anchor .octicon-link {
+	visibility: visible;
+}
+.markdown-body h1 {
+	padding-bottom: 0.3em; font-size: 2em; border-bottom-color: rgb(234, =
+236, 239); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.markdown-body h2 {
+	padding-bottom: 0.3em; font-size: 1.5em; border-bottom-color: rgb(234, =
+236, 239); border-bottom-width: 1px; border-bottom-style: solid;
+}
+.markdown-body h3 {
+	font-size: 1.25em;
+}
+.markdown-body h4 {
+	font-size: 1em;
+}
+.markdown-body h5 {
+	font-size: 0.87em;
+}
+.markdown-body h6 {
+	color: rgb(106, 115, 125); font-size: 0.85em;
+}
+.markdown-body ol {
+	padding-left: 2em;
+}
+.markdown-body ul {
+	padding-left: 2em;
+}
+.markdown-body ol ol {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body ol ul {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body ul ol {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body ul ul {
+	margin-top: 0px; margin-bottom: 0px;
+}
+.markdown-body li {
+=09
+}
+.markdown-body li > p {
+	margin-top: 16px;
+}
+.markdown-body li + li {
+	margin-top: 0.25em;
+}
+.markdown-body dl {
+	padding: 0px;
+}
+.markdown-body dl dt {
+	padding: 0px; font-size: 1em; font-style: italic; font-weight: 600; =
+margin-top: 16px;
+}
+.markdown-body dl dd {
+	padding: 0px 16px; margin-bottom: 16px;
+}
+.markdown-body table {
+	width: 100%; overflow: auto; display: block;
+}
+.markdown-body table th {
+	font-weight: 600;
+}
+.markdown-body table td {
+	padding: 6px 13px; border: 1px solid rgb(223, 226, 229); border-image: =
+none;
+}
+.markdown-body table th {
+	padding: 6px 13px; border: 1px solid rgb(223, 226, 229); border-image: =
+none;
+}
+.markdown-body table tr {
+	border-top-color: rgb(198, 203, 209); border-top-width: 1px; =
+border-top-style: solid; background-color: rgb(255, 255, 255);
+}
+.markdown-body table tr:nth-child(2n) {
+	background-color: rgb(246, 248, 250);
+}
+.markdown-body img {
+	max-width: 100%; box-sizing: content-box; background-color: rgb(255, =
+255, 255);
+}
+.markdown-body img[align=3Dright] {
+	padding-left: 20px;
+}
+.markdown-body img[align=3Dleft] {
+	padding-right: 20px;
+}
+.markdown-body code {
+	margin: 0px; padding: 0.2em 0.4em; border-radius: 3px; font-size: 85%; =
+background-color: rgba(27, 31, 35, 0.05);
+}
+.markdown-body pre {
+	-ms-word-wrap: normal;
+}
+.markdown-body pre > code {
+	background: 0px 0px; margin: 0px; padding: 0px; border: 0px =
+currentColor; border-image: none; font-size: 100%; white-space: pre; =
+-ms-word-break: normal;
+}
+.markdown-body .highlight {
+	margin-bottom: 16px;
+}
+.markdown-body .highlight pre {
+	margin-bottom: 0px; -ms-word-break: normal;
+}
+.markdown-body .highlight pre {
+	padding: 16px; border-radius: 3px; line-height: 1.45; overflow: auto; =
+font-size: 85%; background-color: rgb(246, 248, 250);
+}
+.markdown-body pre {
+	padding: 16px; border-radius: 3px; line-height: 1.45; overflow: auto; =
+font-size: 85%; background-color: rgb(246, 248, 250);
+}
+.markdown-body pre code {
+	margin: 0px; padding: 0px; border: 0px currentColor; border-image: =
+none; line-height: inherit; overflow: visible; display: inline; =
+-ms-word-wrap: normal; background-color: transparent;
+}
+.markdown-body .full-commit :not(:disabled).btn-outline:hover {
+	border-color: rgb(0, 92, 197); color: rgb(0, 92, 197);
+}
+.markdown-body kbd {
+	border-width: 1px; border-style: solid; border-color: rgb(209, 213, =
+218) rgb(209, 213, 218) rgb(198, 203, 209); font: 11px/10px =
+SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace; =
+padding: 3px 5px; border-radius: 3px; border-image: none; color: rgb(68, =
+77, 86); vertical-align: middle; display: inline-block; =
+font-size-adjust: none; font-stretch: normal; box-shadow: inset 0px -1px =
+0px #c6cbd1; background-color: rgb(250, 251, 252);
+}
+.markdown-body :checked + .radio-label {
+	border-color: rgb(3, 102, 214); position: relative; z-index: 1;
+}
+.markdown-body .task-list-item {
+	list-style-type: none;
+}
+.markdown-body .task-list-item + .task-list-item {
+	margin-top: 3px;
+}
+.markdown-body .task-list-item input {
+	margin: 0px 0.2em 0.25em -1.6em; vertical-align: middle;
+}
+.markdown-body hr {
+	border-bottom-color: rgb(238, 238, 238);
+}
+code[class*=3Dlanguage-] {
+	background: 0px 0px; text-align: left; color: rgb(0, 0, 0); =
+line-height: 1.5; font-family: Consolas,Monaco,"Andale Mono","Ubuntu =
+Mono",monospace; font-size: 1em; word-spacing: normal; white-space: pre; =
+-ms-word-break: normal; -ms-word-wrap: normal; text-shadow: 0px 1px =
+#fff; -ms-hyphens: none; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; =
+-webkit-hyphens: none; -moz-hyphens: none; hyphens: none;
+}
+pre[class*=3Dlanguage-] {
+	background: 0px 0px; text-align: left; color: rgb(0, 0, 0); =
+line-height: 1.5; font-family: Consolas,Monaco,"Andale Mono","Ubuntu =
+Mono",monospace; font-size: 1em; word-spacing: normal; white-space: pre; =
+-ms-word-break: normal; -ms-word-wrap: normal; text-shadow: 0px 1px =
+#fff; -ms-hyphens: none; -moz-tab-size: 4; -o-tab-size: 4; tab-size: 4; =
+-webkit-hyphens: none; -moz-hyphens: none; hyphens: none;
+}
+code[class*=3Dlanguage-] ::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+code[class*=3Dlanguage-]::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+pre[class*=3Dlanguage-] ::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+pre[class*=3Dlanguage-]::selection {
+	background: rgb(179, 212, 252); text-shadow: none;
+}
+@media print
+{
+code[class*=3Dlanguage-] {
+	text-shadow: none;
+}
+pre[class*=3Dlanguage-] {
+	text-shadow: none;
+}
+}
+pre[class*=3Dlanguage-] {
+	margin: 0.5em 0px; padding: 1em; overflow: auto;
+}
+:not(pre) > code[class*=3Dlanguage-] {
+	background: rgb(245, 242, 240);
+}
+pre[class*=3Dlanguage-] {
+	background: rgb(245, 242, 240);
+}
+:not(pre) > code[class*=3Dlanguage-] {
+	padding: 0.1em; border-radius: 0.3em; white-space: normal;
+}
+.token.cdata {
+	color: rgb(112, 128, 144);
+}
+.token.comment {
+	color: rgb(112, 128, 144);
+}
+.token.doctype {
+	color: rgb(112, 128, 144);
+}
+.token.prolog {
+	color: rgb(112, 128, 144);
+}
+.token.punctuation {
+	color: rgb(153, 153, 153);
+}
+.namespace {
+	opacity: 0.7;
+}
+.token.boolean {
+	color: rgb(153, 0, 85);
+}
+.token.constant {
+	color: rgb(153, 0, 85);
+}
+.token.deleted {
+	color: rgb(153, 0, 85);
+}
+.token.number {
+	color: rgb(153, 0, 85);
+}
+.token.property {
+	color: rgb(153, 0, 85);
+}
+.token.symbol {
+	color: rgb(153, 0, 85);
+}
+.token.tag {
+	color: rgb(153, 0, 85);
+}
+.token.attr-name {
+	color: rgb(102, 153, 0);
+}
+.token.builtin {
+	color: rgb(102, 153, 0);
+}
+.token.char {
+	color: rgb(102, 153, 0);
+}
+.token.inserted {
+	color: rgb(102, 153, 0);
+}
+.token.selector {
+	color: rgb(102, 153, 0);
+}
+.token.string {
+	color: rgb(102, 153, 0);
+}
+.language-css .token.string {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(154, 110, 58);
+}
+.style .token.string {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(154, 110, 58);
+}
+.token.entity {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(154, 110, 58);
+}
+.token.operator {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(154, 110, 58);
+}
+.token.url {
+	background: hsla(0, 0%, 100%, 0.5); color: rgb(154, 110, 58);
+}
+.token.atrule {
+	color: rgb(0, 119, 170);
+}
+.token.attr-value {
+	color: rgb(0, 119, 170);
+}
+.token.keyword {
+	color: rgb(0, 119, 170);
+}
+.token.class-name {
+	color: rgb(221, 74, 104);
+}
+.token.function {
+	color: rgb(221, 74, 104);
+}
+.token.important {
+	color: rgb(238, 153, 0);
+}
+.token.regex {
+	color: rgb(238, 153, 0);
+}
+.token.variable {
+	color: rgb(238, 153, 0);
+}
+.token.bold {
+	font-weight: 700;
+}
+.token.important {
+	font-weight: 700;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
+}
+body {
+	background-color: rgb(253, 253, 253);
+}
+.indexarticle {
+	margin: 3vh auto; padding: 0px 5px; color: rgb(0, 0, 0); line-height: =
+1.5; font-family: "Source Serif Pro",Georgia,serif; font-weight: 400; =
+-ms-word-wrap: break-word; min-width: 200px; max-width: 990px; =
+box-sizing: border-box; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;
+}
+header {
+	margin: 3vh auto; padding: 0px 5px; color: rgb(0, 0, 0); line-height: =
+1.5; font-family: "Source Serif Pro",Georgia,serif; font-weight: 400; =
+-ms-word-wrap: break-word; min-width: 200px; max-width: 990px; =
+box-sizing: border-box; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;
+}
+.indexarticle {
+	padding: 0px 30px;
+}
+.indexsubtitle {
+	color: rgb(51, 51, 51); font-size: 26px; font-weight: 400; margin-left: =
+20px;
+}
+.indexsubtitle .small {
+	color: rgb(51, 51, 51); font-size: 16px; margin-left: 20px;
+}
+.query {
+	font-size: 20px; margin-top: 25px;
+}
+.query form {
+	margin-right: 40px; display: inline;
+}
+.query form input[type=3Dsearch] {
+	width: 270px;
+}
+article.indexarticle h3 {
+	margin: 0px; font-size: 28px;
+}
+article.indexarticle h3 a {
+	color: rgb(0, 0, 238);
+}
+article.indexarticle h3 a:hover {
+	color: rgb(81, 81, 247);
+}
+article.indexarticle p {
+	margin: 0px; color: rgb(136, 136, 136); font-size: 16px;
+}
+article.indexarticle p.summary {
+	font-size: 18px;
+}
+article.indexarticle p a {
+	color: rgb(33, 150, 243); text-decoration: none;
+}
+header h1 {
+	margin: 0px; color: rgb(51, 51, 51); font-size: 42px; font-weight: 600; =
+border-bottom-color: rgb(238, 238, 238); border-bottom-width: 0.1em; =
+border-bottom-style: solid;
+}
+header p {
+	margin: 2px 0px 0px; color: rgb(136, 136, 136); font-size: 16px;
+}
+header p a {
+	color: rgb(33, 150, 243); text-decoration: none;
+}
+.markdown-body {
+	margin: 0px auto; padding: 0px 10px; min-width: 200px; max-width: =
+990px; box-sizing: border-box;
+}
+footer {
+	margin: 30px auto 50px; padding: 0px 10px; color: rgb(136, 136, 136); =
+font-family: "Source Serif Pro",Georgia,serif; font-size: 16px; =
+font-weight: 400; min-width: 200px; max-width: 990px; box-sizing: =
+border-box; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+form div {
+	margin: 0px auto; padding: 0px 10px; font-family: "Source Serif =
+Pro",Georgia,serif; font-weight: 400; min-width: 200px; max-width: =
+990px; box-sizing: border-box; -ms-text-size-adjust: 100%; =
+-webkit-text-size-adjust: 100%;
+}
+form input {
+	font-family: "Source Serif Pro",Georgia,serif; font-weight: 400; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+form textarea {
+	font-family: "Source Serif Pro",Georgia,serif; font-weight: 400; =
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+}
+textarea {
+	width: 100%; height: 200px;
+}
+input.textfield {
+	width: 100%;
+}
+label {
+	margin: 20px 0px 5px; display: block;
+}
+.back {
+	margin: 40px 0px 0px; display: block;
+}
+p > small.gh {
+	font-family: Consolas,"Liberation Mono",Menlo,Courier,monospace; =
+font-size: 14px; margin-top: -18px; margin-bottom: 12px; display: block;
+}
+.markdown-body {
+	font-family: "Source Serif Pro",Georgia,serif; font-size: 19px;
+}
+.markdown-body .x-form-display-field {
+	font-family: "Source Serif Pro",Georgia,serif; font-size: 19px;
+}
+.markdown-body h1 > a {
+	color: rgb(36, 41, 46) !important; text-decoration: none !important;
+}
+.markdown-body h2 > a {
+	color: rgb(36, 41, 46) !important; text-decoration: none !important;
+}
+.markdown-body h3 > a {
+	color: rgb(36, 41, 46) !important; text-decoration: none !important;
+}
+.markdown-body h4 > a {
+	color: rgb(36, 41, 46) !important; text-decoration: none !important;
+}
+.markdown-body h5 > a {
+	color: rgb(36, 41, 46) !important; text-decoration: none !important;
+}
+.markdown-body h6 > a {
+	color: rgb(36, 41, 46) !important; text-decoration: none !important;
+}
+.markdown-body h2 {
+	margin-top: 60px;
+}
+header > h1 {
+	margin-top: 20px;
+}
+.language-css .token.string {
+	background-color: rgb(246, 248, 250);
+}
+.style .token.string {
+	background-color: rgb(246, 248, 250);
+}
+.token.entity {
+	background-color: rgb(246, 248, 250);
+}
+.token.operator {
+	background-color: rgb(246, 248, 250);
+}
+.token.url {
+	background-color: rgb(246, 248, 250);
+}
+
+------=_NextPart_000_0000_01D5BFBD.2546AA90--

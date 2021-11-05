@@ -1,0 +1,145 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  CSmtp.cpp
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(141,22): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(141,22): warning :   int res_len = strlen(response);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(141,22): warning :                 ~~~~~~^~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(142,22): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(142,22): warning :   int key_len = strlen(keyword);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(142,22): warning :                 ~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(391,50): warning : left operand of comma operator has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(385,8): warning : variable ‘rv’ set but not used [-Wunused-but-set-variable]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(385,8): warning :    bool rv = false;
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(385,8): warning :         ^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(429,45): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(429,45): warning :    M_PRINTF("***** SENDING E-MAIL *****\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(429,45): warning :                                              ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(439,36): warning : conversion to ‘unsigned int’ from ‘std::vector<CSmtp::Recipient>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(439,36): warning :    if(!(rcpt_count = Recipients.size()))
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(439,36): warning :                      ~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(447,8): warning : unused variable ‘rv1’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(447,8): warning :     int rv1=SendData(pEntry);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(447,8): warning :         ^~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(465,54): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(465,54): warning :    M_PRINTF("***** FindCommandEntry command_DATA\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(465,54): warning :                                                       ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(492,21): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(492,21): warning :    int len = msg.size(),sent=0;
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(492,21): warning :              ~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(547,40): warning : left operand of comma operator has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(568,17): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(568,17): warning :       res = fread(FileBuf,sizeof(char),54,hFile);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(568,17): warning :             ~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(595,51): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(595,51): warning :    M_PRINTF("***** FindCommandEntry _DATA END\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(595,51): warning :                                                    ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(641,24): warning : conversion to ‘short unsigned int’ from ‘int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(641,24): warning :      nPort = lpServEnt->s_port;
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(641,24): warning :              ~~~~~~~~~~~^~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(692,31): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(692,31): warning :      M_PRINTF("CONN_1_ERR\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(692,31): warning :                                ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(698,25): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(698,25): warning :    M_PRINTF("CONN_2\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(698,25): warning :                          ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(714,31): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(714,31): warning :      M_PRINTF("CONN_2_ERR\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(714,31): warning :                                ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(717,26): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(717,26): warning :     M_PRINTF("CONN_3\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(717,26): warning :                           ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(736,31): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(736,31): warning :      M_PRINTF("CONN_3_ERR\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(736,31): warning :                                ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(740,25): warning : statement has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(740,25): warning :    M_PRINTF("CONN_4\r\n");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(740,25): warning :                          ^
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(783,117): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(790,126): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(800,33): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(800,33): warning :      unsigned int length = strlen(SendBuf);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(800,33): warning :                            ~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(838,40): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(838,40): warning :      int passwordLength=m_sPassword.size();
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(838,40): warning :                         ~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(863,58): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(863,58): warning :      md5pass1.update(ustrChallenge, decoded_challenge.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(863,58): warning :                                     ~~~~~~~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(879,127): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(879,127): warning :      encoded_challenge = base64_encode(reinterpret_cast<const unsigned char*>(decoded_challenge.c_str()),decoded_challenge.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(879,127): warning :                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(904,38): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(904,38): warning :      int find = decoded_challenge.find("nonce");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(904,38): warning :                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(908,22): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(908,22): warning :      find = nonce.find("\"");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(908,22): warning :             ~~~~~~~~~~^~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(915,34): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(915,34): warning :      find = decoded_challenge.find("realm");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(915,34): warning :             ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(918,23): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(918,23): warning :       find = realm.find("\"");
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(918,23): warning :              ~~~~~~~~~~^~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(982,46): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(982,46): warning :      md5a1a.update(ustrUsername, m_sLogin.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(982,46): warning :                                  ~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(984,40): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(984,40): warning :      md5a1a.update(ustrRealm, realm.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(984,40): warning :                               ~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(986,49): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(986,49): warning :      md5a1a.update(ustrPassword, m_sPassword.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(986,49): warning :                                  ~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(993,40): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(993,40): warning :      md5a1b.update(ustrNonce, nonce.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(993,40): warning :                               ~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(995,37): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(995,37): warning :      md5a1b.update(ustrCNonce, strlen(cnonce));
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(995,37): warning :                                ~~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1002,35): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1002,35): warning :      md5a2.update(ustrUri, uri.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1002,35): warning :                            ~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1015,37): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1015,37): warning :      md5.update(ustrNonce, nonce.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1015,37): warning :                            ~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1017,30): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1017,30): warning :      md5.update(ustrNc, strlen(nc));
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1017,30): warning :                         ~~~~~~^~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1019,34): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1019,34): warning :      md5.update(ustrCNonce, strlen(cnonce));
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1019,34): warning :                             ~~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1021,33): warning : conversion to ‘unsigned int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1021,33): warning :      md5.update(ustrQop, qop.size());
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1021,33): warning :                          ~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1060,57): warning : conversion to ‘unsigned int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1060,57): warning :      encoded_challenge = base64_encode(ustrDigest, strlen(SendBuf));
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1060,57): warning :                                                    ~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1334,13): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1334,13): warning :    res = recv(hSocket,RecvBuf,BUFFER_SIZE,0);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1334,13): warning :          ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1359,32): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1359,32): warning :   int idx = 0,res,nLeft = strlen(SendBuf);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1359,32): warning :                           ~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1395,14): warning : conversion to ‘int’ from ‘ssize_t {aka long int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1395,14): warning :     res = send(hSocket,&SendBuf[idx],nLeft,0);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1395,14): warning :           ~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1420,24): warning : conversion to ‘unsigned int’ from ‘std::vector<CSmtp::Recipient>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1420,24): warning :   return Recipients.size();
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1420,24): warning :          ~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1426,27): warning : conversion to ‘unsigned int’ from ‘std::vector<CSmtp::Recipient>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1426,27): warning :   return BCCRecipients.size();
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1426,27): warning :          ~~~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1432,26): warning : conversion to ‘unsigned int’ from ‘std::vector<CSmtp::Recipient>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1432,26): warning :   return CCRecipients.size();
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1432,26): warning :          ~~~~~~~~~~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1878,35): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1878,35): warning :   int offset = 0,res,nLeft = strlen(SendBuf);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1878,35): warning :                              ~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(1959,41): warning : left operand of comma operator has no effect [-Wunused-value]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(2113,6): warning : unused variable ‘ret’ [-Wunused-variable]
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(2113,6): warning :   int ret = SSL_CTX_load_verify_locations(ssl_ctx, tls_cafile, 0);
+C:\My\UC\UCLinux\mkr_linux\smtp_client\src\CSmtp.cpp(2113,6): warning :       ^~~
+  Archiving objects
+  smtp_client.vcxproj -> C:\My\UC\UCLinux\mkr_linux\smtp_client\bin\x64\Release\libsmtp_client.a

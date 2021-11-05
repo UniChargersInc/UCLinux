@@ -1,0 +1,11 @@
+﻿  Validating sources
+  Copying sources remotely to '192.168.0.15'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  listener.c
+C:\My\Linux\mkr_linux\libevent2\listener.c(241,20): warning : conversion to ‘socklen_t {aka unsigned int}’ from ‘int’ may change the sign of the result [-Wsign-conversion]
+C:\My\Linux\mkr_linux\libevent2\listener.c(241,20): warning :    if (bind(fd, sa, socklen)<0) {
+C:\My\Linux\mkr_linux\libevent2\listener.c(241,20): warning :                     ^
+  Archiving objects
+  libevent2.vcxproj -> C:\My\Linux\mkr_linux\libevent2\bin\x64\Debug\liblibevent2.a

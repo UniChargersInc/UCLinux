@@ -1,0 +1,105 @@
+﻿  Validating sources
+  Copying sources remotely to 'localhost'
+  Validating architecture
+  Starting remote build
+  Compiling sources:
+  var_length_encording.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(50,38): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(50,38): warning :   int outsize = encodeVarint<uint32_t>(v1, buf);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(50,38): warning :                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(58,31): warning : conversion to ‘int32_t {aka int}’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(58,31): warning :   write_int32_ToStream(str.size(), v);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(58,31): warning :                        ~~~~~~~~^~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(59,20): warning : comparison between signed and unsigned integer expressions [-Wsign-compare]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(59,20): warning :   for (int i = 0; i < str.size(); i++)
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(59,20): warning :                   ~~^~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(68,38): warning : conversion to ‘int’ from ‘size_t {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(68,38): warning :   int outsize = encodeVarint<uint64_t>(v1, buf);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_encoding\var_length_encording.cpp(68,38): warning :                 ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~
+  mkr_geocoder.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : StringMatcher.h: No such file or directory
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :  #include "StringMatcher.h"
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :           ^~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : compilation terminated.
+  geo_coordinates.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(20,55): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(20,55): warning :  uint lon2tilex(double lon, uint z) { return lon2tilexf(lon, z); }
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(20,55): warning :                                              ~~~~~~~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(21,58): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(21,58): warning :  uint latp2tiley(double latp, uint z) { return latp2tileyf(latp, z); }
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(21,58): warning :                                                ~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(22,55): warning : conversion to ‘uint32_t {aka unsigned int}’ from ‘double’ may alter its value [-Wfloat-conversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(22,55): warning :  uint lat2tiley(double lat, uint z) { return lat2tileyf(lat, z); }
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geo_files\geo_coordinates.cpp(22,55): warning :                                              ~~~~~~~~~~^~~~~~~~
+  geo_parser_db.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : StringMatcher.h: No such file or directory
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :  #include "StringMatcher.h"
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :           ^~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : compilation terminated.
+  mkr_geo_helper.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : StringMatcher.h: No such file or directory
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :  #include "StringMatcher.h"
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :           ^~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : compilation terminated.
+  mkr_rev_geocoder.cpp
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : StringMatcher.h: No such file or directory
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :  #include "StringMatcher.h"
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error :           ^~~~~~~~~~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\mkr_geocoder.h(56,10): error : compilation terminated.
+  geocoder.pb.cc
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\io\coded_stream.h(1139,20): warning : conversion to ‘int’ from ‘long int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\io\coded_stream.h(1139,20): warning :      int size = end - target;
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\io\coded_stream.h(1139,20): warning :                 ~~~~^~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(276,39): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(276,39): warning :    total_size += unknown_fields().size();
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(276,39): warning :                                        ^
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(704,39): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(704,39): warning :    total_size += unknown_fields().size();
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(704,39): warning :                                        ^
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(1141,39): warning : conversion to ‘int’ from ‘std::__cxx11::basic_string<char>::size_type {aka long unsigned int}’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(1141,39): warning :    total_size += unknown_fields().size();
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\model\geocoder.pb.cc(1141,39): warning :                                        ^
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning :      const int per_value_size = tag_size + sizeof(value);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning :                                 ~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(275,41): warning : conversion to ‘int’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :    const uint32 new_entries = length / sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :                               ~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :    const uint32 new_bytes = new_entries * sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :                             ~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :    const uint32 new_entries = length / sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :                               ~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :    const uint32 new_bytes = new_entries * sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :                             ~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :    const uint32 new_entries = length / sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :                               ~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :    const uint32 new_bytes = new_entries * sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :                             ~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :    const uint32 new_entries = length / sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :                               ~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :    const uint32 new_bytes = new_entries * sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :                             ~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :    const uint32 new_entries = length / sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :                               ~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :    const uint32 new_bytes = new_entries * sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :                             ~~~~~~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :    const uint32 new_entries = length / sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(350,37): warning :                               ~~~~~~~^~~~~~~~~
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning : conversion to ‘google::protobuf::uint32 {aka unsigned int}’ from ‘long unsigned int’ may alter its value [-Wconversion]
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :    const uint32 new_bytes = new_entries * sizeof(CType);
+C:\My\UC\UCLinux\mkr_linux\mkr_geocoding\..\protobuf_3xx\google\protobuf\wire_format_lite_inl.h(351,40): warning :                             ~~~~~~~~~~~~^~~~~~~~~

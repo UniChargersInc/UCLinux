@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x86">
+      <Configuration>Debug</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x86">
+      <Configuration>Release</Configuration>
+      <Platform>x86</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8a231282-bded-4825-993e-09af1067abcc}</ProjectGuid>
+    <Keyword>Linux</Keyword>
+    <RootNamespace>websockets</RootNamespace>
+    <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
+    <ApplicationType>Linux</ApplicationType>
+    <ApplicationTypeRevision>1.0</ApplicationTypeRevision>
+    <TargetLinuxPlatform>Generic</TargetLinuxPlatform>
+    <LinuxProjectType>{2238F9CD-F817-4ECC-BD14-2524D2669B35}</LinuxProjectType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <RemoteRootDir>/home/oem/projects</RemoteRootDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <RemoteRootDir>/home/mkr/projects</RemoteRootDir>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <ItemGroup>
+    <ClCompile Include="wsock\alloc.c" />
+    <ClCompile Include="wsock\base64-decode.c" />
+    <ClCompile Include="wsock\context.c" />
+    <ClCompile Include="wsock\handshake.c" />
+    <ClCompile Include="wsock\header.c" />
+    <ClCompile Include="wsock\libwebsockets.c" />
+    <ClCompile Include="wsock\lws-plat-unix.c" />
+    <ClCompile Include="wsock\output.c" />
+    <ClCompile Include="wsock\parsers.c" />
+    <ClCompile Include="wsock\pollfd.c" />
+    <ClCompile Include="wsock\server-handshake.c" />
+    <ClCompile Include="wsock\server.c" />
+    <ClCompile Include="wsock\service.c" />
+    <ClCompile Include="wsock\sha-1.c" />
+    <ClCompile Include="wsock\ssl.c">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="lws_config.h" />
+    <ClInclude Include="lws_config_private.h" />
+    <ClInclude Include="wsock\extension-deflate-frame.h" />
+    <ClInclude Include="wsock\extension-deflate-stream.h" />
+    <ClInclude Include="wsock\getifaddrs.h" />
+    <ClInclude Include="wsock\huftable.h" />
+    <ClInclude Include="wsock\lextable-strings.h" />
+    <ClInclude Include="wsock\lextable.h" />
+    <ClInclude Include="wsock\libwebsockets.h" />
+    <ClInclude Include="wsock\private-libwebsockets.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./;./wsock;/home/mkr/extLibs/openssl-1.0.2l/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <CLanguageStandard>gnu99</CLanguageStandard>
+      <CppLanguageStandard>gnu++98</CppLanguageStandard>
+      <PreprocessorDefinitions>LWS_OPENSSL_SUPPORT;</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>./;./wsock;/home/mkr/extLibs/openssl-1.0.2l/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <CLanguageStandard>gnu99</CLanguageStandard>
+      <CppLanguageStandard>gnu++98</CppLanguageStandard>
+      <PreprocessorDefinitions>LWS_OPENSSL_SUPPORT;WITH_TLS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DebugInformationFormat>None</DebugInformationFormat>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

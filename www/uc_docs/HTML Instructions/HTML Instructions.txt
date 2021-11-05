@@ -1,0 +1,400 @@
+<html>
+	<head> 
+		<style> 
+			h1   {
+				font-family: 'Open Sans';
+				font-style: normal;
+				font-size: 32px;
+			}
+			
+			h2	{
+				font-family: 'Open Sans'; 
+				font-style: normal; 
+				font-size: 24px; 
+			}
+			
+			p    {
+			font-family: 'Open Sans'; 
+			font-style: normal; 
+			font-size: 18px; 
+			}
+			
+			
+			.accordion {
+				background-color: #eee;
+				color: #444;
+				cursor: pointer;
+				padding: 18px;
+				width: 100%;
+				border: none;
+				text-align: left;
+				outline: none;
+				font-size: 18px;
+				font-family: 'Open Sans';
+				transition: 0.4s;
+			}
+
+			.active, .accordion:hover {
+				background-color: #ccc; 
+			}
+
+			.panel {
+				padding: 0 18px;
+				display: none;
+				background-color: white;
+				overflow: hidden;
+			}
+			
+			
+		
+			ol {
+				font-family: 'Open Sans'; 
+				font-size: 18px;
+				line-height: 1.6;
+			}
+			
+			ul {
+				font-family: 'Open Sans'; 
+				font-size: 18px;
+				line-height: 1.6;
+			}
+			
+			#customers {
+				font-family: 'Open Sans';
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+			#customers td, #customers th {
+				border: 1px solid #ddd;
+				padding: 8px;
+				width: 50%;
+			}
+
+			#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+			#customers tr:hover {background-color: #ddd;}
+
+			#customers th {
+				padding-top: 12px;
+				padding-bottom: 12px;
+				font-family: 'Open Sans'; 
+				text-align: left;
+				background-color: #5FB3CE;
+				color: white;
+			}
+			
+			#blank	{
+				font-family: 'Open Sans';
+				font-size: 18px;
+				width: 40%;
+			}	
+				
+			#blank td {
+				border: 0px;
+				padding: 10px;
+			}	
+		</style>
+	</head>
+	
+	<body> 
+		<h1>United Chargers OCPP Portal</h1>
+		<p>User Manual and Connection Guide</p>
+	
+		<h2>Device Set Up</h2>
+
+		<button class="accordion">Charger Models</button>
+			<div class="panel">
+				<p>acharger.ca accepts the following models from United Chargers:</p>
+				<table id="blank">
+					<tr>
+						<td>Grizzl-E Smart</td>
+						<td>Grizzl-E Smart Avalanche Edition</td> 
+					</tr>
+					<tr>
+						<td><img src= "grizzl-e_fullimage.png" alt="Grizzl-E Smart" width="150px" height="300px"></td>
+						<td><img src="Avalanche_BlackCable.png" alt Grizzl-E Smart Avalanche" width="150px" height="300px"></td>
+					</tr>
+					<tr>
+						<td>Model Numbers:</td>
+						<td>Model Numbers:</td>
+					</tr>
+					<tr>
+						<td>
+							<ul>
+								<li>GRS-14-24-P</li>
+								<li>GRS-6-24-P</li>
+							</ul>
+						</td>
+						<td>
+							<ul> 
+								<li>GRS-14-24-AB</li>
+							</ul>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+		<button class="accordion">Charger Serial Number</button>
+			<div class="panel">
+				<p>The Serial Number is critical for all Connectivity of the Grizzl-E Smart EV Charger.</p> 
+				<p>Before starting, find the Serial number located on the charging label.</p>
+				<img src="Serial_Number.png" alt="Charger Serial Number Location" width="420px" height="360px">
+			</div>
+
+		<button class="accordion">Wi-Fi Configuration</button>
+			<div class="panel">
+				<p>Before connecting to the network, check the strength and Encryption type of the Wi-Fi signal:</p>
+				<ol> 
+					<li>Plug in the charger. Ensure indicator light is alternating blue and purple</li> 
+					<li>Open the Wi-Fi settings on your phone or desktop</li> 
+					<li>Select the network <b>UC_Smart_[ChargerSerial#]</b>.</li> 
+					<li>Open the internet browser on your device.</li> 
+					<li>Open the internet browser on your device.</li>
+					<li> A webpage will load. Select the <b>Show Available Networks</b> button.</li>
+					<li> A list of available networks will display with RSII Strength and Encryption Type.</li> 
+				</ol>
+			
+				<p>Signal Strength</p>
+				<table id="customers"
+					<tr>
+						<th>RSII in dBm</td> 
+						<th>Signal Strength</td>
+					</tr> 
+					 
+					<tr> 
+						<td>50</td>
+						<td>Excellent</td> 
+					</tr>
+					<tr>
+						<td>60</td> 
+						<td>Very Good</td> 
+					</tr>
+					<tr> 
+						<td>70</td>
+						<td>Good</td>
+					</tr> 
+					<tr>	
+						<td>80</td> 
+						<td>Low</td>
+					</tr>
+					<tr>
+						<td>90</td> 
+						<td>Very Low</td>
+					</tr>
+					<tr> 
+						<td>0</td>
+						<td>No Signal</td>
+					</tr> 
+				</table> 
+				</br>
+				<table id="customers">
+					<tr>
+						<th>Encryption Level</td> 
+						<th>Encryption Type</td>
+					</tr> 
+					 
+					<tr> 
+						<td> 0</td>
+						<td>WIFI_AUTH_OPEN</td> 
+					</tr>
+					<tr>
+						<td> 1</td> 
+						<td>WIFI_AUTH_WEP</td> 
+					</tr>
+					<tr> 
+						<td> 2</td>
+						<td>WIFI_AUTH_WPA_PSK</td>
+					</tr> 
+					<tr>	
+						<td> 3</td> 
+						<td>WIFI_AUTH_WPA2_PSK</td>
+					</tr>
+					<tr>
+						<td> 4</td> 
+						<td>WIFI_AUTH_WPA_WPA2_PSK</td>
+					</tr>
+					<tr> 
+						<td> 5</td>
+						<td>WIFI_AUTH_WPA2_ENTERPRISE</td>
+					</tr> 
+				</table>
+				</br> 
+				<p>The RSSI must be between 50-79 to update the charger and use smart features. If the RSSI reading is above 80 install a Wi-Fi repeater to increase the signal strength or move the Wi-Fi router closer to the charger.</p>
+				<p><b>Note:</b> The Grizzl-E Smart does not support 5Gz frequency. Ensure your router uses 2.4 Ghz frequency.</p>
+
+			</div>
+			
+		<button class="accordion">Connect Charger To Wi-Fi Network</button>
+			<div class="panel">
+				<p>To connect your Grizzl-E Smart to Wi-Fi:</p>  
+				<ol>
+					<li>Plug in the Charger.</li>
+					<li>Open the Wi-Fi settings on your computer or cell phone.</li>
+					<li>Select the network <b>UC_Smart_[ChargerSerial#]</b>*.</li>
+					<li>Open your browser.</li>
+					<li>Enter the IP address <b>192.168.4.1</b> into the browser search bar.</li>
+					<li>A webpage will load. Select the Enter Router Credentials button.</li>
+					<li>Enter the SSID** and Password for your Wi-Fi network. Leave acharger.ca in the Portal URL.</li>
+					<li>Verify that you are connected. If connection is successful the indicator light will alternate between Blue and Light Blue.</li>
+					<li>Disconnect your smartphone from UC_Smart_#### and re-connect to your local network.</li>
+					<li>Close the browser page.</li>
+				</ol>
+				<p><b>*Note:</b> Your device may state that the Wi-Fi network is not connected to the internet. Continue without Internet until the end of the procedure.</p>
+				<p>**SSID is the network name.</p>
+				
+			</div>	
+		
+			<button class="accordion">Login to Portal</button>
+			<div class="panel">
+				<p>Create an Account</p>
+				<ol>
+					<li>Go to https://acharger.ca</li>
+					<li>Select the <b>Login</b> button.</li>
+					<li>Select the <b>Sign Up</b> button.</li>
+					<li>Enter your Full Name and Email Address.</li>
+					<li>Create a Username and Password.</li>
+					<li>Select the <b>Register</b> button.</li>
+				</ol>
+				
+				<p>Login to Account</p>
+				<ol>
+					<li>Select the <b>Login</b> button.</li>
+					<li>Enter Username and Password.</li>
+					<li>Select the <b>Sign In</b> button.</li>
+				</ol>
+				
+				<p>Forgot Password</p>
+				<ol>
+					<li>Send an email to info@unitedchargers.com.</li>
+					<li>Include the following information:
+						<ul>
+							<li>Username</li>
+							<li>Email</li>
+							<li>Charger Serial Number</li>
+						</ul>
+					</li>	
+				</ol>
+			</div>	
+		
+			<button class="accordion">Add Device</button>
+			<div class="panel">
+				<p>Once you have logged on to acharger.ca:</p>
+				<ol>
+					<li>Go to the Charging Stations tab.</li>
+					<li>Select the <b>Add</b> button from the top menu.</li>
+					<li>Enter the Charger Serial Number into the Serial Number Field.</li>
+						<ul>
+							<li>Note: Other information on the unit can be filled out but is not necessary. Only the Serial Number is needed.</li>
+						</ul>
+					<li>Select the <b>Create</b> button.</li>
+				</ol>
+			</div>	
+			
+			<button class="accordion">Ensure Device is Connected</button>
+			<div class="panel">
+				<img src="Charger_Status.png" alt="Charging Station">
+				<p>After Connecting the device to the Wi-Fi network and adding the device ensure the device is connected to acharger.ca.</p>
+				<p>The connection status will show red with <b>Connected</b>. The indicator light on the charger will be alternating Blue/Turquoise</p>
+				
+				<p>If the device shows as Not Connected to the acharger.ca portal try the following steps:</p>
+				<ul>
+					<li>Ensure the Indicator light on the device is alternating between Blue and Light Blue.</li>
+					<li>Wait 2 minutes for the charger and portal to establish a connection.</li>
+					<li>Refresh the acharger.ca page and log back in.</li>
+					<li>Power Cycle the Charger by unplugging it and plugging it back in.</li> 
+					<li>Ensure the serial number on acharger.ca matches the one on the label.</li>
+					<li>Reset the Wi-Fi Board as described in the <a href="https://grizzl-e.com/grizzl-e-smart-manual/" target="blank">User Manual</a></li>
+				</ul>
+			</div>	
+			
+			<button class="accordion">Update Charging Station Firmware</button>
+			<div class="panel">
+				<p>Once your device is connected it is recommended that you update to the latest Charging Station firmware.</p>
+				<ol>
+					<li>Ensure the device shows as Connected on acharger.ca. Ensure the charger is not connected to the vehicle.</li>
+					<li>On the Charging Stations tab select the Smart Charging Station. The outline box will appear red when the station is selected.</li>
+					<li>Select the <b>Firmware Update</b> button in the top menu. The Firmware Update box will open.</li>
+					<li>Select the <b>Start Upload</b> button.</li>
+					<li>Wait for Upload Stage 1 and Upload Stage 2 to complete. Do not interrupt Wi-Fi connection or disconnect the unit’s power during the update. When the update is complete both stages will be at 100% and the charger indicator light will go back to Blue/Light Blue alternating.</li>
+				</ol>
+				<img src="Update_in_process.png" alt="Update in Process">
+			</div>	
+	
+	<h2>Smart Charging</h2>
+
+		<button class="accordion">Charge and Get Report</button>
+			<div class="panel">
+				<ol>
+					<li>Insert the charging Connector into the EV and ensure the connector is fully seated/locked in place. Once complete, the charging session will begin.</li>
+					<li>Ensure the Charging Status shows charging.</li>
+					<li>When the charging session is finished remove the charging connector and return to the holster.</li>
+					<li>Go to the Reports tab.</li>
+					<li>Select the charging station from the dropdown menu.</li>
+					<li>Select the date range for the reports.</li>
+					<li>Select Get Report.</li>
+					<li>Report will display Amperage (A) and Kilowatts (kW) over time (minutes).</li>
+				</ol>
+				<img src="Report_Graph.png" Alt="Report Graph">
+			</div>
+		
+		<button class="accordion">Set Charging Schedule</button>
+			<div class="panel">
+				<ol>
+					<li>Go to the Charging Profile tab. Ensure the correct Charger Serial number displays at the top of the screen.</li>
+					<li>Set the correct time zone and daylight saving setting. Select the Update button.</li>
+					<li>Select the Add Profile button from the top menu.</li>
+					<li>Set the Valid From and Valid To dates.</li>
+					<li>Select the date and time for the Start of the Schedule. The vehicle will start charging at the time selected.</li>
+					<li>Set the Charge Limit to the Maximum Current or Power. For example, if you want to charge at 32A for the first time period, type 32 into the Charge Limit field.</li>
+					<li>Set the Duration for the number of hours you want to charge at the Charge Limit. For example, if you wanted to charge at 32A for 2 hours, type 2 in the Duration field.</li>
+					<li>Select the Add New Period. The Duration (minutes) and Charging Current (A) will be graphed on the profile screen.</li>
+					<li>Add additional Charging Periods as desired. Set the Charge Limit and Duration for the next period. Amperage and Duration will be graphed on the profile screen.
+						<img src="Charging_Profile.png" Alt="Report Graph"></li>
+					<li>Select the Save Profile button from the top menu.</li>
+					<li>Refresh the page and login to acharger.ca.</li>
+					<li>Ensure the profile number shows in the top menu.</li>
+				</ol>
+			</div>
+	
+		<button class="accordion">Change Charging Profile</button>
+			<div class="panel">
+				<p>If you want to change the time period, duration, or current settings you will need to create a new profile:</p>
+				<ol>
+					<li>Select <b>Clear Profile</b> button in the top menu. Ensure the message <i>No Profile found for station</i> shows on screen.</li>
+					<li>Select <b>Add Profile.</b></li>
+					<li>Set the <i>StartSchedule</i> for the date and time you want the profile to start.</li>
+					<li>Set the Charge Limit and Duration.</li>
+					<li>Select the <b>Add Period</b> button. A line should be graphed on the Profile.</li>
+					<li>Select <b>Save Profile</b>.</li>
+					<li>Refresh the page.</li>
+					<li>Login and select the Profile from the top drop down box.</li>
+				</ol>
+			</div>
+			
+			
+		<button class="accordion">Clear Charging Profile</button>
+			<div class="panel">
+				<p>If you need to charge at a time not specified on the schedule, select the <b>Clear Profile</b> button before connecting the vehicle.</p>
+			</div>
+	
+	
+	<script>
+			var acc = document.getElementsByClassName("accordion");
+			var i;
+
+			for (i = 0; i < acc.length; i++) {
+			acc[i].addEventListener("click", function() {
+			this.classList.toggle("active");
+			var panel = this.nextElementSibling;
+			if (panel.style.display === "block") {
+			panel.style.display = "none";
+			} else {
+				panel.style.display = "block";
+			}
+			});
+			}
+		</script>
+	
+	</body> 
+</html>

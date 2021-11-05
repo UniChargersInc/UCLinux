@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{9476a82a-ad5b-4ed1-880b-e422901efcc6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\wsock\base64-decode.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\alloc.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\context.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\handshake.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\header.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\output.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\parsers.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\pollfd.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\server.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\server-handshake.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\service.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\sha-1.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\lws-plat-win.c" />
+    <ClCompile Include="..\wsock\libwebsockets.c">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\wsock\ssl.c">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\lws_config.h" />
+    <ClInclude Include="..\lws_config_private.h" />
+  </ItemGroup>
+</Project>

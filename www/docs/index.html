@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no, viewport-fit=cover">
+    <meta name="description" content="docsify-tabs - A docsify.js plugin for rendering tabbed content from markdown.">
+    <meta name="google-site-verification" content="_EWJaM8G6xwMtEqemO4yN8WqSU2CaKVi3jTj0gLg48E">
+    <title>docsify-tabs - A docsify.js plugin for rendering tabbed content from markdown</title>
+    <link rel="stylesheet" href="js/theme-simple.css" title="Simple">
+    <link rel="stylesheet" href="assets/css/main.css">
+	<!--<link rel="stylesheet" href="assets/css/style.css"> -->
+
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <!-- JavaScript -->
+    <script>
+        // Docsify
+        window.$docsify = {
+            // GENERAL
+            // -----------------------------------------------------------------
+            name       : 'United Chargers Docs',
+			logo: "/assets/img/logo_blue1.png",
+            homepage   : 'index.md',
+            loadSidebar: true,
+
+            // NAVIGATION
+            // -----------------------------------------------------------------
+           
+			alias: {
+			'/.*/_sidebar.md': '/_sidebar.md'
+			},
+            auto2top   : true,
+            maxLevel   : 4,
+            subMaxLevel: 4,
+
+            // PLUGINS
+            // -----------------------------------------------------------------
+            executeScript: true,
+            ga    : 'UA-100100910-4',
+            search: {
+                depth      : 3,
+                noData     : 'No results!',
+                placeholder: 'Search...'
+            },
+            tabs: {
+                // persist    : false,
+                // sync       : false,
+                // theme      : 'material',
+                // tabComments: false,
+                // tabHeadings: false
+            }
+        };
+    </script>
+	<!--<script src="js/docsify.js"></script> -->
+	<script src="js/docsify.min.js"></script>
+	<script src="js/docsify-tabs@1"></script>
+	<script src="js/docsify-copy-code@2"></script>
+	
+	<!--
+    <script src="js/docsify@4"></script>
+    <script src="js/docsify-themeable@0"></script>
+    <script src="js/docsify-copy-code@2"></script>
+    <script src="js/docsify-tabs@1"></script>
+    <script src="js/external-script.min.js"></script>
+    <script src="js/ga.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/class-change@1"></script>
+    <script>
+        // Initialize the default attribute listener
+        classChange.attrs();
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+
+message CLogin 
+{
+	required int32 res=1;              // 1-NO, 2-YES
+	required  int32 cid=2;
+    required  string user=3;
+    required  string pass=4;
+	required  string lang=5;
+	required  int64 si=6;   // session info
+}
+
+message RttHB
+{
+	    required sint32 rid=1;  // need on mobile
+		
+		required  float lat=2;
+        required  float lon=3;
+        required  int32 spd=4;
+        required  int32 cog=5;
+        required  int64 ts=6; 
+		
+		optional int32 devtype=7;  // need to communicate with WS
+		optional string did=8; 
+		optional string sensors=9;
+}
+
+message ClsLoginMD
+{
+	   required	CLogin lgn=1;
+       optional  int32 RID=2;
+       optional  string DrName=3;
+         
+       optional PCSList cs_stations=4;  //A repeated field is inherently optional: you just don't add any values.
+       optional  PConf config=5;
+       optional  PEmpl driverProf=6;
+}
+
+message RttHBResp
+{
+	required int32 res=1;              // 1-NO, 2-YES
+	required sint32 rid=2;  // need on mobile
+	optional PCSList cs_list=3;
+}
+
+//--------------added for messaging----------------
+message  PIRptMFile  //PInspectionReportMediaFile
+{
+    required string fname=1;
+	required bytes payload=2;
+}
+
+message PMMsgList
+{
+	required   PMsgList msgs=1;
+	repeated PIRptMFile mfiles=2;
+}
+

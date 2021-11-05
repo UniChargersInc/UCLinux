@@ -1,0 +1,143 @@
+html {
+	font: x-medium/normal Verdana, Arial, sans-serif; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+body {
+	font: x-medium/normal Verdana, Arial, sans-serif; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+div {
+	font: x-medium/normal Verdana, Arial, sans-serif; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+p {
+	font: x-medium/normal Verdana, Arial, sans-serif; color: rgb(51, 51, 51); font-size-adjust: none; font-stretch: normal;
+}
+body {
+	margin: 0px; padding: 0px;
+}
+a:link {
+	color: rgb(0, 105, 151); text-decoration: none;
+}
+a:active {
+	color: rgb(0, 105, 151); text-decoration: none;
+}
+a:visited {
+	color: rgb(0, 111, 191); text-decoration: none;
+}
+a:hover {
+	color: rgb(41, 172, 41);
+}
+img {
+	text-decoration: none;
+}
+a.imgLink {
+	text-decoration: none;
+}
+a.imgLink:visited {
+	text-decoration: none;
+}
+div.clear {
+	clear: both; font-size: 1px;
+}
+h1 {
+	font-size: medium; font-weight: bold;
+}
+h2 {
+	color: rgb(0, 154, 218); font-size: medium; font-weight: bold;
+}
+h2 span {
+	color: rgb(0, 154, 218); font-size: medium; font-weight: bold;
+}
+h3 {
+	font-size: x-small; font-weight: bold;
+}
+h4 {
+	font-size: x-small; font-weight: normal;
+}
+
+#wrapper {
+    /*width: 840px;*/
+    max-width: 840px;
+    margin: auto;
+}
+#header {
+	height: 80px; clear: right;
+}
+
+#pageBody {
+	margin: 0px; padding: 0px 0px 0px 5px; clear: both;
+}
+
+#content {
+	margin: 30px 0px 20px 10px;
+}
+#footer {
+	padding: 10px; clear: both;
+}
+#logo {
+    width: 120px;
+    height: 80px;
+    float: left;
+    margin-bottom:  40px;
+}
+
+
+UNKNOWN {
+	height: auto;
+}
+
+div.dividePage {
+	clear: both;
+}
+div.dividePage div.col1 {
+	width: 180px; float: left;
+}
+div.dividePage div.col2 {
+	margin: 0px 0px 0px 30px; width: 280px; float: left;
+}
+.floatRight {
+	float: right;
+}
+.spacer {
+	height: 100px;
+}
+#pageBody input {
+	padding: 1px 0px 1px 3px;
+}
+#pageBody a:link {
+	color: rgb(0, 105, 151); text-decoration: underline;
+}
+#pageBody a:active {
+	color: rgb(0, 105, 151); text-decoration: underline;
+}
+#pageBody a:visited {
+	color: rgb(0, 111, 191); text-decoration: underline;
+}
+#pageBody a:hover {
+	color: rgb(41, 172, 41);
+}
+
+li {
+	margin: 0px; padding: 0.5em 0px 0px 3.5em;
+}
+
+#content li {
+	margin: 0px; padding: 0.4em 0px 0.4em 0.5em;
+}
+#content ul {
+	margin: 0px; padding: 0.2em 0px 0px 2em;
+}
+
+.style1 {
+    color: #0000FF;
+    font-weight: bold;
+    font-size: medium;
+}
+
+.style14 {
+    color: #000099;
+    font-weight: bold;
+}
+
+.style2 {
+    color: #333333;
+    font-weight: bold;
+}

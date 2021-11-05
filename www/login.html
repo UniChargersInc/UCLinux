@@ -1,0 +1,186 @@
+﻿
+
+<!DOCTYPE html>
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+<HEAD>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<TITLE>United Chargers Portal </TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Smart chargers for electric vehicles">
+ <LINK href="index.css" rel="Stylesheet" type="text/css" media="screen">
+ <link rel="stylesheet" href="js1/flat_m.css" type="text/css" media="screen" charset="utf-8">
+ <script src="js1/wb_m.js" type="text/javascript" charset="utf-8"></script>
+ <script src="js1/pbf_m.js"></script>
+ 
+</HEAD> 
+
+<BODY>
+    <div class="header">
+ 
+   <div class="h_column">
+        <div class="h_column">
+        <a href="index.html"><img src="m_files/logo_2.png" height="48" width="148" class="h_column_img" /> </a>
+        </div>
+       <div class="h_column">
+           <img src="m_files/OCAlogo.png" height="92" width="120" class="h_column_img1"/>
+       </div>
+  </div>
+  
+</div>
+
+
+  <div class="content">
+    <div class="button-center">
+        <!--<a href="login.html" class="button">Login</a>-->
+         
+        <div style="background-color:transparent;">
+			<div id="data" style="width:300px;margin:20px;"></div>
+            <form>
+			            <div id="areaB"></div>
+		            </form>
+            </div>
+  </div>
+     
+  </div>
+  
+  
+
+<div class="footer">
+    <div class="f_col1"></div>
+    <div class="f_col2">
+        <h2>United Chargers Inc EV Portal</h2>
+        <p>Free for home use of Any OCPP 1.6J EV Charger</p>
+    </div>
+    <div class="f_col3"></div>
+  <p>Footer</p>
+</div>
+
+<!-- ========================================================= -->
+<script>
+	    var AJX = mkrwa.ajax(), gL = 0;
+	    function g_rand() { return Math.round((Math.random() * 10000)); }
+	    function l_fail() {
+	        $$("un_id").setValue("");
+            $$("psw_id").setValue("");
+            mkrwa.alert({type:"alert-error",text:"Your credentials are incorrect\r\nPlease enter the correct ones or Sign Up to create an account"});
+        }
+        function switch_f() {
+            $$("my_form").show();
+            var z=$$("my_reg_form"),x;
+            z.hide();
+            x = z.getValues();
+            x.fullname = "", x.email = "", x.ruser = "", x.rpass = "";
+        }
+	    var form1 = [
+			{ view: "text",id:"un_id", label: 'Username', name: "user" },
+			{ view: "text", id: "psw_id", type: "password", label: 'Password', name: "pass" },
+			{cols:[
+				{
+					view: "button", value: "Sign in", click: function () {
+						var z=$$("my_form");
+						if (z.validate()) {
+							//mkrwa.message("All is correct");
+							var xx=z.getValues();
+							var un = xx.user, psw = xx.pass;
+                            login_p(un, psw);
+						}
+						else {
+							mkrwa.message({ type: "error", text: "Form data is invalid" });
+						}
+					}
+				},
+				{
+					view: "button", value: "Sign up", click: function () {
+						$$("my_reg_form").show();
+						$$("my_form").hide();
+					}
+				}
+			]}
+	    ];
+
+//===========================Registration form==================
+ var reg_form = [
+			{ view: "text",id:"reg_fname_id", label: 'Full name', name: "fullname" },
+			{ view: "text", id: "reg_email_addr_id",  label: 'Email address', name: "email" },
+			{ view: "text",id:"reg_un_id", label: 'Username', name: "ruser" },
+			{ view: "text", id: "reg_psw_id", type: "password", label: 'Password', name: "rpass" },
+			{cols:[
+				{
+					view: "button", value: "Register", click: function () {
+						var z=$$("my_reg_form");
+						if (z.validate()) {
+							//mkrwa.message("All is correct");
+							var xx=z.getValues();
+							if(!mkrwa.rules.isEmail(xx.email)){
+                                mkrwa.alert({ ok: "OK", type: "alert-warning", text: "Please enter a correct email address" });
+                                return;
+                            }
+                            register_p(xx.fullname, xx.email, xx.ruser, xx.rpass, function (d) {
+                                if (d.indexOf("OK") != -1) {
+                                        var s = d.split(":");
+										mkrwa.alert({ok:"OK",type:"alert-warning",text:"Your account has been created.<br> Your ClientID: "+s[1]+ "<br>You can use your credentials to login"});
+                                        switch_f();
+									} else {
+										mkrwa.alert({ok:"OK",type:"alert-warning",text:d});
+									}
+                            });
+                            
+						}
+						else {
+							mkrwa.message({ type: "error", text: "Form data is invalid" });
+						}
+					}
+				},
+				{
+                    view: "button", value: "Cancel", click: switch_f
+				}
+			]}
+	    ];
+
+
+
+	    mkrwa.ui({
+	        container: "data",
+	        view: "form",
+            id:"my_form",
+	        scroll: false,
+           // css: "background-color:transparent;",
+            //width: 320,
+            //height:220,
+	        elements: form1,
+	        rules: {
+	            "pass": mkrwa.rules.isNotEmpty,
+	            "user": mkrwa.rules.isNotEmpty
+	        },
+	        elementsConfig: {
+	            labelPosition: "top",
+               
+	        }
+	    });
+		
+		mkrwa.ui({
+	        container: "data",
+	        view: "form",
+            id:"my_reg_form",
+	        scroll: false,
+
+	        elements: reg_form,
+	        rules: {
+				"fullname": mkrwa.rules.isNotEmpty,
+	            "email": mkrwa.rules.isNotEmpty,
+	            "rpass": mkrwa.rules.isNotEmpty,
+	            "ruser": mkrwa.rules.isNotEmpty
+	        },
+	        elementsConfig: {
+	            labelPosition: "top",
+               
+	        }
+	    });
+        
+		$$("my_reg_form").hide();
+
+</script>
+
+</BODY>
+</HTML>
